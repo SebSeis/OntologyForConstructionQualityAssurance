@@ -1,0 +1,525 @@
+@prefix : <http://www.semanticweb.org/constructionqualityontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/constructionqualityontology> .
+
+<http://www.semanticweb.org/constructionqualityontology> rdf:type owl:Ontology ;
+                                                          owl:versionIRI <http://www.semanticweb.org/constructionqualityontology/1.1> ;
+                                                          rdfs:comment "This ontology describes construction quality"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/constructionqualityontology#hasBauaktivität
+:hasBauaktivität rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :Kontrollaktivität ;
+                 rdfs:range :Bauaktivität .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hasBauverfahren
+:hasBauverfahren rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :Bauaktivität ;
+                 rdfs:range :Bauverfahren .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hasElement
+:hasElement rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Prüfung ;
+            rdfs:range :Element .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hasNachweis
+:hasNachweis rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Kontrollaktivität ;
+             rdfs:range :Nachweis .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hasProzess
+:hasProzess rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hasPrüfmethode
+:hasPrüfmethode rdf:type owl:ObjectProperty ;
+                rdfs:domain :Kontrollaktivität ,
+                            :Prüfung ;
+                rdfs:range :Prüfmethode .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hasPrüfung
+:hasPrüfung rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Kontrollaktivität ;
+            rdfs:range :Prüfung .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hasRegelung
+:hasRegelung rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Nachweis ,
+                         :Prüfung ;
+             rdfs:range :Regularien .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hasVerantwortlichen
+:hasVerantwortlichen rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain :Bauaktivität ,
+                                 :Kontrollaktivität ;
+                     rdfs:range :Person .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hatNachfolger
+:hatNachfolger rdf:type owl:ObjectProperty ;
+               rdfs:domain :Bauaktivität ;
+               rdfs:range :Bauaktivität .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hatNachgewerk
+:hatNachgewerk rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Firma ;
+               rdfs:range :Firma .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hatVorgewerk
+:hatVorgewerk rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Firma ;
+              rdfs:range :Firma .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#hatVorgänger
+:hatVorgänger rdf:type owl:ObjectProperty ;
+              rdfs:domain :Bauaktivität ;
+              rdfs:range :Bauaktivität .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#isAnforderungregelung
+:isAnforderungregelung rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain :Anforderungsregelung ;
+                       rdfs:range <http://www.semanticweb.org/constructionqualityontology#4.5.1> ,
+                                  <http://www.semanticweb.org/constructionqualityontology#5.4> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/constructionqualityontology#WichteRegelung
+:WichteRegelung rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Regularien ;
+                rdfs:range xsd:int ;
+                rdfs:comment "Beschreibt die Wichte einer Regularie und seiner Kinder" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/constructionqualityontology#ATV
+:ATV rdf:type owl:Class ;
+     rdfs:subClassOf :Regularien .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Anforderungsregelung
+:Anforderungsregelung rdf:type owl:Class ;
+                      rdfs:subClassOf :Klassifikation ;
+                      rdfs:comment "Beschreibt die Anforderung an das Bauteil"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Bauaktivität
+:Bauaktivität rdf:type owl:Class ;
+              rdfs:subClassOf :Terminplan .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Bauverfahren
+:Bauverfahren rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Bauvertrag
+:Bauvertrag rdf:type owl:Class ;
+            rdfs:subClassOf :Vertrag .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Betonbau
+:Betonbau rdf:type owl:Class ;
+          rdfs:subClassOf :Gewerke ;
+          rdfs:label "Betonbau"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Bodenplatte
+:Bodenplatte rdf:type owl:Class ;
+             rdfs:subClassOf :Element .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#DIN
+:DIN rdf:type owl:Class ;
+     rdfs:subClassOf :Regularien .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Eigenüberwachung
+:Eigenüberwachung rdf:type owl:Class ;
+                  rdfs:subClassOf :Überwachungsart .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Element
+:Element rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Erdbau
+:Erdbau rdf:type owl:Class ;
+        rdfs:subClassOf :Gewerke ;
+        rdfs:label "Erdbau"^^rdfs:Literal ,
+                   "Tiefbau"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Fehler
+:Fehler rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Firma
+:Firma rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Fremdüberwachung
+:Fremdüberwachung rdf:type owl:Class ;
+                  rdfs:subClassOf :Überwachungsart .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Gewerke
+:Gewerke rdf:type owl:Class ;
+         rdfs:label "Gewerke"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Klassifikation
+:Klassifikation rdf:type owl:Class ;
+                rdfs:subClassOf :Regularien .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Kontrollaktivität
+:Kontrollaktivität rdf:type owl:Class ;
+                   rdfs:subClassOf :Terminplan .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Lastplattendruckversuch
+:Lastplattendruckversuch rdf:type owl:Class ;
+                         rdfs:subClassOf :Prüfmethode .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Leistungsbeschreibung
+:Leistungsbeschreibung rdf:type owl:Class ;
+                       rdfs:subClassOf :Vertrag .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Leistungsverzeichnis
+:Leistungsverzeichnis rdf:type owl:Class ;
+                      rdfs:subClassOf :Vertrag .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Mangel
+:Mangel rdf:type owl:Class ;
+        rdfs:subClassOf :Fehler .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Messwerte
+:Messwerte rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Nachweis
+:Nachweis rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Nachweisregelung
+:Nachweisregelung rdf:type owl:Class ;
+                  rdfs:subClassOf :Klassifikation ;
+                  rdfs:comment "Beschreibt den zu erbringenden Nachweis"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Position
+:Position rdf:type owl:Class ;
+          rdfs:subClassOf :Leistungsverzeichnis .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Prozess
+:Prozess rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Prüfmethode
+:Prüfmethode rdf:type owl:Class ;
+             rdfs:label "Prüfverfahren"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Prüfregelung
+:Prüfregelung rdf:type owl:Class ;
+              rdfs:subClassOf :Klassifikation ;
+              rdfs:comment "Definiert die Prüfmethode"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Prüfung
+:Prüfung rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Regularien
+:Regularien rdf:type owl:Class ;
+            rdfs:comment "Enthalten eine Wichte" ,
+                         "Regulaieren werden über Regeln abgebildet. Regeln verweisen jedoch auf deren Herkunft"^^rdfs:Literal ,
+                         "Sind projektübergreifend" ;
+            rdfs:label "Gesetze"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Schaden
+:Schaden rdf:type owl:Class ;
+         rdfs:subClassOf :Fehler .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Terminplan
+:Terminplan rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Trockenbau
+:Trockenbau rdf:type owl:Class ;
+            rdfs:subClassOf :Gewerke ;
+            rdfs:label "Trockenbau"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Vertrag
+:Vertrag rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Wall
+:Wall rdf:type owl:Class ;
+      rdfs:subClassOf :Element .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#ZTV
+:ZTV rdf:type owl:Class ;
+     rdfs:subClassOf :Regularien .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#ZTV-ING-Teil3
+:ZTV-ING-Teil3 rdf:type owl:Class ;
+               rdfs:subClassOf :ZTV ;
+               rdfs:comment "Randschalung"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Überwachungsart
+:Überwachungsart rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#13670
+<http://www.semanticweb.org/constructionqualityontology#13670> rdf:type owl:Class ;
+                                                               rdfs:subClassOf :DIN ;
+                                                               rdfs:comment "Dient der Bestimmung von Toleranzen"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#4
+<http://www.semanticweb.org/constructionqualityontology#4> rdf:type owl:Class ;
+                                                           rdfs:subClassOf :ZTV-ING-Teil3 .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#4.5
+<http://www.semanticweb.org/constructionqualityontology#4.5> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/constructionqualityontology#4> .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#4.5.1
+<http://www.semanticweb.org/constructionqualityontology#4.5.1> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/constructionqualityontology#4.5> ;
+                                                               rdfs:comment """Die Anordnung der Schalungen muss den
+ ordnungsgemäßen Einbau von Bewehrung und 
+Spanngliedern sowie das ordnungsgemäße V
+erdichten des Betons ermöglichen.
+[ZTV Teil 3 4.5.1 (1)]
+Die Schalung muss so beschaffen sein, dass 
+der Beton beim Ausschalen weder erschüttert noch 
+beschädigt wird. 
+[ZTV Teil 3 4.5.1 (1)]"""^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#5
+<http://www.semanticweb.org/constructionqualityontology#5> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.semanticweb.org/constructionqualityontology#13670> .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#5.4
+<http://www.semanticweb.org/constructionqualityontology#5.4> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/constructionqualityontology#5> ;
+                                                             rdfs:comment """Schalung muss den Beton in seiner vorgesehenen
+Form halten, bis er ausreichend erhärtet ist
+[DIN EN 13670 5.4]
+Schalung und die Fugen zwischen Schalbrettern 
+oder Schaltafeln müssen ausreichend dicht sein
+[DIN EN 13670 5.4]
+Die Innenflächen der Schalung müssen sauber sein.
+[DIN EN 13670 5.4]"""^^rdfs:Literal .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/constructionqualityontology#BetonbauMustermann
+:BetonbauMustermann rdf:type owl:NamedIndividual ,
+                             :Firma .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Bodenplatte01
+:Bodenplatte01 rdf:type owl:NamedIndividual ,
+                        :Bodenplatte .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Bodenplatte_herstellen
+:Bodenplatte_herstellen rdf:type owl:NamedIndividual ,
+                                 :Bauaktivität ;
+                        :hasVerantwortlichen :MustermannABC ;
+                        :hatNachfolger :Wände1OG_herstellen ;
+                        :hatVorgänger :Schottertragschicht_herstellen .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Dynamischer_Lastplattendruckversuch
+:Dynamischer_Lastplattendruckversuch rdf:type owl:NamedIndividual ,
+                                              :Lastplattendruckversuch .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#ErdbauMustermann
+:ErdbauMustermann rdf:type owl:NamedIndividual ,
+                           :Firma .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Kontrollaktivität01
+:Kontrollaktivität01 rdf:type owl:NamedIndividual ,
+                              :Kontrollaktivität ;
+                     :hasBauaktivität :Bodenplatte_herstellen ;
+                     :hasPrüfmethode :Sichtprüfung ;
+                     :hasPrüfung :Prüfung01 ,
+                                 :Prüfung02 .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Kontrollaktivität02
+:Kontrollaktivität02 rdf:type owl:NamedIndividual ,
+                              :Kontrollaktivität ;
+                     :hasBauaktivität :Bodenplatte_herstellen .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#MustermannABC
+:MustermannABC rdf:type owl:NamedIndividual ,
+                        :Person ;
+               :hatVorgewerk :MustermannSchotter .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#MustermannSchotter
+:MustermannSchotter rdf:type owl:NamedIndividual ,
+                             :Person .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#MustermannXY
+:MustermannXY rdf:type owl:NamedIndividual ,
+                       :Person .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Nachweis01
+:Nachweis01 rdf:type owl:NamedIndividual ,
+                     :Nachweis ;
+            :hasBauaktivität :Kontrollaktivität01 ,
+                             :Kontrollaktivität02 ;
+            :hasRegelung :Teil3-4.5.1 .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Prüfung01
+:Prüfung01 rdf:type owl:NamedIndividual ,
+                    :Prüfung ;
+           :hasElement :Bodenplatte01 .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Prüfung02
+:Prüfung02 rdf:type owl:NamedIndividual ,
+                    :Prüfung ;
+           :hasElement :Bodenplatte01 .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Schottertragschicht_herstellen
+:Schottertragschicht_herstellen rdf:type owl:NamedIndividual ,
+                                         :Bauaktivität ;
+                                :hasVerantwortlichen :MustermannSchotter ;
+                                :hatNachfolger :Wände1OG_herstellen .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Sichtprüfung
+:Sichtprüfung rdf:type owl:NamedIndividual ,
+                       :Prüfmethode .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Statischer_Lastplattendruckversuch
+:Statischer_Lastplattendruckversuch rdf:type owl:NamedIndividual ,
+                                             :Lastplattendruckversuch .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Teil3-4.5.1
+:Teil3-4.5.1 rdf:type owl:NamedIndividual ,
+                      :ZTV-ING-Teil3 ;
+             rdfs:comment """Die Anordnung der Schalungen muss den
+ ordnungsgemäßen Einbau von Bewehrung und 
+Spanngliedern sowie das ordnungsgemäße V
+erdichten des Betons ermöglichen.
+[ZTV Teil 3 4.5.1 (1)]
+Die Schalung muss so beschaffen sein, dass 
+der Beton beim Ausschalen weder erschüttert noch 
+beschädigt wird. 
+[ZTV Teil 3 4.5.1 (1)]""" .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Wall1
+:Wall1 rdf:type owl:NamedIndividual ,
+                :Wall .
+
+
+###  http://www.semanticweb.org/constructionqualityontology#Wände1OG_herstellen
+:Wände1OG_herstellen rdf:type owl:NamedIndividual ,
+                              :Bauaktivität ;
+                     :hasVerantwortlichen :MustermannXY ;
+                     :hatVorgänger :Bodenplatte_herstellen .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ATV
+                :DIN
+                :ZTV
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Bauvertrag
+                :Leistungsbeschreibung
+                :Leistungsverzeichnis
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Betonbau
+                :Erdbau
+                :Trockenbau
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

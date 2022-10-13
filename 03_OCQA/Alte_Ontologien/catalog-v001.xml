@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ocr/0.1" uri="file:/C:/Users/verwalter/OneDrive%20-%20Technische%20Universität%20Ilmenau/Neuer%20Ordner/03_Datenmodell/01_Regularien-OCR/ocr.owl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/concontract-0.1" uri="file:/C:/Users/verwalter/OneDrive%20-%20Technische%20Universität%20Ilmenau/Neuer%20Ordner/03_Datenmodell/04_Vertrag/ConContract.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1645992943998" name="https://w3id.org/ocqa" uri="20220402_GitHubTest_ocqa/documentation/myDocumentation/ontology.rdf"/>
+    </group>
+</catalog>

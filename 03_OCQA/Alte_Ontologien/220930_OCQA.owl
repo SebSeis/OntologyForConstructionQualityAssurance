@@ -1,0 +1,365 @@
+@prefix : <https://w3id.org/ocqa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/ocqa#> .
+
+<https://w3id.org/ocqa#> rdf:type owl:Ontology ;
+                          owl:versionIRI <https://w3id.org/ocqa/0.2> ;
+                          owl:imports <https://w3id.org/concontract-0.1> ,
+                                      <https://w3id.org/ocr/0.1> ;
+                          dcterms:creator "Sebastian Seiß" ;
+                          dcterms:description "The Ontology for Quality Assurance is a simple ontology defining the core concepts for quality quality assurence in construction." ;
+                          dcterms:issued "2022-01-01" ;
+                          dcterms:license "https://creativecommons.org/licenses/by/1.0" ;
+                          dcterms:modified "2022-06-07" ;
+                          dcterms:title "Ontology for Construction Quality Assurence (OCQA)" ;
+                          vann:preferredNamespacePrefix "ocqa" ;
+                          vann:preferredNamespaceUri "https://w3id.org/ocqa#" ;
+                          rdfs:comment """- Version 0.3
+- CoreModel""" ;
+                          owl:versionInfo 0.2 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ocqa#DIN_55350:2021-10
+<https://w3id.org/ocqa#DIN_55350:2021-10> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ocqa#DIN_9000:2015
+<https://w3id.org/ocqa#DIN_9000:2015> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/ocqa#hasCausation
+:hasCausation rdf:type owl:ObjectProperty ;
+              rdfs:domain :Evaluation ;
+              rdfs:range :Causation ;
+              rdfs:label "hatUrsache"@de .
+
+
+###  https://w3id.org/ocqa#hasDocumentation
+:hasDocumentation rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Evaluation ,
+                              :Inspection ;
+                  rdfs:range :Documentation ;
+                  rdfs:label "hatDokumentation"@de .
+
+
+###  https://w3id.org/ocqa#hasInspection
+:hasInspection rdf:type owl:ObjectProperty ;
+               rdfs:range :Inspection ;
+               rdfs:comment "Eine Beziehung zwischen einem Element, Bauaktivität oder Kontrollaktivität und einer Prüfung"@de ;
+               rdfs:label "hatPrüfung"@de .
+
+
+###  https://w3id.org/ocqa#hasRecord
+:hasRecord rdf:type owl:ObjectProperty ;
+           rdfs:domain :Inspection ;
+           rdfs:range :Evaluation ;
+           rdfs:label "hatAufnahme"@de .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/ocqa#InspectionStatus
+:InspectionStatus rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Inspection ;
+                  rdfs:comment "Prüfstatus"@de ;
+                  <https://w3id.org/ocqa#DIN_55350:2021-10> """Zustand bezüglich der Frage, welche Prüfungen an einem bestimmten Objekt durchgeführt wurden und welche Prüfergebnisse dabei erzielt wurden
+Anmerkung 1 zum Begriff: Der Prüfstatus kann zum Beispiel dokumentiert sein:
+— am Produkt oder an der Dienstleistung selbst;
+— auf einem am Produkt oder an der Dienstleistung angebrachten Träger;
+— in einem Begleitpapier des Produkts oder der Dienstleistung;
+— durch die Positionierung (zum Beispiel Aufstellungsort, Lagerungsort usw.) des Produkts oder der Dienstleistung;
+— in der Datenverarbeitung; oder
+— in einer sonstigen geeigneten Weise."""@de .
+
+
+###  https://w3id.org/ocqa#accepted
+:accepted rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Inspection ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Describes if the quality checked by a inspection or the sum of inspection in a quality inspection task is according to the required quality"@de ;
+          rdfs:label "Bestanden"@de .
+
+
+###  https://w3id.org/ocqa#filePath
+:filePath rdf:type owl:DatatypeProperty ;
+          rdfs:domain :ExternalResource ;
+          rdfs:range xsd:anyURI .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/ocqa#Activity
+:Activity rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa#Causation
+:Causation rdf:type owl:Class ;
+           rdfs:label "Ursache"@de .
+
+
+###  https://w3id.org/ocqa#Conformity
+:Conformity rdf:type owl:Class ;
+            rdfs:subClassOf :Evaluation .
+
+
+###  https://w3id.org/ocqa#Damage
+:Damage rdf:type owl:Class ;
+        rdfs:subClassOf :Nonconformity ;
+        owl:disjointWith :Defect ;
+        rdfs:label "Schaden"@de .
+
+
+###  https://w3id.org/ocqa#Defect
+:Defect rdf:type owl:Class ;
+        rdfs:subClassOf :Nonconformity ;
+        rdfs:label "Mangel"@de .
+
+
+###  https://w3id.org/ocqa#Determination
+:Determination rdf:type owl:Class ;
+               rdfs:subClassOf :Activity ;
+               rdfs:label "Bestimmung"@de ;
+               <https://w3id.org/ocqa#DIN_9000:2015> "Tätigkeit zur Ermittlung eines oder mehrerer Merkmale (3.10.1) und ihrer Merkmalswerte"@de .
+
+
+###  https://w3id.org/ocqa#Documentation
+:Documentation rdf:type owl:Class ;
+               rdfs:label "Dokumentation"@de .
+
+
+###  https://w3id.org/ocqa#Equipment
+:Equipment rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa#Evaluation
+:Evaluation rdf:type owl:Class ;
+            rdfs:label "Aufnahme"@de .
+
+
+###  https://w3id.org/ocqa#ExternalResource
+:ExternalResource rdf:type owl:Class ;
+                  rdfs:subClassOf :Documentation ;
+                  rdfs:comment "Eine externe Ressource werden über eine URI verknüpft"@de ;
+                  rdfs:label "Externe Ressource"@de .
+
+
+###  https://w3id.org/ocqa#Image
+:Image rdf:type owl:Class ;
+       rdfs:subClassOf :Documentation .
+
+
+###  https://w3id.org/ocqa#Inspection
+:Inspection rdf:type owl:Class ;
+            rdfs:subClassOf :Determination ;
+            rdfs:label "Inspektion"@de ,
+                       "Prüfung"@de ;
+            <https://w3id.org/ocqa#DIN_9000:2015> """Bestimmung (3.11.1) der Konformität (3.6.11) mit festgelegten Anforderungen (3.6.4)
+Anmerkung 1 zum Begriff: Zeigt das Ergebnis einer Prüfung Konformität, kann es zu Zwecken der Verifizierung (3.8.12) verwendet werden.
+Anmerkung 2 zum Begriff: Das Ergebnis einer Prüfung kann Konformität oder Nichtkonformität (3.6.9) oder einen Grad von Konformität aufzeigen."""@de .
+
+
+###  https://w3id.org/ocqa#InspectionEquipment
+:InspectionEquipment rdf:type owl:Class ;
+                     owl:equivalentClass :MeasuringEquipment ;
+                     rdfs:subClassOf :Equipment .
+
+
+###  https://w3id.org/ocqa#InspectionMethod
+:InspectionMethod rdf:type owl:Class ;
+                  rdfs:label "Prüfungsmethode"@de .
+
+
+###  https://w3id.org/ocqa#InspectionPlan
+:InspectionPlan rdf:type owl:Class ;
+                rdfs:subClassOf :Plan ;
+                rdfs:label "Prüfplan"@de ;
+                <https://w3id.org/ocqa#DIN_55350:2021-10> """Spezifikation einer oder mehrerer Prüfungen
+Anmerkung 1 zum Begriff: Ein Prüfplan enthält im Allgemeinen Angaben zum Prüfobjekt und die Festlegung der Prüftechnik, der Prüftätigkeiten und Prüfprozesse und der Abfolge von Prüfungen oder verweist auf entsprechende Prüfspezifikationen, Prüfanweisungen und Prüfablaufpläne. Ein Prüfplan kann auch Festlegungen zur Kennzeichnung und Dokumentation des Prüfstatus enthalten.
+Anmerkung 2 zum Begriff: Zusätzlich zu einem umfassenden Prüfplan können für eine Prüfung Auszüge aus diesem Prüfplan in Form von Prüfspezifikationen, Prüfanweisungen und Prüfablaufplänen zweckmäßig sein."""@de .
+
+
+###  https://w3id.org/ocqa#Measurement
+:Measurement rdf:type owl:Class ;
+             rdfs:subClassOf :Determination ;
+             <https://w3id.org/ocqa#DIN_9000:2015> """Prozess (3.4.1) zum Bestimmen eines Wertes
+Anmerkung 1 zum Begriff: Nach ISO 3534-2 ist der bestimmte Wert üblicherweise ein Größenwert.
+Anmerkung 2 zum Begriff: Dieser Begriff stellt eine der gemeinsamen Benennungen und der Basisdefinitionen für ISO-Managementsystemnormen dar, die in ISO/IEC Directives, Part 1, Consolidated ISO Supplement, Anhang SL enthalten sind. Die ursprüngliche Definition wurde durch Hinzufügen von Anmerkung 1 zum Begriff geändert."""@de .
+
+
+###  https://w3id.org/ocqa#MeasuringEquipment
+:MeasuringEquipment rdf:type owl:Class ;
+                    rdfs:subClassOf :Equipment ;
+                    rdfs:label "Messmittel"@de ;
+                    <https://w3id.org/ocqa#DIN_9000:2015> "Messgerät, Software, Messnormal, Referenzmaterial oder apparative Hilfsmittel oder eine Kombination davon, wie sie zur Realisierung eines Messprozesses (3.11.5) erforderlich sind"@de .
+
+
+###  https://w3id.org/ocqa#Monitoring
+:Monitoring rdf:type owl:Class ;
+            rdfs:subClassOf :Determination ;
+            <https://w3id.org/ocqa#DIN_9000:2015> """Bestimmung (3.11.1) des Zustands eines Systems
+(3.5.1), eines Prozesses (3.4.1), eines Produkts (3.7.6), einer Dienstleistung (3.7.7) oder einer Tätigkeit
+Anmerkung 1 zum Begriff: Bei der Bestimmung des Zustands kann es erforderlich sein, zu prüfen, zu beaufsichtigen oder kritisch zu beobachten.
+Anmerkung 2 zum Begriff: Überwachung ist üblicherweise eine Bestimmung des Zustands eines Objekts
+(3.6.1), die in verschiedenen Stufen verschiedenen Zeiten durchgeführt wird.
+Anmerkung 3 zum Begriff: Dieser Begriff stellt eine der gemeinsamen Benennungen und der Basisdefinitionen für ISO-Managementsystemnormen dar, die in ISO/IEC Directives, Part 1, Consolidated ISO Supplement, Anhang SL enthalten sind. Die ursprüngliche Definition sowie Anmerkung 1 zum Begriff wurden geändert und Anmerkung 2 zum Begriff wurde hinzugefügt."""@de .
+
+
+###  https://w3id.org/ocqa#Nonconformity
+:Nonconformity rdf:type owl:Class ;
+               rdfs:subClassOf :Evaluation .
+
+
+###  https://w3id.org/ocqa#Plan
+:Plan rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa#ProgressEvaluation
+:ProgressEvaluation rdf:type owl:Class ;
+                    rdfs:subClassOf :Determination ;
+                    rdfs:label "Beurteilung des Fortschritts"@de ;
+                    <https://w3id.org/ocqa#DIN_9000:2015> """<Projektmanagement> Bewertung des Fortschritts bezüglich des Erreichens der Projektziele (Projekt (3.4.2), Ziel (3.7.1))
+Anmerkung 1 zum Begriff: Diese Bewertung sollte an geeigneten Punkten des Lebenszyklus des Projekts an
+Projektprozessen (3.4.1) durchgeführt werden,
+Anmerkung 2 zum Begriff: Die Ergebnisse der Beurteilungen des Fortschritts können zur Überarbeitung des Projektmanagementplans (3.8.11) führen.
+[QUELLE: ISO 10006:2003, 3.4, modifiziert — Anmerkungen zum Begriff wurden modifiziert]"""@de .
+
+
+###  https://w3id.org/ocqa#Protocol
+:Protocol rdf:type owl:Class ;
+          rdfs:subClassOf :Documentation ;
+          rdfs:comment "Wird abgeleitet aus SHACL Regel über DASH funktionen"@de ;
+          rdfs:label "Prüfbescheinigung"@de ,
+                     "Prüfprotokoll"@de ;
+          <https://w3id.org/ocqa#DIN_55350:2021-10> """Aufzeichnung mit Angaben über durchgeführte Prüfungen, die als Nachweis über die Qualität eines Objektes dient
+Anmerkung 1 zum Begriff: Eine Prüfbescheinigung kann Angaben enthalten wie:
+— Aussteller der Prüfbescheinigung/Datum;
+— Hersteller/Auftragnehmer (Lieferer);
+— Abnehmer/Auftraggeber/Besteller/Betreiber;
+— Auftrags-/Bestell-Nummer;
+— Liefergegenstand, Stückzahl usw.;
+— Qualitätsanforderung (z. B. technische Lieferbedingungen);
+— Prüfspezifikationen;
+— Art der Prüfbescheinigung;
+— gegebenenfalls spezielle Qualitätsmerkmale;
+— Prüfergebnisse; und
+— gegebenenfalls weitere Angaben und Vereinbarungen.
+Anmerkung 2 zum Begriff: Es gibt verschiedene Arten von Prüfbescheinigungen. In DINEN10204:2005-01 sind definiert: Werksbescheinigung „2.1“, Werkszeugnis „2.2“, Abnahmeprüfzeugnis „3.1“ und Abnahmeprüfzeugnis „3.2“.
+Anmerkung 3 zum Begriff: Eine Prüfbescheinigung entbindet einen weiterverarbeitenden Abnehmer des Produktes oder der Dienstleistung im Allgemeinen nicht von seiner Qualitätsverantwortung."""@de .
+
+
+###  https://w3id.org/ocqa#Result
+:Result rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa#Review
+:Review rdf:type owl:Class ;
+        rdfs:subClassOf :Determination ;
+        <https://w3id.org/ocqa#DIN_9000:2015> """Bestimmung (3.11.1) der Eignung, Angemessenheit
+und Wirksamkeit (3.7.11) eines Objekts (3.6.1), festgelegte Ziele (3.7.1) zu erreichen
+Managementbewertung,
+BEISPIEL
+Entwicklungsüberprüfung (3.4.8), Überprüfung von Kundenanforderungen (Kunde (3.2.4), Anforderung (3.6.4)), Überprüfung von Korrekturmaßnahmen (3.12.2) Begutachtung.
+und
+Anmerkung 1 zum Begriff: Überprüfung kann auch die Bestimmung der Effizienz (3.7.10) enthalten."""@de .
+
+
+###  https://w3id.org/ocqa#Sample
+:Sample rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing ,
+                        :Documentation ;
+        rdfs:label "Muster"@de ;
+        <https://w3id.org/ocqa#DIN_55350:2021-10> """Objekt, das repräsentativ für ein anderes Objekt oder mehrere andere Objekte ist
+Anmerkung 1 zum Begriff: Die Art oder der Anlass der Überprüfung oder die Anforderungen, die an das Muster gestellt werden, bestimmen im Einzelnen die Art des Musters.
+Anmerkung 2 zum Begriff: Ein Muster kann in seiner Gesamtheit repräsentativ sein für die repräsentierten Objekte oder in Teilen, z. B. nur bezogen auf einen Teil der Merkmale der repräsentierten Objekte.
+Anmerkung 3 zum Begriff: Es sollte vermieden werden, andere Benennungen wie „Qualitätsmuster“, „Prüfmuster“, „Spezialmuster“ als Synonyme zu „Muster“ zu verwenden."""@de .
+
+
+###  https://w3id.org/ocqa#Test
+:Test rdf:type owl:Class ;
+      rdfs:subClassOf :Determination ;
+      rdfs:label "Test"@de ;
+      <https://w3id.org/ocqa#DIN_9000:2015> """Bestimmung (3.11.1)
+entsprechend
+Anforderungen (3.6.4) an einen beabsichtigten Gebrauch oder beabsichtigte Anwendung
+den spezifischen eine spezifische
+Anmerkung 1 zum Begriff: Zeigt das Ergebnis eines Tests Konformität (3.6.11), kann es zu Zwecken der Validierung (3.8.13) verwendet werden."""@de .
+
+
+###  https://w3id.org/ocqa#Video
+:Video rdf:type owl:Class ;
+       rdfs:subClassOf :Documentation .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Image
+                :Protocol
+                :Video
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Inspection
+                :Measurement
+                :Monitoring
+                :Review
+                :Test
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

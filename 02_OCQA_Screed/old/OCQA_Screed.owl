@@ -1,0 +1,298 @@
+@prefix : <https://w3id.org/ocqa_screed#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/ocqa_screed#> a owl:Ontology ;
+	owl:versionIRI <https://w3id.org/ocqa_screed/0.1> ;
+	owl:imports <https://w3id.org/ocqa/0.2> ;
+	<http://purl.org/dc/terms/creator> "Sebastian Seiß" ;
+	<http://purl.org/dc/terms/description> "The Ontology for Screed is an extension of the OCQA ontology" ;
+	<http://purl.org/dc/terms/issued> "2022-02-24" ;
+	<http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/1.0" ;
+	<http://purl.org/dc/terms/title> "Ontology for Contruction Quality Assurence Extension Screed (OCQA_SCREED)" ;
+	<http://purl.org/vocab/vann/preferredNamespacePrefix> "ocqa_screed" ;
+	<http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ocqa_screed#" ;
+	rdfs:comment """- Version 0.1
+- Extension Screed""" ;
+	owl:versionInfo "0.1"^^xsd:decimal .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+
+<http://purl.org/dc/terms/creator> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/description
+
+<http://purl.org/dc/terms/description> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/issued
+
+<http://purl.org/dc/terms/issued> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/license
+
+<http://purl.org/dc/terms/license> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/modified
+
+<http://purl.org/dc/terms/modified> a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/title
+
+<http://purl.org/dc/terms/title> a owl:AnnotationProperty .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+
+<http://purl.org/vocab/vann/preferredNamespacePrefix> a owl:AnnotationProperty .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+
+<http://purl.org/vocab/vann/preferredNamespaceUri> a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ocqa_screed#Anzahl
+
+:Anzahl a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty ;
+	rdfs:domain :CM-Methode , :Garmethode ;
+	rdfs:range xsd:integer .
+# 
+# https://w3id.org/ocqa_screed#Kontrollwert
+
+:Kontrollwert a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty ;
+	rdfs:domain :MessprotokollHaftfestigkeit ;
+	rdfs:range xsd:double .
+# 
+# https://w3id.org/ocqa_screed#Messwert
+
+:Messwert a owl:DatatypeProperty ;
+	rdfs:domain :MessprotokollHaftfestigkeit ;
+	rdfs:range xsd:double .
+# 
+# https://w3id.org/ocqa_screed#hatEbenheitsabweichungen
+
+:hatEbenheitsabweichungen a owl:DatatypeProperty ;
+	rdfs:domain <https://w3id.org/ocqa#Record> ;
+	rdfs:range xsd:double .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ocqa#Damage
+
+<https://w3id.org/ocqa#Damage> a owl:Class .
+# 
+# https://w3id.org/ocqa#Defect
+
+<https://w3id.org/ocqa#Defect> a owl:Class .
+# 
+# https://w3id.org/ocqa#Inspection
+
+<https://w3id.org/ocqa#Inspection> a owl:Class .
+# 
+# https://w3id.org/ocqa#InspectionMethod
+
+<https://w3id.org/ocqa#InspectionMethod> a owl:Class .
+# 
+# https://w3id.org/ocqa#Protokoll
+
+<https://w3id.org/ocqa#Protokoll> a owl:Class .
+# 
+# https://w3id.org/ocqa#Record
+
+<https://w3id.org/ocqa#Record> a owl:Class .
+# 
+# https://w3id.org/ocqa_screed#AbweichendeHaftfestigkeit
+
+:AbweichendeHaftfestigkeit a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Record> .
+# 
+# https://w3id.org/ocqa_screed#AbweichendeKonsiszentklasse
+
+:AbweichendeKonsiszentklasse a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Record> .
+# 
+# https://w3id.org/ocqa_screed#Bestätigungsprüfung
+
+:Bestätigungsprüfung a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Inspection> .
+# 
+# https://w3id.org/ocqa_screed#CM-Methode
+
+:CM-Methode a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#InspectionMethod> .
+# 
+# https://w3id.org/ocqa_screed#Crack
+
+:Crack a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Record> .
+# 
+# https://w3id.org/ocqa_screed#Ebenheitsmessung
+
+:Ebenheitsmessung a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#InspectionMethod> .
+# 
+# https://w3id.org/ocqa_screed#Ebenheitsprüfung
+
+:Ebenheitsprüfung a owl:Class ;
+	rdfs:subClassOf :Untergrundprüfung .
+# 
+# https://w3id.org/ocqa_screed#Eingangsprüfung
+
+:Eingangsprüfung a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Inspection> .
+# 
+# https://w3id.org/ocqa_screed#Erhärtungsprüfung
+
+:Erhärtungsprüfung a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Inspection> .
+# 
+# https://w3id.org/ocqa_screed#Erstprüfung
+
+:Erstprüfung a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Inspection> .
+# 
+# https://w3id.org/ocqa_screed#Feuchteprüfung
+
+:Feuchteprüfung a owl:Class ;
+	rdfs:subClassOf :Bestätigungsprüfung .
+# 
+# https://w3id.org/ocqa_screed#Garmethode
+
+:Garmethode a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#InspectionMethod> .
+# 
+# https://w3id.org/ocqa_screed#KontrolleVorgewerkRohbau
+
+:KontrolleVorgewerkRohbau a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Inspection> .
+# 
+# https://w3id.org/ocqa_screed#MessprotokollFeuchtigkeit
+
+:MessprotokollFeuchtigkeit a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Protokoll> .
+# 
+# https://w3id.org/ocqa_screed#MessprotokollHaftfestigkeit
+
+:MessprotokollHaftfestigkeit a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Protokoll> .
+# 
+# https://w3id.org/ocqa_screed#Oberflächenzugfestigkeit
+
+:Oberflächenzugfestigkeit a owl:Class ;
+	rdfs:subClassOf :Bestätigungsprüfung .
+# 
+# https://w3id.org/ocqa_screed#ProtokollSichtprüfungUntergrund
+
+:ProtokollSichtprüfungUntergrund a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Protokoll> .
+# 
+# https://w3id.org/ocqa_screed#PrüfungLageDecke
+
+:PrüfungLageDecke a owl:Class ;
+	rdfs:subClassOf :KontrolleVorgewerkRohbau .
+# 
+# https://w3id.org/ocqa_screed#SichtprüfungUntergrund
+
+:SichtprüfungUntergrund a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#InspectionMethod> ;
+	rdfs:comment "Visuelle Prüfung auf Ebenheit des Untergrundes. Bestehen Zweifel an der Ebeneheit des Untergrundens müssen weitere Untersuchungen durchgeführt werden."@de .
+# 
+# https://w3id.org/ocqa_screed#UnebenheitDerDeckenplatte
+
+:UnebenheitDerDeckenplatte a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Record> .
+# 
+# https://w3id.org/ocqa_screed#Untergrundprüfung
+
+:Untergrundprüfung a owl:Class ;
+	rdfs:subClassOf :KontrolleVorgewerkRohbau .
+# 
+# https://w3id.org/ocqa_screed#WerkseigeneProduktionskontrolle
+
+:WerkseigeneProduktionskontrolle a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/ocqa#Inspection> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid1 a owl:AllDisjointClasses ;
+	owl:members _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first <https://w3id.org/ocqa#Damage> ;
+	rdf:rest _:genid5 .
+
+_:genid5 a rdf:List ;
+	rdf:first <https://w3id.org/ocqa#Defect> ;
+	rdf:rest _:genid4 .
+
+_:genid4 a rdf:List ;
+	rdf:first :AbweichendeHaftfestigkeit ;
+	rdf:rest _:genid3 .
+
+_:genid3 a rdf:List ;
+	rdf:first :AbweichendeKonsiszentklasse ;
+	rdf:rest _:genid2 .
+
+_:genid2 a rdf:List ;
+	rdf:first :Crack ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid7 a owl:AllDisjointClasses ;
+	owl:members _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first :Bestätigungsprüfung ;
+	rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first :Eingangsprüfung ;
+	rdf:rest _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first :Erhärtungsprüfung ;
+	rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :Erstprüfung ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :WerkseigeneProduktionskontrolle ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
