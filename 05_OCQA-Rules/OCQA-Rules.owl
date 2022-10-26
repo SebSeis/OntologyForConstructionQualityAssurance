@@ -1,4 +1,5 @@
 @prefix : <https://w3id.org/ocqa/rules#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -9,7 +10,6 @@
 
 <https://w3id.org/ocqa/rules> rdf:type owl:Ontology ;
                                owl:versionIRI <https://w3id.org/ocqa/0.1/rules> ;
-                               owl:imports <http://www.w3.org/ns/shacl#> ;
                                rdfs:comment """The aim of this ontology is to provide a library to easily access rules by queries. Therefore different classes are defined to structure the SHACL Shapes in a more generic way.
 This ontology get imported by OCQA."""@en ,
                                             """Verison 0.1
@@ -23,12 +23,13 @@ Rule Box""" ;
 ###  https://w3id.org/ocqa/rules#hasBody
 :hasBody rdf:type owl:ObjectProperty ;
          rdfs:domain :Rule ;
-         rdfs:range <http://www.w3.org/ns/shacl#Shape> .
+         rdfs:range sh:Shape .
 
 
 ###  https://w3id.org/ocqa/rules#hasFocusedProcedure
 :hasFocusedProcedure rdf:type owl:ObjectProperty ;
-                     rdfs:domain :Rule .
+                     rdfs:domain :Rule ;
+                     rdfs:range ocqa:Procedure .
 
 
 ###  https://w3id.org/ocqa/rules#hasFocusedProcess
@@ -45,39 +46,64 @@ Rule Box""" ;
 
 ###  https://w3id.org/ocqa/rules#isDefinedByCompany
 :isDefinedByCompany rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :isDefinedBy .
+                    rdfs:subPropertyOf :isDefinedBy ;
+                    rdfs:domain :Rule ;
+                    rdfs:range <https://w3id.org/digitalconstruction/0.5/Agents#Organization> .
 
 
 ###  https://w3id.org/ocqa/rules#isDefinedByContract
 :isDefinedByContract rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :isDefinedBy .
+                     rdfs:subPropertyOf :isDefinedBy ;
+                     rdfs:domain :Rule ;
+                     rdfs:range <https://w3id.org/digitalconstruction/0.5/Information#Contract> .
 
 
-###  https://w3id.org/ocqa/rules#isDefinedByRule
-:isDefinedByRule rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :isDefinedBy .
+###  https://w3id.org/ocqa/rules#isDefinedByRegulation
+:isDefinedByRegulation rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :isDefinedBy ;
+                       rdfs:domain :Rule .
 
 
 #################################################################
 #    Classes
 #################################################################
 
+###  http://www.w3.org/ns/shacl#Shape
+sh:Shape rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Agents#Organization
+<https://w3id.org/digitalconstruction/0.5/Agents#Organization> rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Information#Contract
+<https://w3id.org/digitalconstruction/0.5/Information#Contract> rdf:type owl:Class .
+
+
 ###  https://w3id.org/ocqa#Activity
 ocqa:Activity rdf:type owl:Class .
 
 
-###  https://w3id.org/ocqa/rules#InspectionEvaluationRules
-:InspectionEvaluationRules rdf:type owl:Class ;
-                           rdfs:subClassOf :Rule .
+###  https://w3id.org/ocqa#Procedure
+ocqa:Procedure rdf:type owl:Class .
 
 
-###  https://w3id.org/ocqa/rules#InspectionPlanValidationRules
-:InspectionPlanValidationRules rdf:type owl:Class ;
-                               rdfs:subClassOf :Rule ;
-                               rdfs:comment "Die Regeln dieser Klasse Validieren und stellen die Konsistenz des Prüfplans sicher."@de ,
-                                            "This rules of this class validate and ensure the consistenc of the inspection plan"@en ;
-                               rdfs:label "Konsistenzregeln"@de ,
-                                          "Validation rules"@en .
+###  https://w3id.org/ocqa/rules#InspectionEvaluationRule
+:InspectionEvaluationRule rdf:type owl:Class ;
+                          rdfs:subClassOf :Rule ;
+                          rdfs:comment "Die Regeln dienen der Evaluation von aufgenommenen Qualitäten"@de ,
+                                       "The rules of this class evaluate the quality of products/services"@en ;
+                          rdfs:label "Inspections evaluation rules"@en ,
+                                     "Regel zur Evaluation von Prüfungsergebnisse"@de .
+
+
+###  https://w3id.org/ocqa/rules#InspectionPlanValidationRule
+:InspectionPlanValidationRule rdf:type owl:Class ;
+                              rdfs:subClassOf :Rule ;
+                              rdfs:comment "Die Regeln dieser Klasse Validieren und stellen die Konsistenz des Prüfplans sicher."@de ,
+                                           "This rules of this class validate and ensure the consistenc of the inspection plan"@en ;
+                              rdfs:label "Konsistenzregeln"@de ,
+                                         "Validation rules"@en .
 
 
 ###  https://w3id.org/ocqa/rules#InspectionPlanningRule
@@ -91,7 +117,10 @@ ocqa:Activity rdf:type owl:Class .
 
 ###  https://w3id.org/ocqa/rules#Rule
 :Rule rdf:type owl:Class ;
-      rdfs:comment "This class describes rules in general"@en .
+      rdfs:comment "Die Klasse beschreibt Regeln"@de ,
+                   "This class describes rules in general"@en ;
+      rdfs:label "Regel"@de ,
+                 "Rule"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

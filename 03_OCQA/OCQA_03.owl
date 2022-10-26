@@ -13,7 +13,7 @@
                           owl:imports <http://w3id.org/digitalconstruction/0.5/Units> ,
                                       <https://w3id.org/concontract-0.1> ,
                                       <https://w3id.org/digitalconstruction/0.5/Information> ,
-                                      <https://w3id.org/ocr/0.1> ;
+                                      <https://w3id.org/ocr/0.2> ;
                           dcterms:creator "Sebastian Seiß" ;
                           dcterms:description "The Ontology for Quality Assurance is a simple ontology defining the core concepts for quality quality assurence in construction." ;
                           dcterms:issued "2022-01-01" ;
@@ -379,6 +379,28 @@ Anmerkung 2 zum Begriff: Dieser Begriff stellt eine der gemeinsamen Benennungen 
                        rdfs:subClassOf :Procedure .
 
 
+###  https://w3id.org/ocqa#Correction
+:Correction rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/digitalconstruction/0.5/Processes#Activity> ;
+            rdfs:label "Correction"@en ,
+                       "Korrektur"@de ;
+            <https://w3id.org/ocqa#DIN_9000:2015> """Maßnahme zur Beseitigung einer erkannten Nichtkonformität (3.6.9)
+Anmerkung 1 zum Begriff: Eine Korrektur kann im Vorfeld, in Verbindung mit oder nach einer Korrekturmaßnahme (3.12.2) vorgenommen werden.
+Anmerkung 2 zum Begriff: Eine Korrektur kann z. B. Nacharbeit (3.12.8) oder Neueinstufung (3.12.4) sein."""@de .
+
+
+###  https://w3id.org/ocqa#Corrective_action
+:Corrective_action rdf:type owl:Class ;
+                   rdfs:subClassOf <https://w3id.org/digitalconstruction/0.5/Processes#Activity> ;
+                   rdfs:label "Corrective action"@en ,
+                              "Korrekturmaßnahme"@de ;
+                   <https://w3id.org/ocqa#DIN_9000:2015> """Maßnahme zum Beseitigen der Ursache einer Nichtkonformität (3.6.9) und zum Verhindern des erneuten Auftretens
+Anmerkung 1 zum Begriff: Für eine Nichtkonformität kann es mehr als eine Ursache geben.
+Anmerkung 2 zum Begriff: Eine Korrekturmaßnahme wird ergriffen, um das erneute Auftreten einer Nichtkonformität zu verhindern, während eine Vorbeugungsmaßnahme (3.12.1) ergriffen wird, um das Auftreten der Nichtkonformität zu verhindern.
+Anmerkung 3 zum Begriff: Dieser Begriff stellt eine der gemeinsamen Benennungen und der Basisdefinitionen für ISO-Managementsystemnormen dar, die in ISO/IEC Directives, Part 1, Consolidated ISO Supplement,
+Anhang SL enthalten sind. Die ursprüngliche Definition wurde durch Hinzufügen der Anmerkungen 1 und 2 zum Begriff geändert."""@en .
+
+
 ###  https://w3id.org/ocqa#Damage
 :Damage rdf:type owl:Class ;
         rdfs:subClassOf :Nonconformity ;
@@ -426,6 +448,11 @@ Anmerkung 2 zum Begriff: Der vom Kunden (3.2.4) beabsichtigte Gebrauch kann durc
                     "Fehlerkategorie"@de .
 
 
+###  https://w3id.org/ocqa#FailureProtocol
+:FailureProtocol rdf:type owl:Class ;
+                 rdfs:subClassOf :Protocol .
+
+
 ###  https://w3id.org/ocqa#FailureType
 :FailureType rdf:type owl:Class .
 
@@ -438,7 +465,8 @@ Anmerkung 2 zum Begriff: Der vom Kunden (3.2.4) beabsichtigte Gebrauch kann durc
 ###  https://w3id.org/ocqa#Inspection
 :Inspection rdf:type owl:Class ;
             rdfs:subClassOf :Determination ;
-            rdfs:label "Inspektion"@de ,
+            rdfs:label "Inspection"@en ,
+                       "Inspektion"@de ,
                        "Prüfung"@de ;
             <https://w3id.org/ocqa#DIN_9000:2015> """Bestimmung (3.11.1) der Konformität (3.6.11) mit festgelegten Anforderungen (3.6.4)
 Anmerkung 1 zum Begriff: Zeigt das Ergebnis einer Prüfung Konformität, kann es zu Zwecken der Verifizierung (3.8.12) verwendet werden.
@@ -470,9 +498,16 @@ Anmerkung 2 zum Begriff: Zusätzlich zu einem umfassenden Prüfplan können für
                                 "Prüfverfahren"@de .
 
 
+###  https://w3id.org/ocqa#InspectionProtocol
+:InspectionProtocol rdf:type owl:Class ;
+                    rdfs:subClassOf :Protocol .
+
+
 ###  https://w3id.org/ocqa#Measurement
 :Measurement rdf:type owl:Class ;
              rdfs:subClassOf :Determination ;
+             rdfs:label "Measurement"@en ,
+                        "Messung"@de ;
              <https://w3id.org/ocqa#DIN_9000:2015> """Prozess (3.4.1) zum Bestimmen eines Wertes
 Anmerkung 1 zum Begriff: Nach ISO 3534-2 ist der bestimmte Wert üblicherweise ein Größenwert.
 Anmerkung 2 zum Begriff: Dieser Begriff stellt eine der gemeinsamen Benennungen und der Basisdefinitionen für ISO-Managementsystemnormen dar, die in ISO/IEC Directives, Part 1, Consolidated ISO Supplement, Anhang SL enthalten sind. Die ursprüngliche Definition wurde durch Hinzufügen von Anmerkung 1 zum Begriff geändert."""@de .
@@ -488,6 +523,8 @@ Anmerkung 2 zum Begriff: Dieser Begriff stellt eine der gemeinsamen Benennungen 
 ###  https://w3id.org/ocqa#Monitoring
 :Monitoring rdf:type owl:Class ;
             rdfs:subClassOf :Determination ;
+            rdfs:label "Monitoring"@en ,
+                       "Überwachung"@de ;
             <https://w3id.org/ocqa#DIN_9000:2015> """Bestimmung (3.11.1) des Zustands eines Systems
 (3.5.1), eines Prozesses (3.4.1), eines Produkts (3.7.6), einer Dienstleistung (3.7.7) oder einer Tätigkeit
 Anmerkung 1 zum Begriff: Bei der Bestimmung des Zustands kann es erforderlich sein, zu prüfen, zu beaufsichtigen oder kritisch zu beobachten.
@@ -509,6 +546,16 @@ Anmerkung 1 zum Begriff: Dieser Begriff stellt eine der gemeinsamen Benennungen 
 :Plan rdf:type owl:Class .
 
 
+###  https://w3id.org/ocqa#Preventive_Action
+:Preventive_Action rdf:type owl:Class ;
+                   rdfs:subClassOf <https://w3id.org/digitalconstruction/0.5/Processes#Activity> ;
+                   rdfs:label "Preventive action"@en ,
+                              "Vorbeugungsmaßnahme"@de ;
+                   <https://w3id.org/ocqa#DIN_9000:2015> """Maßnahme zur Beseitigung der Ursache einer möglichen Nichtkonformität (3.6.9) oder einer anderen möglichen unerwünschten Situation.
+Anmerkung 1 zum Begriff: Für eine mögliche Nichtkonformität kann es mehr als eine Ursache geben.
+Anmerkung 2 zum Begriff: Eine Vorbeugungsmaßnahme wird ergriffen, um das Auftreten einer Nichtkonformität zu verhindern, während eine Korrekturmaßnahme (3.12.2) ergriffen wird, um das erneute Auftreten der Nichtkonformität zu verhindern"""@de .
+
+
 ###  https://w3id.org/ocqa#Procedure
 :Procedure rdf:type owl:Class ;
            rdfs:comment "Verfahren ist die „festgelegte Art und Weise, eine Tätigkeit oder einen Prozess auszuführen“"@en ;
@@ -527,7 +574,8 @@ Note 1 to entry: Procedures can be documented or not."""@en .
 ###  https://w3id.org/ocqa#ProgressEvaluation
 :ProgressEvaluation rdf:type owl:Class ;
                     rdfs:subClassOf :Determination ;
-                    rdfs:label "Beurteilung des Fortschritts"@de ;
+                    rdfs:label "Beurteilung des Fortschritts"@de ,
+                               "Progress evaluation"@en ;
                     <https://w3id.org/ocqa#DIN_9000:2015> """<Projektmanagement> Bewertung des Fortschritts bezüglich des Erreichens der Projektziele (Projekt (3.4.2), Ziel (3.7.1))
 Anmerkung 1 zum Begriff: Diese Bewertung sollte an geeigneten Punkten des Lebenszyklus des Projekts an
 Projektprozessen (3.4.1) durchgeführt werden,
@@ -562,10 +610,22 @@ Anmerkung 3 zum Begriff: Eine Prüfbescheinigung entbindet einen weiterverarbeit
 :Record rdf:type owl:Class ;
         rdfs:label "Aufzeichnung"@de ,
                    "Documentation"@en ,
-                   "Dokumentation"@de ;
+                   "Dokumentation"@de ,
+                   "Record"@en ;
         <https://w3id.org/ocqa#DIN_9000:2015> """Dokument (3.8.5), das erreichte Ergebnisse angibt oder einen Nachweis ausgeführter Tätigkeiten bereitstellt
 Anmerkung 1 zum Begriff: Aufzeichnungen können beispielsweise angewendet werden zur Darlegung von Rückverfolgbarkeit (3.6.13) und zum Nachweis von Verifizierung (3.8.12), Vorbeugungsmaßnahmen (3.12.1) und Korrekturmaßnahmen (3.12.2).
 Anmerkung 2 zum Begriff: Aufzeichnungen bedürfen üblicherweise nicht einer Überwachung durch Revision."""@de .
+
+
+###  https://w3id.org/ocqa#Repair
+:Repair rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/digitalconstruction/0.5/Processes#Activity> ;
+        rdfs:label "Reparatur"@de ,
+                   "repair"@en ;
+        <https://w3id.org/ocqa#DIN_9000:2015> """Maßnahme an einem nichtkonformen (3.6.9) Produkt (3.7.6) oder einer nichtkonformen Dienstleistung (3.7.7), um diese(s) für den beabsichtigten Gebrauch annehmbar zu machen
+Anmerkung 1 zum Begriff: Eine erfolgreiche Reparatur eines nichtkonformen Produkts oder einer nichtkonformen Dienstleistung muss nicht notwendigerweise zur Übereinstimmung des Produkts oder der Dienstleistung mit den Anforderungen (3.6.4) führen. In Zusammenhang mit einer Reparatur kann eine Sonderfreigabe (3.12.5) erforderlich sein.
+Anmerkung 2 zum Begriff: Reparatur schließt Abhilfemaßnahmen ein, die der Rückführung eines/einer früher fehlerfreien Produkts oder Dienstleistung in einen gebrauchsfähigen Zustand dienen, zum Beispiel als Teil der Instandhaltung.
+Anmerkung 3 zum Begriff: Reparatur kann Teile des/der nichtkonformen Produkts oder Dienstleistung beeinflussen oder verändern"""@de .
 
 
 ###  https://w3id.org/ocqa#Result
@@ -576,6 +636,8 @@ Anmerkung 2 zum Begriff: Aufzeichnungen bedürfen üblicherweise nicht einer Üb
 ###  https://w3id.org/ocqa#Review
 :Review rdf:type owl:Class ;
         rdfs:subClassOf :Determination ;
+        rdfs:label "Review"@en ,
+                   "Überprüfung"@de ;
         <https://w3id.org/ocqa#DIN_9000:2015> """Bestimmung (3.11.1) der Eignung, Angemessenheit
 und Wirksamkeit (3.7.11) eines Objekts (3.6.1), festgelegte Ziele (3.7.1) zu erreichen
 Managementbewertung,
@@ -583,6 +645,15 @@ BEISPIEL
 Entwicklungsüberprüfung (3.4.8), Überprüfung von Kundenanforderungen (Kunde (3.2.4), Anforderung (3.6.4)), Überprüfung von Korrekturmaßnahmen (3.12.2) Begutachtung.
 und
 Anmerkung 1 zum Begriff: Überprüfung kann auch die Bestimmung der Effizienz (3.7.10) enthalten."""@de .
+
+
+###  https://w3id.org/ocqa#Rework
+:Rework rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/digitalconstruction/0.5/Processes#Activity> ;
+        rdfs:label "Nacharbeit"@de ,
+                   "Rework"@en ;
+        <https://w3id.org/ocqa#DIN_9000:2015> """Maßnahme an einem nichtkonformen (3.6.9) Produkt (3.7.6) oder einer nichtkonformen Dienstleistung (3.7.7), damit es/sie die Anforderungen (3.6.4) erfüllt.
+Anmerkung 1 zum Begriff: Nacharbeit kann Teile des nichtkonformen Produkts oder der nichtkonformen Dienstleistung beeinflussen oder verändern."""@de .
 
 
 ###  https://w3id.org/ocqa#Sample
@@ -593,6 +664,19 @@ Anmerkung 1 zum Begriff: Überprüfung kann auch die Bestimmung der Effizienz (3
 Anmerkung 1 zum Begriff: Die Art oder der Anlass der Überprüfung oder die Anforderungen, die an das Muster gestellt werden, bestimmen im Einzelnen die Art des Musters.
 Anmerkung 2 zum Begriff: Ein Muster kann in seiner Gesamtheit repräsentativ sein für die repräsentierten Objekte oder in Teilen, z. B. nur bezogen auf einen Teil der Merkmale der repräsentierten Objekte.
 Anmerkung 3 zum Begriff: Es sollte vermieden werden, andere Benennungen wie „Qualitätsmuster“, „Prüfmuster“, „Spezialmuster“ als Synonyme zu „Muster“ zu verwenden."""@de .
+
+
+###  https://w3id.org/ocqa#Scrap
+:Scrap rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/digitalconstruction/0.5/Processes#Activity> ;
+       rdfs:label "Verschrottung"@de ,
+                  "scrap"@en ;
+       <https://w3id.org/ocqa#DIN_9000:2015> """Aussondern
+Maßnahme an einem nichtkonformen (3.6.9) Produkt (3.7.6) oder einer nichtkonformen Dienstleistung (3.7.7), um den ursprünglich beabsichtigten Gebrauch auszuschließen
+
+BEISPIEL Recycling, Zerstörung.
+
+Anmerkung 1 zum Begriff: Bei einer nichtkonformen Dienstleistung wird der Gebrauch durch die Einstellung der (Erbringung der) Dienstleistung ausgeschlossen"""@de .
 
 
 ###  https://w3id.org/ocqa#ScreedFailure
@@ -610,7 +694,8 @@ Anmerkung 3 zum Begriff: Es sollte vermieden werden, andere Benennungen wie „Q
 ###  https://w3id.org/ocqa#Test
 :Test rdf:type owl:Class ;
       rdfs:subClassOf :Determination ;
-      rdfs:label "Test"@de ;
+      rdfs:label "Test"@de ,
+                 "test"@en ;
       <https://w3id.org/ocqa#DIN_9000:2015> """Bestimmung (3.11.1)
 entsprechend
 Anforderungen (3.6.4) an einen beabsichtigten Gebrauch oder beabsichtigte Anwendung
