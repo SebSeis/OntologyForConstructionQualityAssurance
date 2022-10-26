@@ -1,0 +1,323 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix ifc:   <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix beo:   <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix opm:   <https://w3id.org/opm#> .
+@prefix lbd:   <https://linkebuildingdata.org/LBD#> .
+@prefix props: <http://lbd.arch.rwth-aachen.de/props#> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix seas:  <https://w3id.org/seas/> .
+@prefix unit:  <http://qudt.org/vocab/unit/> .
+@prefix IFC4-PSD: <https://www.linkedbuildingdata.net/IFC4-PSD#> .
+@prefix smls:  <https://w3id.org/def/smls-owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix inst:  <https://www.qualityAssurence.de/DuplexHouset#> .
+@prefix mep:   <http://pi.pauwel.be/voc/distributionelement#> .
+@prefix furn:  <http://pi.pauwel.be/voc/furniture#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+
+inst:nameIfcRoot_9808fd7f-dc48-478e-9217-628e833d410f
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_nameIfcRoot_9808fd7f-dc48-478e-9217-628e833d410f_1652117831038 .
+
+inst:pitchAngle_9808fd7f-dc48-478e-9217-628e833d410f
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_pitchAngle_9808fd7f-dc48-478e-9217-628e833d410f_1652117831037 .
+
+inst:globalIdIfcRoot_7b7032cc-b822-417b-9aea-6429f95d6512
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_globalIdIfcRoot_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831032 .
+
+inst:state_isExternal_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831035
+        a                     opm:CurrentPropertyState ;
+        schema:value          false ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0356622" .
+
+inst:globalIdIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd7
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_globalIdIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd7_1652117831026 .
+
+inst:state_nameIfcRoot_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831036
+        a                     opm:CurrentPropertyState ;
+        schema:value          "Geschossdecke:Slab-Screet-Concrete:143106" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0366585" .
+
+inst:batid_9808fd7f-dc48-478e-9217-628e833d49bd
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_batid_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831036 .
+
+inst:state_globalIdIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd7_1652117831026
+        a                     opm:CurrentPropertyState ;
+        schema:value          "1xS3BCk291UvhgP2a6eflN" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0266856" .
+
+inst:state_objectTypeIfcObject_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831036
+        a                     opm:CurrentPropertyState ;
+        schema:value          "Geschossdecke:Slab-Screet-Concrete" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0366585" .
+
+inst:numberOfStoreys_7b7032cc-b822-417b-9aea-642906a29bd4
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_numberOfStoreys_7b7032cc-b822-417b-9aea-642906a29bd4_1652117831029 .
+
+inst:state_globalIdIfcRoot_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831032
+        a                     opm:CurrentPropertyState ;
+        schema:value          "1xS3BCk291UvhgP2dvNMKI" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0326713" .
+
+inst:loadBearing_9808fd7f-dc48-478e-9217-628e833d410f
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_loadBearing_9808fd7f-dc48-478e-9217-628e833d410f_1652117831037 .
+
+inst:building_7b7032cc-b822-417b-9aea-642906a29bd4
+        a                      bot:Building ;
+        props:globalIdIfcRoot  inst:globalIdIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd4 ;
+        props:isLandmarked     inst:isLandmarked_7b7032cc-b822-417b-9aea-642906a29bd4 ;
+        props:numberOfStoreys  inst:numberOfStoreys_7b7032cc-b822-417b-9aea-642906a29bd4 ;
+        owl:sameAs             inst:IfcBuilding_129 ;
+        bot:hasStorey          inst:storey_7b7032cc-b822-417b-9aea-6429f95d6512 .
+
+inst:state_elevationIfcBuildingStorey_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831032
+        a                     opm:CurrentPropertyState ;
+        schema:value          "0."^^xsd:double ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0326713" ;
+        smls:unit             unit:M .
+
+inst:state_nameIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd7_1652117831026
+        a                     opm:CurrentPropertyState ;
+        schema:value          "Default" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0266856" .
+
+inst:state_longNameIfcSpatialStructureElement_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831032
+        a                     opm:CurrentPropertyState ;
+        schema:value          "Level 1" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0326713" .
+
+inst:state_batid_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831036
+        a                     opm:CurrentPropertyState ;
+        schema:value          "143106" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0366585" .
+
+inst:state_globalIdIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd4_1652117831028
+        a                     opm:CurrentPropertyState ;
+        schema:value          "1xS3BCk291UvhgP2a6eflK" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0286812" .
+
+inst:globalIdIfcRoot_9808fd7f-dc48-478e-9217-628e833d410f
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_globalIdIfcRoot_9808fd7f-dc48-478e-9217-628e833d410f_1652117831038 .
+
+inst:state_nameIfcRoot_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831032
+        a                     opm:CurrentPropertyState ;
+        schema:value          "Level 1" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0326713" .
+
+inst:objectTypeIfcObject_9808fd7f-dc48-478e-9217-628e833d49bd
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_objectTypeIfcObject_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831036 .
+
+inst:state_objectTypeIfcObject_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831032
+        a                     opm:CurrentPropertyState ;
+        schema:value          "Ebene:8mm Head" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0326713" .
+
+inst:objectTypeIfcObject_7b7032cc-b822-417b-9aea-6429f95d6512
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_objectTypeIfcObject_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831032 .
+
+inst:aboveGround_7b7032cc-b822-417b-9aea-6429f95d6512
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_aboveGround_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831033 .
+
+inst:state_globalIdIfcRoot_9808fd7f-dc48-478e-9217-628e833d410f_1652117831038
+        a                     opm:CurrentPropertyState ;
+        schema:value          "2O2Fr$t4X7Zf8NOew3FK4F" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0386539" .
+
+inst:nameIfcRoot_9808fd7f-dc48-478e-9217-628e833d49bd
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_nameIfcRoot_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831036 .
+
+inst:pitchAngle_9808fd7f-dc48-478e-9217-628e833d49bd
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_pitchAngle_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831035 .
+
+<urn:bot:geom:pt:7b7032cc-b822-417b-9aea-642906a29bd7>
+        geo:asWKT  "POINT (-87.3821839999 41.5227839999)"^^geo:wktLiteral .
+
+inst:nameIfcRoot_7b7032cc-b822-417b-9aea-6429f95d6512
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_nameIfcRoot_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831032 .
+
+inst:longNameIfcSpatialStructureElement_7b7032cc-b822-417b-9aea-6429f95d6512
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_longNameIfcSpatialStructureElement_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831032 .
+
+inst:nameIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd7
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_nameIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd7_1652117831026 .
+
+inst:state_refElevationIfcSite_7b7032cc-b822-417b-9aea-642906a29bd7_1652117831022
+        a                     opm:CurrentPropertyState ;
+        schema:value          "0."^^xsd:double ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0237017" ;
+        smls:unit             unit:M .
+
+inst:state_nameIfcRoot_9808fd7f-dc48-478e-9217-628e833d410f_1652117831038
+        a                     opm:CurrentPropertyState ;
+        schema:value          "Geschossdecke:Slab-Screet-Concrete:141232" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0386539" .
+
+inst:slab_9808fd7f-dc48-478e-9217-628e833d410f
+        a                          bot:Element , beo:Slab-FLOOR , beo:Slab ;
+        props:batid                inst:batid_9808fd7f-dc48-478e-9217-628e833d410f ;
+        props:globalIdIfcRoot      inst:globalIdIfcRoot_9808fd7f-dc48-478e-9217-628e833d410f ;
+        props:isExternal           inst:isExternal_9808fd7f-dc48-478e-9217-628e833d410f ;
+        props:loadBearing          inst:loadBearing_9808fd7f-dc48-478e-9217-628e833d410f ;
+        props:nameIfcRoot          inst:nameIfcRoot_9808fd7f-dc48-478e-9217-628e833d410f ;
+        props:objectTypeIfcObject  inst:objectTypeIfcObject_9808fd7f-dc48-478e-9217-628e833d410f ;
+        props:pitchAngle           inst:pitchAngle_9808fd7f-dc48-478e-9217-628e833d410f ;
+        owl:sameAs                 inst:IfcSlab_204 .
+
+inst:site_7b7032cc-b822-417b-9aea-642906a29bd7
+        a                          geo:Feature , bot:Site ;
+        props:globalIdIfcRoot      inst:globalIdIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd7 ;
+        props:nameIfcRoot          inst:nameIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd7 ;
+        props:refElevationIfcSite  inst:refElevationIfcSite_7b7032cc-b822-417b-9aea-642906a29bd7 ;
+        geo:hasGeometry            <urn:bot:geom:pt:7b7032cc-b822-417b-9aea-642906a29bd7> ;
+        owl:sameAs                 inst:IfcSite_160 ;
+        bot:hasBuilding            inst:building_7b7032cc-b822-417b-9aea-642906a29bd4 .
+
+inst:isExternal_9808fd7f-dc48-478e-9217-628e833d410f
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_isExternal_9808fd7f-dc48-478e-9217-628e833d410f_1652117831037 .
+
+inst:state_aboveGround_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831033
+        a                     opm:CurrentPropertyState ;
+        schema:value          <https://w3id.org/express#UNKNOWN> ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0336679" .
+
+inst:globalIdIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd4
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_globalIdIfcRoot_7b7032cc-b822-417b-9aea-642906a29bd4_1652117831028 .
+
+inst:elevationIfcBuildingStorey_7b7032cc-b822-417b-9aea-6429f95d6512
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_elevationIfcBuildingStorey_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831032 .
+
+inst:state_loadBearing_9808fd7f-dc48-478e-9217-628e833d410f_1652117831037
+        a                     opm:CurrentPropertyState ;
+        schema:value          false ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0376577" .
+
+inst:state_numberOfStoreys_7b7032cc-b822-417b-9aea-642906a29bd4_1652117831029
+        a                     opm:CurrentPropertyState ;
+        schema:value          1 ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0296794" .
+
+inst:loadBearing_9808fd7f-dc48-478e-9217-628e833d49bd
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_loadBearing_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831035 .
+
+inst:batid_9808fd7f-dc48-478e-9217-628e833d410f
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_batid_9808fd7f-dc48-478e-9217-628e833d410f_1652117831038 .
+
+inst:isLandmarked_7b7032cc-b822-417b-9aea-642906a29bd4
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_isLandmarked_7b7032cc-b822-417b-9aea-642906a29bd4_1652117831029 .
+
+inst:state_isLandmarked_7b7032cc-b822-417b-9aea-642906a29bd4_1652117831029
+        a                     opm:CurrentPropertyState ;
+        schema:value          <https://w3id.org/express#UNKNOWN> ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0296794" .
+
+inst:globalIdIfcRoot_9808fd7f-dc48-478e-9217-628e833d49bd
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_globalIdIfcRoot_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831036 .
+
+inst:state_pitchAngle_9808fd7f-dc48-478e-9217-628e833d410f_1652117831037
+        a                     opm:CurrentPropertyState ;
+        schema:value          "0."^^xsd:double ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0376577" ;
+        smls:unit             unit:M .
+
+inst:state_batid_9808fd7f-dc48-478e-9217-628e833d410f_1652117831038
+        a                     opm:CurrentPropertyState ;
+        schema:value          "141232" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0386539" .
+
+inst:state_isExternal_9808fd7f-dc48-478e-9217-628e833d410f_1652117831037
+        a                     opm:CurrentPropertyState ;
+        schema:value          false ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0376577" .
+
+inst:name_7b7032cc-b822-417b-9aea-6429f95d6512
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_name_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831033 .
+
+inst:refElevationIfcSite_7b7032cc-b822-417b-9aea-642906a29bd7
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_refElevationIfcSite_7b7032cc-b822-417b-9aea-642906a29bd7_1652117831022 .
+
+inst:state_loadBearing_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831035
+        a                     opm:CurrentPropertyState ;
+        schema:value          false ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0356622" .
+
+inst:state_objectTypeIfcObject_9808fd7f-dc48-478e-9217-628e833d410f_1652117831038
+        a                     opm:CurrentPropertyState ;
+        schema:value          "Geschossdecke:Slab-Screet-Concrete" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0386539" .
+
+inst:objectTypeIfcObject_9808fd7f-dc48-478e-9217-628e833d410f
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_objectTypeIfcObject_9808fd7f-dc48-478e-9217-628e833d410f_1652117831038 .
+
+inst:storey_7b7032cc-b822-417b-9aea-6429f95d6512
+        a                          bot:Storey ;
+        props:aboveGround          inst:aboveGround_7b7032cc-b822-417b-9aea-6429f95d6512 ;
+        props:elevationIfcBuildingStorey
+                inst:elevationIfcBuildingStorey_7b7032cc-b822-417b-9aea-6429f95d6512 ;
+        props:globalIdIfcRoot      inst:globalIdIfcRoot_7b7032cc-b822-417b-9aea-6429f95d6512 ;
+        props:longNameIfcSpatialStructureElement
+                inst:longNameIfcSpatialStructureElement_7b7032cc-b822-417b-9aea-6429f95d6512 ;
+        props:name                 inst:name_7b7032cc-b822-417b-9aea-6429f95d6512 ;
+        props:nameIfcRoot          inst:nameIfcRoot_7b7032cc-b822-417b-9aea-6429f95d6512 ;
+        props:objectTypeIfcObject  inst:objectTypeIfcObject_7b7032cc-b822-417b-9aea-6429f95d6512 ;
+        owl:sameAs                 inst:IfcBuildingStorey_144 ;
+        bot:containsElement        inst:slab_9808fd7f-dc48-478e-9217-628e833d410f , inst:slab_9808fd7f-dc48-478e-9217-628e833d49bd .
+
+inst:state_globalIdIfcRoot_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831036
+        a                     opm:CurrentPropertyState ;
+        schema:value          "2O2Fr$t4X7Zf8NOew3FKcz" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0366585" .
+
+inst:state_name_7b7032cc-b822-417b-9aea-6429f95d6512_1652117831033
+        a                     opm:CurrentPropertyState ;
+        schema:value          "Level 1" ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0336679" .
+
+inst:isExternal_9808fd7f-dc48-478e-9217-628e833d49bd
+        a                     opm:Property ;
+        opm:hasPropertyState  inst:state_isExternal_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831035 .
+
+inst:slab_9808fd7f-dc48-478e-9217-628e833d49bd
+        a                          beo:Slab-FLOOR , bot:Element , beo:Slab ;
+        props:batid                inst:batid_9808fd7f-dc48-478e-9217-628e833d49bd ;
+        props:globalIdIfcRoot      inst:globalIdIfcRoot_9808fd7f-dc48-478e-9217-628e833d49bd ;
+        props:isExternal           inst:isExternal_9808fd7f-dc48-478e-9217-628e833d49bd ;
+        props:loadBearing          inst:loadBearing_9808fd7f-dc48-478e-9217-628e833d49bd ;
+        props:nameIfcRoot          inst:nameIfcRoot_9808fd7f-dc48-478e-9217-628e833d49bd ;
+        props:objectTypeIfcObject  inst:objectTypeIfcObject_9808fd7f-dc48-478e-9217-628e833d49bd ;
+        props:pitchAngle           inst:pitchAngle_9808fd7f-dc48-478e-9217-628e833d49bd ;
+        owl:sameAs                 inst:IfcSlab_360 .
+
+inst:state_pitchAngle_9808fd7f-dc48-478e-9217-628e833d49bd_1652117831035
+        a                     opm:CurrentPropertyState ;
+        schema:value          "0."^^xsd:double ;
+        prov:generatedAtTime  "2022-05-09T19:37:11.0356622" ;
+        smls:unit             unit:M .
