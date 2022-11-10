@@ -1,4 +1,5 @@
 @prefix : <https://w3id.org/ocqa#> .
+@prefix opm: <https://w3id.org/opm#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -88,6 +89,13 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 # #################################################################
 # 
 # 
+# https://w3id.org/ocqa#containsCharacteristics
+
+:containsCharacteristics a owl:ObjectProperty ;
+	rdfs:subPropertyOf owl:topObjectProperty ;
+	rdfs:domain :SubMasterDataCatalog ;
+	rdfs:range :Characteristic .
+# 
 # https://w3id.org/ocqa#coveredByRecord
 
 :coveredByRecord a owl:ObjectProperty ;
@@ -107,11 +115,10 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 	rdfs:range :Causation ;
 	rdfs:label "hatUrsache"@de .
 # 
-# https://w3id.org/ocqa#containsCharacteristics
+# https://w3id.org/ocqa#hasCharacteristic
 
-:containsCharacteristics a owl:ObjectProperty ;
-	rdfs:subPropertyOf owl:topObjectProperty ;
-	rdfs:domain :SubMasterDataCatalog ;
+:hasCharacteristic a owl:ObjectProperty ;
+	rdfs:domain :ClassifiedFailure ;
 	rdfs:range :Characteristic .
 # 
 # https://w3id.org/ocqa#hasInspection
@@ -185,11 +192,15 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 # 
 # https://w3id.org/ocqa#hasSubMasterDataCatalog
 
-:hasSubMasterDataCatalog a owl:ObjectProperty .
+:hasSubMasterDataCatalog a owl:ObjectProperty ;
+	rdfs:domain :MasterDataCatalog ;
+	rdfs:range :SubMasterDataCatalog .
 # 
 # https://w3id.org/ocqa#hasSubRuleCatalog
 
-:hasSubRuleCatalog a owl:ObjectProperty .
+:hasSubRuleCatalog a owl:ObjectProperty ;
+	rdfs:domain :RuleCatalog ;
+	rdfs:range :SubRuleCatalog .
 # 
 # https://w3id.org/ocqa#isDocumentedBy
 
@@ -391,6 +402,10 @@ dcat:Catalog a owl:Class .
 
 dcat:Dataset a owl:Class .
 # 
+# http://www.w3id.org/opm#Property
+
+<http://www.w3id.org/opm#Property> a owl:Class .
+# 
 # https://w3id.org/digitalconstruction/0.5/Agents#Person
 
 <https://w3id.org/digitalconstruction/0.5/Agents#Person> a owl:Class .
@@ -411,6 +426,7 @@ dcat:Dataset a owl:Class .
 # https://w3id.org/ocqa#Characteristic
 
 :Characteristic a owl:Class ;
+	rdfs:subClassOf <http://www.w3id.org/opm#Property> ;
 	rdfs:comment "In dieser Klasse sind alle Stammdaten zur Planung von Qualitätskontrollen hinterlegt. Die Stammdaten sind einem Katalog zugeordnet"@de , "This class contains all master data to plan inspections"@en ;
 	rdfs:label "Characteristic"@en , "Charakteristik"@de .
 # 

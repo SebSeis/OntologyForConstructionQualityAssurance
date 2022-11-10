@@ -17,9 +17,35 @@
 # #################################################################
 # 
 # 
+# http://www.w3id.org/opm#hasPropertyState
+
+<http://www.w3id.org/opm#hasPropertyState> a owl:ObjectProperty ;
+	rdfs:subPropertyOf owl:topObjectProperty .
+# 
 # https://w3id.org/ocqa#detect
 
 <https://w3id.org/ocqa#detect> a owl:ObjectProperty .
+# 
+# https://w3id.org/opm#hasPropertyState
+
+<https://w3id.org/opm#hasPropertyState> a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/prov#generatedAtTime
+
+<http://www.w3.org/ns/prov#generatedAtTime> a owl:DatatypeProperty .
+# 
+# https://schema.org/value
+
+<https://schema.org/value> a owl:DatatypeProperty .
 # 
 # 
 # 
@@ -70,12 +96,32 @@ _:genid1 a owl:Restriction ;
 # https://w3id.org/ocqa/screedExtension#UnevenScreed
 
 :UnevenScreed a owl:Class ;
-	rdfs:subClassOf :ScreedFailure .
+	rdfs:subClassOf :ScreedFailure , _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty <https://w3id.org/ocqa#hasCharacteristic> ;
+	owl:hasValue :dd05a17b_c237_4c10_8238_edd3e069772c .
+
+:UnevenScreed rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty <https://w3id.org/ocqa#hasCharacteristic> ;
+	owl:hasValue :ea4b9ce6_de62_4b68_9783_7a043faad633 .
+
+:UnevenScreed rdfs:subClassOf _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty <https://w3id.org/ocqa#hasCharacteristic> ;
+	owl:hasValue :2fd46978_74e9_4b0c_b98a_2a73f0e2b11f .
 # 
 # https://w3id.org/ocqa/screedExtension#WrongInstallationHight
 
 :WrongInstallationHight a owl:Class ;
 	rdfs:subClassOf :ScreedFailure .
+# 
+# https://w3id.org/opm#PropertyState
+
+<https://w3id.org/opm#PropertyState> a owl:Class .
 # 
 # 
 # 
@@ -93,7 +139,8 @@ _:genid1 a owl:Restriction ;
 # 
 # https://w3id.org/ocqa/screedExtension#ScreedFailureCatalog
 
-:ScreedFailureCatalog a owl:NamedIndividual , <https://w3id.org/ocqa#SubMasterDataCatalog> .
+:ScreedFailureCatalog a owl:NamedIndividual , <https://w3id.org/ocqa#SubMasterDataCatalog> ;
+	<https://w3id.org/ocqa#containsCharacteristics> :2fd46978_74e9_4b0c_b98a_2a73f0e2b11f .
 # 
 # https://w3id.org/ocqa/screedExtension#b2415bb5_ef3e_45cb_b8ec_5b1e745e6e50
 
@@ -123,7 +170,15 @@ _:genid1 a owl:Restriction ;
 # https://w3id.org/ocqa/screedExtension#2fd46978_74e9_4b0c_b98a_2a73f0e2b11f
 
 :2fd46978_74e9_4b0c_b98a_2a73f0e2b11f a owl:NamedIndividual , <https://w3id.org/ocqa#FailureCosts> ;
+	<https://w3id.org/opm#hasPropertyState> :6e1546ee_0668_4e8e_b084_534e3a13089f ;
 	rdfs:label "a"@de .
+# 
+# https://w3id.org/ocqa/screedExtension#6e1546ee_0668_4e8e_b084_534e3a13089f
+
+:6e1546ee_0668_4e8e_b084_534e3a13089f a owl:NamedIndividual , <https://w3id.org/opm#PropertyState> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2022-10-11T17:21:00.000+00:00"^^xsd:dateTime ;
+	<https://schema.org/value> "50.0"^^xsd:double ;
+	rdfs:label "PropertyState_20221110"@de .
 # 
 # https://w3id.org/ocqa/screedExtension#60020a53_aab1_464b_a14b_45fab4917e70
 
