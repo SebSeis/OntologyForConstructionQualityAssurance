@@ -35,16 +35,19 @@
 <https://w3id.org/ocqa#InspectionProcedure> rdf:type owl:Class .
 
 
-###  https://w3id.org/ocqa/screedExtension#FlatnessInspection
-<https://w3id.org/ocqa/screedExtension#FlatnessInspection> rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                             owl:onProperty <https://w3id.org/ocqa#detect> ;
-                                                                             owl:allValuesFrom <https://w3id.org/ocqa/screedExtension#UnevenScreed>
-                                                                           ] .
-
-
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.example.org/DuplexScreedInspection#test
+:test rdf:type owl:NamedIndividual ;
+      <https://w3id.org/ocqa#hasInspectionProcedure> <https://w3id.org/ocqa/screedExtension#ScreedFloorEvenMeasurement> .
+
+
+###  http://www.example.org/DuplexScreedInspection#test2
+:test2 rdf:type owl:NamedIndividual ,
+                <https://w3id.org/ocqa/screedExtension#CrackInpsection> .
+
 
 ###  http://www.semanticweb.org/verwalter/ontologies/2022/9/untitled-ontology-40#Failure_25e4116b_6d13_4153_8550_dd1bd6c1a5a4
 :Failure_25e4116b_6d13_4153_8550_dd1bd6c1a5a4 rdf:type owl:NamedIndividual ;
@@ -68,6 +71,8 @@
                                                           <https://w3id.org/ocqa#Inspection> ,
                                                           <https://w3id.org/ocqa/screedExtension#FlatnessInspection> ;
                                                  <https://w3id.org/ocqa#detect> :Failure_25e4116b_6d13_4153_8550_dd1bd6c1a5a4 ;
+                                                 <https://w3id.org/ocqa#hasInspectionEquipment> <https://w3id.org/ocqa/screedExtension#001_ScreedLevellingMeasuringWedge> ,
+                                                                                                <https://w3id.org/ocqa/screedExtension#003_Straightedge> ;
                                                  <https://w3id.org/ocqa#hasInspectionProcedure> :InspectionProcedure_4ecbfc01_8732_43c4_9ad8_c3daefbd9bc9 ;
                                                  rdfs:label "EbenheitsprüfungEstrich"@de .
 

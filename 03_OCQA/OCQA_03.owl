@@ -121,6 +121,11 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 	rdfs:domain :ClassifiedFailure ;
 	rdfs:range :Characteristic .
 # 
+# https://w3id.org/ocqa#hasFailure
+
+:hasFailure a owl:ObjectProperty ;
+	rdfs:range :Failure .
+# 
 # https://w3id.org/ocqa#hasInspection
 
 :hasInspection a owl:ObjectProperty ;
@@ -564,8 +569,23 @@ Anmerkung 2 zum Begriff: Der vom Kunden (3.2.4) beabsichtigte Gebrauch kann durc
 	rdfs:subClassOf :Determination , _:genid1 .
 
 _:genid1 a owl:Restriction ;
-	owl:onProperty :detect ;
-	owl:allValuesFrom :Failure .
+	owl:onProperty :hasInspectionEquipment ;
+	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass :InspectionEquipment .
+
+:Inspection rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty :hasInspectionProcedure ;
+	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass :InspectionProcedure .
+
+:Inspection rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty :hasInspectionProcedure ;
+	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass :InspectionProcedure .
 
 :Inspection rdfs:label "Inspection"@en , "Inspektion"@de , "Prüfung"@de ;
 	:DIN_9000:2015 """Bestimmung (3.11.1) der Konformität (3.6.11) mit festgelegten Anforderungen (3.6.4)
@@ -607,9 +627,9 @@ Anmerkung 2 zum Begriff: Zusätzlich zu einem umfassenden Prüfplan können für
 # https://w3id.org/ocqa#MasterDataCatalog
 
 :MasterDataCatalog a owl:Class ;
-	rdfs:subClassOf dcat:Catalog , _:genid2 .
+	rdfs:subClassOf dcat:Catalog , _:genid4 .
 
-_:genid2 a owl:Restriction ;
+_:genid4 a owl:Restriction ;
 	owl:onProperty :hasSubMasterDataCatalog ;
 	owl:minCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -764,9 +784,9 @@ Anmerkung 1 zum Begriff: Nacharbeit kann Teile des nichtkonformen Produkts oder 
 # https://w3id.org/ocqa#RuleCatalog
 
 :RuleCatalog a owl:Class ;
-	rdfs:subClassOf dcat:Catalog , _:genid3 .
+	rdfs:subClassOf dcat:Catalog , _:genid5 .
 
-_:genid3 a owl:Restriction ;
+_:genid5 a owl:Restriction ;
 	owl:onProperty :hasSubRuleCatalog ;
 	owl:minCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -860,46 +880,46 @@ Anmerkung 1 zum Begriff: Zeigt das Ergebnis eines Tests Konformität (3.6.11), k
 # 
 # 
 
-_:genid4 a owl:AllDisjointClasses ;
-	owl:members _:genid7 .
+_:genid6 a owl:AllDisjointClasses ;
+	owl:members _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :Image ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :Protocol ;
+	rdf:rest _:genid7 .
 
 _:genid7 a rdf:List ;
-	rdf:first :Image ;
-	rdf:rest _:genid6 .
-
-_:genid6 a rdf:List ;
-	rdf:first :Protocol ;
-	rdf:rest _:genid5 .
-
-_:genid5 a rdf:List ;
 	rdf:first :Video ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid8 a owl:AllDisjointClasses ;
-	owl:members _:genid14 .
+_:genid10 a owl:AllDisjointClasses ;
+	owl:members _:genid16 .
+
+_:genid16 a rdf:List ;
+	rdf:first :Inspection ;
+	rdf:rest _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first :Measurement ;
+	rdf:rest _:genid14 .
 
 _:genid14 a rdf:List ;
-	rdf:first :Inspection ;
+	rdf:first :Monitoring ;
 	rdf:rest _:genid13 .
 
 _:genid13 a rdf:List ;
-	rdf:first :Measurement ;
+	rdf:first :ProgressEvaluation ;
 	rdf:rest _:genid12 .
 
 _:genid12 a rdf:List ;
-	rdf:first :Monitoring ;
+	rdf:first :Review ;
 	rdf:rest _:genid11 .
 
 _:genid11 a rdf:List ;
-	rdf:first :ProgressEvaluation ;
-	rdf:rest _:genid10 .
-
-_:genid10 a rdf:List ;
-	rdf:first :Review ;
-	rdf:rest _:genid9 .
-
-_:genid9 a rdf:List ;
 	rdf:first :Test ;
 	rdf:rest rdf:nil .
 # 
