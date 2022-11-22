@@ -1,0 +1,33 @@
+@prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:                 <http://www.w3.org/ns/shacl#> .
+@prefix dash:               <http://datashapes.org/dash#> .
+@prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:                 <http://www.semanticweb.org/verwalter/ontologies/2022/1/Example_Screed_Sichtpruefung#> .
+@prefix owl:                <http://www.w3.org/2002/07/owl#> .
+@prefix ocqa:               <https://w3id.org/ocqa/0.3#>.
+@prefix ocqa_screed:        <https://w3id.org/ocqa_screed#>.
+@prefix ocqa_rules:        <https://w3id.org/ocqa_rules#>.
+
+ocqa_rules:CalculateInspectionCost
+a sh:NodeShape;
+sh:targetClass ocqa:Inspection;
+sh:rule [
+		a sh:SPARQLRule ;
+		sh:construct """
+            prefix ocqa:                <https://w3id.org/ocqa/0.3#>
+            prefix rdf:                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+			CONSTRUCT {
+				$this ocqa:hasInspectionCost ?InspectionCost .
+			}
+			WHERE { #Characteristic Inspection multiplied by hasCount
+				$this ocqa:hasCount ?count .
+				$this ocqa:hasCharacteristic ?char .
+                ?char rdf:type ocqa:InspectionCost.
+                ?char ocqa:hasPropertyState/schema:value ?value.
+				BIND (?value * ?count AS ?InspectionCost) .
+			}
+			""" ;
+	] ;
+.

@@ -1,0 +1,238 @@
+@prefix : <https://w3id.org/ocqa/screedExtension#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/ocqa/screedExtension> .
+
+<https://w3id.org/ocqa/screedExtension> rdf:type owl:Ontology ;
+                                         owl:imports <https://w3id.org/ocqa/0.3> ;
+                                         rdfs:comment "This is a screed extension"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3id.org/opm#hasPropertyState
+<http://www.w3id.org/opm#hasPropertyState> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/ocqa#detect
+<https://w3id.org/ocqa#detect> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/opm#hasPropertyState
+<https://w3id.org/opm#hasPropertyState> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#generatedAtTime
+<http://www.w3.org/ns/prov#generatedAtTime> rdf:type owl:DatatypeProperty .
+
+
+###  https://schema.org/value
+<https://schema.org/value> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/ocqa#ClassifiedFailure
+<https://w3id.org/ocqa#ClassifiedFailure> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa#Inspection
+<https://w3id.org/ocqa#Inspection> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa/screedExtension#CrackInpsection
+:CrackInpsection rdf:type owl:Class ;
+                 rdfs:subClassOf :ScreedInspection ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <https://w3id.org/ocqa#detect> ;
+                                   owl:allValuesFrom :ScreedCrack
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <https://w3id.org/ocqa#hasInspectionProcedure> ;
+                                   owl:hasValue :CrackWedgeMeasurement
+                                 ] .
+
+
+###  https://w3id.org/ocqa/screedExtension#FlatnessInspection
+:FlatnessInspection rdf:type owl:Class ;
+                    rdfs:subClassOf :ScreedInspection ,
+                                    [ rdf:type owl:Class ;
+                                      owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/ocqa#hasInspectionProcedure> ;
+                                                      owl:hasValue :ScreedFloorEvenMeasurement
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/ocqa#hasInspectionProcedure> ;
+                                                      owl:hasValue :ScreedNivellement
+                                                    ]
+                                                  )
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <https://w3id.org/ocqa#detect> ;
+                                      owl:allValuesFrom :UnevenScreed
+                                    ] .
+
+
+###  https://w3id.org/ocqa/screedExtension#ScreedCrack
+:ScreedCrack rdf:type owl:Class ;
+             rdfs:subClassOf :ScreedFailure .
+
+
+###  https://w3id.org/ocqa/screedExtension#ScreedFailure
+:ScreedFailure rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/ocqa#ClassifiedFailure> .
+
+
+###  https://w3id.org/ocqa/screedExtension#ScreedInspection
+:ScreedInspection rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/ocqa#Inspection> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <https://w3id.org/ocqa#detect> ;
+                                    owl:allValuesFrom :ScreedFailure
+                                  ] .
+
+
+###  https://w3id.org/ocqa/screedExtension#ScreedLevellingMeasuringWedge
+:ScreedLevellingMeasuringWedge rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/ocqa#InspectionEquipment> ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <https://w3id.org/ocqa#hasInspectionEquipment> ;
+                                                 owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/ocqa#hasInspectionProcedure> ;
+                                                                      owl:hasValue :ScreedFloorEvenMeasurement
+                                                                    ]
+                                               ] .
+
+
+###  https://w3id.org/ocqa/screedExtension#Straightedge
+:Straightedge rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/ocqa#InspectionEquipment> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://w3id.org/ocqa#hasInspectionEquipment> ;
+                                owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/ocqa#hasInspectionProcedure> ;
+                                                     owl:hasValue :ScreedFloorEvenMeasurement
+                                                   ]
+                              ] .
+
+
+###  https://w3id.org/ocqa/screedExtension#UnevenScreed
+:UnevenScreed rdf:type owl:Class ;
+              rdfs:subClassOf :ScreedFailure ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://w3id.org/ocqa#hasCharacteristic> ;
+                                owl:hasValue :dd05a17b_c237_4c10_8238_edd3e069772c
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://w3id.org/ocqa#hasCharacteristic> ;
+                                owl:hasValue :ea4b9ce6_de62_4b68_9783_7a043faad633
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://w3id.org/ocqa#hasCharacteristic> ;
+                                owl:hasValue <https://w3id.org/ocqa/screedExtension#2fd46978_74e9_4b0c_b98a_2a73f0e2b11f>
+                              ] .
+
+
+###  https://w3id.org/ocqa/screedExtension#WrongInstallationHight
+:WrongInstallationHight rdf:type owl:Class ;
+                        rdfs:subClassOf :ScreedFailure .
+
+
+###  https://w3id.org/opm#PropertyState
+<https://w3id.org/opm#PropertyState> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/ocqa/screedExtension#CrackWedgeMeasurement
+:CrackWedgeMeasurement rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/ocqa#InspectionProcedure> .
+
+
+###  https://w3id.org/ocqa/screedExtension#ScreedCatalog
+:ScreedCatalog rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/ocqa#MasterDataCatalog> ;
+               <https://w3id.org/ocqa#hasSubMasterDataCatalog> :ScreedFailureCatalog .
+
+
+###  https://w3id.org/ocqa/screedExtension#ScreedFailureCatalog
+:ScreedFailureCatalog rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/ocqa#SubMasterDataCatalog> ;
+                      <https://w3id.org/ocqa#containsCharacteristics> <https://w3id.org/ocqa/screedExtension#2fd46978_74e9_4b0c_b98a_2a73f0e2b11f> .
+
+
+###  https://w3id.org/ocqa/screedExtension#ScreedFloorEvenMeasurement
+:ScreedFloorEvenMeasurement rdf:type owl:NamedIndividual ,
+                                     <https://w3id.org/ocqa#InspectionProcedure> .
+
+
+###  https://w3id.org/ocqa/screedExtension#ScreedNivellement
+:ScreedNivellement rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/ocqa#InspectionProcedure> .
+
+
+###  https://w3id.org/ocqa/screedExtension#b2415bb5_ef3e_45cb_b8ec_5b1e745e6e50
+:b2415bb5_ef3e_45cb_b8ec_5b1e745e6e50 rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/ocqa#InspectionCost> ;
+                                      rdfs:label "asd"@de .
+
+
+###  https://w3id.org/ocqa/screedExtension#dcec1cb8_355d_4a5c_b242_bf2450bbe9bc
+:dcec1cb8_355d_4a5c_b242_bf2450bbe9bc rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/ocqa#FailureProbability> ;
+                                      rdfs:label "sd"@de .
+
+
+###  https://w3id.org/ocqa/screedExtension#dd05a17b_c237_4c10_8238_edd3e069772c
+:dd05a17b_c237_4c10_8238_edd3e069772c rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/ocqa#FailureDetectionTime> ;
+                                      rdfs:label "ds"@de .
+
+
+###  https://w3id.org/ocqa/screedExtension#df946dd9_179d_46a8_b56b_c7ae64648c54
+:df946dd9_179d_46a8_b56b_c7ae64648c54 rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/ocqa#ProbableFailureLocation> ;
+                                      rdfs:label "asd"@de .
+
+
+###  https://w3id.org/ocqa/screedExtension#ea4b9ce6_de62_4b68_9783_7a043faad633
+:ea4b9ce6_de62_4b68_9783_7a043faad633 rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/ocqa#FailureDetectionProbability> ;
+                                      rdfs:label "d"@de .
+
+
+###  https://w3id.org/ocqa/screedExtension#2fd46978_74e9_4b0c_b98a_2a73f0e2b11f
+<https://w3id.org/ocqa/screedExtension#2fd46978_74e9_4b0c_b98a_2a73f0e2b11f> rdf:type owl:NamedIndividual ,
+                                                                                      <https://w3id.org/ocqa#FailureCosts> ;
+                                                                             <https://w3id.org/opm#hasPropertyState> <https://w3id.org/ocqa/screedExtension#6e1546ee_0668_4e8e_b084_534e3a13089f> ;
+                                                                             rdfs:label "a"@de .
+
+
+###  https://w3id.org/ocqa/screedExtension#6e1546ee_0668_4e8e_b084_534e3a13089f
+<https://w3id.org/ocqa/screedExtension#6e1546ee_0668_4e8e_b084_534e3a13089f> rdf:type owl:NamedIndividual ,
+                                                                                      <https://w3id.org/opm#PropertyState> ;
+                                                                             <http://www.w3.org/ns/prov#generatedAtTime> "2022-10-11T17:21:00.000+00:00"^^xsd:dateTime ;
+                                                                             <https://schema.org/value> "50.0"^^xsd:double ;
+                                                                             rdfs:label "PropertyState_20221110"@de .
+
+
+###  https://w3id.org/ocqa/screedExtension#60020a53_aab1_464b_a14b_45fab4917e70
+<https://w3id.org/ocqa/screedExtension#60020a53_aab1_464b_a14b_45fab4917e70> rdf:type owl:NamedIndividual ,
+                                                                                      <https://w3id.org/ocqa#ImpactsOnConstructionProcess> ;
+                                                                             rdfs:label "asd"@de .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

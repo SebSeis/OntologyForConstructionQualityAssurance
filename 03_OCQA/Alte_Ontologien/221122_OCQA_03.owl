@@ -153,10 +153,6 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 	rdfs:domain :Inspection ;
 	rdfs:range :InspectionProcedure .
 # 
-# https://w3id.org/ocqa#hasLabourCost
-
-:hasLabourCost a owl:ObjectProperty .
-# 
 # https://w3id.org/ocqa#hasProcedure
 
 :hasProcedure a owl:ObjectProperty ;
@@ -282,11 +278,6 @@ Otherwise inspection cost estimation can be done by the sum over equipment cost,
 	rdfs:domain :InspectionProcedure ;
 	rdfs:label "Kostenwert"@de .
 # 
-# https://w3id.org/ocqa#hasCountInspection
-
-:hasCountInspection a owl:DatatypeProperty ;
-	rdfs:label "AnzahlPrüfung"@de .
-# 
 # https://w3id.org/ocqa#hasDeprecation
 
 :hasDeprecation a owl:DatatypeProperty ;
@@ -296,10 +287,6 @@ Otherwise inspection cost estimation can be done by the sum over equipment cost,
 
 :hasDocumentationCost a owl:DatatypeProperty ;
 	rdfs:subPropertyOf :hasLabourCost .
-# 
-# https://w3id.org/ocqa#hasDuration
-
-:hasDuration a owl:DatatypeProperty .
 # 
 # https://w3id.org/ocqa#hasEnergieCost
 
