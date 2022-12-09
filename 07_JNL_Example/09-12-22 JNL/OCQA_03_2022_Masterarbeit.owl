@@ -1,0 +1,731 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#"
+     xml:base="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ocqa="https://w3id.org/ocqa#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#">
+        <owl:versionIRI rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung"/>
+        <terms:creator>Jan Niklas Lünig</terms:creator>
+        <terms:issued>2022-11-01</terms:issued>
+        <terms:license>https://creativecommons.org/licenses/by/1.0</terms:license>
+        <rdfs:comment xml:lang="de">Ziel der Masterarbeit ist es, die ontologie für baubegleitende Qualitätssicherungen (OCQA) entsprechend den Anforderungen um die Kostenermittlung unf Risikobeurteilung zu erweitern. Dabei soll die Daten-, Informations-, und Wissensrepräsentation mittls Semantik Web Repräsentationsformaten erfolgen.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- https://w3id.org/ocqa#BGB -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/ocqa#BGB"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#Urteil -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#Urteil"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VOB -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VOB"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasVirtualDefect -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasVirtualDefect">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+        <rdfs:range rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasVirtualDefect</rdfs:label>
+        <rdfs:label xml:lang="de">hatFiktivenFehler</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#uncoverDefect -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#uncoverDefect">
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:label xml:lang="de">decktFehlerAuf</rdfs:label>
+        <rdfs:label xml:lang="en">uncoverDefect</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://schema.org/value -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/value"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasAcceptanceCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasAcceptanceCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFixCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:comment xml:lang="de">Abbnahmekosten von externen Beteiligten</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAcceptanceCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatAbnahmeKosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasAppraisalCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasAppraisalCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasQualityRelatedCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:comment xml:lang="de">DIN 55350
+Kosten, die durch planmäßige Prüfungen, die keinen konkreten Fehler zum Anlass haben, verursacht werden
+Anmerkung 1 zum Begriff: Prüfkosten entstehen durch das für Prüfungen eingesetzte Personal und die zugehörigen Prüfmittel, eingeschlossen die Prüfmittelüberwachung in allen Bereichen der Organisation. Bei zeitlich ineinandergreifenden Prüftätigkeiten und anderen Tätigkeiten sind die Kosten für den Anteil der Prüftätigkeiten anzusetzen.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAppraisalCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatPrüfkosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasConsequenceDelay -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasConsequenceDelay">
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasConsequenceDelay</rdfs:label>
+        <rdfs:label xml:lang="de">hatKonsequenzVerzögerung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDegradationCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDegradationCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFixCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
+        <rdfs:comment xml:lang="de">Aufbaukosten, um das Prüfmittel abzubauen</rdfs:comment>
+        <rdfs:label xml:lang="en">hasDegradationCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatAbbaukosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDepreciationCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDepreciationCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
+        <rdfs:label xml:lang="en">hasDepreciationCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatAbschreibungskosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDetectionNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDetectionNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasRPZ"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasDetectionNumber</rdfs:label>
+        <rdfs:label xml:lang="de">hatEntdeckungswahrscheinlichkeitsZahl</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDirektFailureCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDirektFailureCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:comment xml:lang="de">Kosten zur juristischen Mangelbehebung (direkte Kosten)</rdfs:comment>
+        <rdfs:label xml:lang="en">hasDirektFailureCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatDirekteFehlerkosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDocumentationCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDocumentationCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasLobourCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:label xml:lang="en">hasDocumentationCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatDokumentationskosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEnergyCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEnergyCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
+        <rdfs:label xml:lang="en">hasEnergyCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatEnergieKosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEquipmentSwitchCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEquipmentSwitchCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasLobourCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
+        <rdfs:label xml:lang="en">hasEquipmentSwitchCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatGeräteUmstellKosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasQualityRelatedCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:comment xml:lang="en">DIN 55350
+Kosten, die durch Fehler verursacht werden
+Anmerkung 1 zum Begriff: Fehlerkosten können nach dem Ort der Feststellung der Fehler in zwei Untergruppen eingeteilt werden: in interne Fehlerkosten und in externe Fehlerkosten. Es kann zweckmäßig sein, für eine Organisation festzulegen, was unter „intern“ und „extern“ zu verstehen ist.
+Anmerkung 2 zum Begriff: Beispiele für Fehlerkosten sind die Kosten für Beseitigung oder Linderung eines Fehlers, für
+Nacharbeit, Reparatur, Verschrottung, Entsorgung, Behandlung von Ausschuss, außerplanmäßige Sortierprüfung, Wiederholungsprüfung, Ausfallzeit, Gewährleistung und Produkthaftung.
+Anmerkung 3 zum Begriff: Einige Fehlerkosten mögen schwer quantifizierbar sein, können aber sehr bedeutsam sein,
+zum Beispiel Kosten durch Imageverlust.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasFailureCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatFehlerkosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasFailureDescription</rdfs:label>
+        <rdfs:label xml:lang="en">hatFehlerBeschreibung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureDescriptionInVOB -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureDescriptionInVOB">
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasFailureDescriptionInVOB</rdfs:label>
+        <rdfs:label xml:lang="de">hatFehlerBeschreibungNachVOB</rdfs:label>
+        <VOB xml:lang="de">§ 13 Nr. 1 VOB/B Abweichung von den anerkannten Regeln der Technik</VOB>
+        <VOB xml:lang="de">§ 13 Nr. 1 VOB/B, § 633 BGB Abweichung von der vereinbarten Beschaffenheit</VOB>
+        <VOB xml:lang="de">§ 13 Nr. 1a VOB/B, § 633 BGB Abweichung von der vertraglich zugesicherten Beschaffenheit</VOB>
+        <VOB xml:lang="de">§ 13 Nr. 1b VOB/B, § 633 BGB Keine Eignung für die gewöhnliche Verwendung</VOB>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureDescription"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasFailureLocation</rdfs:label>
+        <rdfs:label xml:lang="de">hatFehlerOrt</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureReason -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureReason">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureDescription"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasFailureReason</rdfs:label>
+        <rdfs:label xml:lang="de">hatFehlerursache</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureType -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureDescription"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasFailureType</rdfs:label>
+        <rdfs:label xml:lang="de">hhasFailureType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFixCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFixCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasAppraisalCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:comment xml:lang="de">Prüfkosten besitzen in der Bauwirtschaft einen konstanten Kostenanteil.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasFixCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatFixKosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasIndirectFailureCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasIndirectFailureCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:comment xml:lang="de">Aus dem Mangel resultierende Kosten</rdfs:comment>
+        <rdfs:label xml:lang="en">hasIndirectFailureCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatIndriekteFehlerkosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasInspectionEquipmentCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasInspectionEquipmentCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
+        <rdfs:label xml:lang="en">hasInspectionEquipmentCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatArbeitsmittelkosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasJourneyCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasJourneyCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFixCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:comment xml:lang="de">Anreisekosten durch den Prüfer</rdfs:comment>
+        <rdfs:label xml:lang="en">hasJourneyCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatAnreiseKosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasLaboratoryCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasLaboratoryCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:label xml:lang="en">hasLaboratoryCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatLaborKosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasLobourCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasLobourCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasAppraisalCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:comment xml:lang="de">Prüf- und Dokumentationszeiten werden in der Kostenart Personalkosten  zusammengefasst.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasLobourCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatPersonalKosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaintananceCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaintananceCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
+        <rdfs:label xml:lang="en">hasMaintananceCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatInstandhaltungskosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasAppraisalCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
+        <rdfs:comment xml:lang="de">Materialkosten ergeben sich, wenn der mengenmäßige Verbrauch an Roh-, Hilfs- und Betriebsstoffen mit den zugehörigen Preisen bewertet wird.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasMaterialCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatMaterialkosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPostPerformanceCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPostPerformanceCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDirektFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:comment xml:lang="de">Die Beseitigung des Mangels am nicht vertragskonformen Werk, mit dem Ziel den vertraglich geschuldeten Zustand herzustellen, wird als Nacherfüllung bezeichnet.  Die entstandenen Aufwendungen aus Transport-, Wege-, Arbeits- und Materialkosten sind gemäß § 635 BGB von dem Unternehmer zu tragen.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasPostPerformanceCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatNacherfüllungskosten</rdfs:label>
+        <VOB xml:lang="de">§ 635 Nacherfüllung
+(2) Der Unternehmer hat die zum Zwecke der Nacherfüllung erforderlichen Aufwendungen, insbesondere Transport-, Wege-, Arbeits- und Materialkosten zu tragen.</VOB>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialAreaLosses -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialAreaLosses">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasIndirectFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasPotentialAreaLosses</rdfs:label>
+        <rdfs:label xml:lang="de">hatMöglicheFlächenverluste</rdfs:label>
+        <Urteil xml:lang="de">11 O 25452/ 10 - Urteil Landgerichts München vom 27.10.2016.</Urteil>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialDelayCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialDelayCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasIndirectFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasPotentialDelayCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatMöglicheVerzögerungskosten</rdfs:label>
+        <VOB xml:lang="de">§ 4 Abs. 7 S. 2 VOB/B.</VOB>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialEvacuationCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialEvacuationCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasIndirectFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasPotentialEvacuationCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatMöglicheRäumungskosten</rdfs:label>
+        <Urteil xml:lang="de">11 O 25452/ 10 - Urteil Landgerichts München vom 27.10.2016</Urteil>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialInterestCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialInterestCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasIndirectFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasPotentialInterestCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatMöglicheZinskosten</rdfs:label>
+        <Urteil xml:lang="de">24 U 64/16 – Urteil OLG Frankfurt am Main vom 24.07.2017</Urteil>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialLawCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialLawCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasIndirectFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasPotentialLawCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatMöglicheGerichtskosten</rdfs:label>
+        <Urteil xml:lang="de">24 U 64/16 – Urteil OLG Frankfurt am Main vom 24.07.2017.</Urteil>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPreventionCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPreventionCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasQualityRelatedCosts"/>
+        <rdfs:comment xml:lang="de">DIN 55350
+Kosten, die durch die Analyse und Beseitigung von Fehlerursachen verursacht werden
+Anmerkung 1 zum Begriff: Zu den Fehlerverhütungskosten gehören insbesondere die Kosten für Vorbeugungsmaßnahmen (bei möglichen Fehlerursachen) und Korrekturmaßnahmen (bei erkannten Fehlerursachen).</rdfs:comment>
+        <rdfs:label xml:lang="en">hasPreventionCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatFehlerverhütungskosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasProbabilityFactor -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasProbabilityFactor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasRPZ"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasProbabilityNumber</rdfs:label>
+        <rdfs:label xml:lang="de">hatAuftrittswahrscheinlichkeitsZahl</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasQualityRelatedCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasQualityRelatedCosts">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+        <rdfs:comment xml:lang="de">DIN 55350
+Summe von Fehlerverhütungs-, Prüf- und Fehlerkosten
+Anmerkung 1 zum Begriff: Qualitätsbezogene Kosten werden in einer Organisation nach deren eigenen Kriterien abgegrenzt und erfasst.
+Anmerkung 2 zum Begriff: Zu den Qualitätsbezogenen Kosten gehören auch Kosten für Qualitätsaudits durch Kunden
+und Zertifizierungsstellen.
+Anmerkung 3 zum Begriff: Die Benennung „Qualitätskosten“ wird nicht empfohlen</rdfs:comment>
+        <rdfs:label xml:lang="en">hasQualityRelatedCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatQualitätsbezogeneKosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasRPZ -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasRPZ">
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasRPZ</rdfs:label>
+        <rdfs:label xml:lang="de">hatRPZ</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasReductionCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasReductionCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDirektFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:comment xml:lang="de">Aus fehlgeschlagenen und verweigerten Nacherfüllungsansprüchen folgt das Recht zum Rücktritt. Die Rechtsfolge des Rücktritts ist die vollständige Rückabwicklung des Bauvertrages.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasReductionCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatRücktrittskosten</rdfs:label>
+        <ocqa:BGB xml:lang="de">§ 636 Besondere Bestimmungen für Rücktritt und Schadensersatz
+Außer in den Fällen der § 281 Abs. 2 und 323 Abs. 2 bedarf es der Fristsetzung auch dann nicht, wenn der Unternehmer die Nacherfüllung gemäß § 635 Abs. 3 verweigert oder wenn die Nacherfüllung fehlgeschlagen oder dem Besteller unzumutbar ist.</ocqa:BGB>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSelfRepairCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSelfRepairCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDirektFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:comment xml:lang="de">Die Selbstvornahme berechtigt den Auftraggeber nach § 637 BGB den Mangel nach erfolglosem Ablauf einer angemessenen Mangelbeseitigungsfrist selbst zu beseitigen. Die daraus resultierenden Aufwendungen darf der AG den AN in Rechnung stellen.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasSelfRepairCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatSelbstvornahmeKosten</rdfs:label>
+        <ocqa:BGB xml:lang="de">§ 637 Selbstvornahme
+(1) Der Besteller kann wegen eines Mangels des Werkes nach erfolglosem Ablauf einer von ihm zur Nacherfüllung bestimmten angemessenen Frist den Mangel selbst beseitigen und Ersatz der erforderlichen Aufwendungen verlangen, wenn nicht der Unternehmer die Nacherfüllung zu Recht verweigert.
+(2) § 323 Abs. 2 findet entsprechende Anwendung. Der Bestimmung einer Frist bedarf es auch dann nicht, wenn die Nacherfüllung fehlgeschlagen oder dem Besteller unzumutbar ist.
+(3) Der Besteller kann von dem Unternehmer für die zur Beseitigung des Mangels erforderlichen Aufwendungen Vorschuss verlangen.</ocqa:BGB>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSetUpCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSetUpCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFixCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
+        <rdfs:label xml:lang="en">hasSetUpCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatAufbaukosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSeverityFactor -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSeverityFactor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasRPZ"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="en">hasSeverityFactor</rdfs:label>
+        <rdfs:label xml:lang="de">hatBedeutungsZahl</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSurveyExcecutionCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSurveyExcecutionCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasLobourCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:label xml:lang="en">hasSurveyExcecutionCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatPrüfdurchführungsKosten</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasTimeOfAppearance -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasTimeOfAppearance">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFailureDescription"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:label xml:lang="de">hatAuftrittszeitpunkt</rdfs:label>
+        <rdfs:label xml:lang="en">time of appearance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasWithdrawalCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasWithdrawalCosts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDirektFailureCosts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <rdfs:comment xml:lang="de">Statt der Nacherfüllung darf der Besteller nach § 638 Abs. 3 BGB „die Vergütung durch Erklärung gegenüber dem Unternehmer mindern“.   Ein monetärer Wertausgleich ist nach § 13 Abs. 6 VOB/B und § 275 Abs. 6 BGB zulässig, wenn die Mangelbeseitigung unmöglich, unverhältnismäßig oder unzumutbar ist.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasWithdrawalCosts</rdfs:label>
+        <rdfs:label xml:lang="de">hatMinderungskosten</rdfs:label>
+        <VOB xml:lang="de">§ 13 Mängelansprüche
+(6) Ist die Beseitigung des Mangels für den Auftraggeber unzumutbar oder ist sie unmöglich oder würde sie einen unverhältnismäßig hohen Aufwand erfordern und wird sie deshalb vom Auftragnehmer verweigert, so kann der Auftraggeber durch Erklärung gegenüber dem Auftragnehmer die Vergütung mindern (§ 638 BGB).</VOB>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+    
+
+
+    <!-- https://w3id.org/ocqa#Characteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa#Characteristic"/>
+    
+
+
+    <!-- https://w3id.org/ocqa#Failure -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa#Failure"/>
+    
+
+
+    <!-- https://w3id.org/ocqa#Inspection -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa#Inspection"/>
+    
+
+
+    <!-- https://w3id.org/ocqa#InspectionEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa#InspectionEquipment"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ocqa#Characteristic"/>
+        <rdfs:label xml:lang="en">InspectionExcecutionCosts</rdfs:label>
+        <rdfs:label xml:lang="de">Prüfdurchführungskosten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ocqa#Failure"/>
+        <rdfs:label xml:lang="de">FiktiverFehler</rdfs:label>
+        <rdfs:label xml:lang="en">VirtualDefect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/opm#PropertyState -->
+
+    <owl:Class rdf:about="https://w3id.org/opm#PropertyState"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154">
+        <rdf:type rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts"/>
+        <rdf:type rdf:resource="https://w3id.org/opm#PropertyState"/>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg">
+        <rdf:type rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts"/>
+        <rdf:type rdf:resource="https://w3id.org/opm#PropertyState"/>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335">
+        <rdf:type rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts"/>
+        <rdf:type rdf:resource="https://w3id.org/opm#PropertyState"/>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#int">66</schema:value>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#"
+     xml:base="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement"
+     xmlns:opm="https://w3id.org/opm#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Variables="https://w3id.org/digitalconstruction/0.5/Variables#"
+     xmlns:Erweiterung="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#">
+    <owl:Ontology rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#">
+        <owl:versionIRI rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Variables#hasPropertyState -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Variables#hasPropertyState"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#uncoverDefect -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#uncoverDefect"/>
+    
+
+
+    <!-- https://w3id.org/opm#hasPropertyState -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/opm#hasPropertyState"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDegradationCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDegradationCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDepreciationCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDepreciationCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDetectionNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDetectionNumber"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDocumentationCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDocumentationCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEquipmentSwitchCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEquipmentSwitchCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasJourneyCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasJourneyCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaintananceCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaintananceCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPostPerformanceCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPostPerformanceCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialDelayCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialDelayCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialEvacuationCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialEvacuationCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialInterestCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialInterestCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialLawCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialLawCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasProbabilityFactor -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasProbabilityFactor"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasReductionCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasReductionCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSelfRepairCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSelfRepairCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSetUpCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSetUpCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSetUpCostsBegin -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSetUpCostsBegin"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSeverityFactor -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSeverityFactor"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSurveyExcecutionCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSurveyExcecutionCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasWithdrawalCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasWithdrawalCosts"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ocqa#Inspection -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa#Inspection"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#FailureUnevenness -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#FailureUnevenness">
+        <rdf:type rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <Erweiterung:hasDetectionNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</Erweiterung:hasDetectionNumber>
+        <Erweiterung:hasPostPerformanceCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2500</Erweiterung:hasPostPerformanceCosts>
+        <Erweiterung:hasPotentialDelayCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3000</Erweiterung:hasPotentialDelayCosts>
+        <Erweiterung:hasPotentialEvacuationCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</Erweiterung:hasPotentialEvacuationCosts>
+        <Erweiterung:hasPotentialInterestCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</Erweiterung:hasPotentialInterestCosts>
+        <Erweiterung:hasPotentialLawCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</Erweiterung:hasPotentialLawCosts>
+        <Erweiterung:hasProbabilityFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</Erweiterung:hasProbabilityFactor>
+        <Erweiterung:hasReductionCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5000</Erweiterung:hasReductionCosts>
+        <Erweiterung:hasSelfRepairCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4000</Erweiterung:hasSelfRepairCosts>
+        <Erweiterung:hasSeverityFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</Erweiterung:hasSeverityFactor>
+        <Erweiterung:hasWithdrawalCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1400</Erweiterung:hasWithdrawalCosts>
+        <rdfs:label xml:lang="de">FailureUneveness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Executioncosts3957fg03 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Executioncosts3957fg03">
+        <rdf:type rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts"/>
+        <Variables:hasPropertyState rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154"/>
+        <Variables:hasPropertyState rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335"/>
+        <opm:hasPropertyState rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Inspection -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Inspection">
+        <rdf:type rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <Erweiterung:uncoverDefect rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#FailureUnevenness"/>
+        <Erweiterung:hasDegradationCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Erweiterung:hasDegradationCosts>
+        <Erweiterung:hasDepreciationCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Erweiterung:hasDepreciationCosts>
+        <Erweiterung:hasDocumentationCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</Erweiterung:hasDocumentationCosts>
+        <Erweiterung:hasEquipmentSwitchCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Erweiterung:hasEquipmentSwitchCosts>
+        <Erweiterung:hasJourneyCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</Erweiterung:hasJourneyCosts>
+        <Erweiterung:hasMaintananceCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</Erweiterung:hasMaintananceCosts>
+        <Erweiterung:hasSetUpCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Erweiterung:hasSetUpCosts>
+        <Erweiterung:hasSurveyExcecutionCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</Erweiterung:hasSurveyExcecutionCosts>
+        <rdfs:comment xml:lang="de">Die Durchführung einer Nivellement Messung besteht gemäß Pfretzschner aus den folgenden Arbeitsschritten.  
+1. Anbringen der zwei Nivellierlatten auf einem Platten. Alternativ kann die Nivellierlatte auch von einem Mitarbeiter gehalten werden.
+2. Aufbau und Ausrichtung des Nivellier auf einem Stativ in der Mitte der Messdistanz.
+3. Anpeilen des ersten Messpunktes und anschließendes Ablesen.
+4. Anpeilen des zweiten Messpunktes und anschließendes ablesen. 
+5. Berechnung der Höhendifferenz h.
+6. Nach der Ausrichtung wird das gesamte Profil aufgenommen. Gemäß der Abbildung x erfordern Höhendifferenzen teilweise ein Umstellen und Neuausrichtung des Nivellier.</rdfs:comment>
+        <rdfs:label xml:lang="de">NivellementMessung</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
