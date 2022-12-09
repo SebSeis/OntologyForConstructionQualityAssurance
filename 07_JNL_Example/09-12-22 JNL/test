@@ -1,0 +1,189 @@
+@prefix : <http://www.semanticweb.org/verwalter/ontologies/2022/11/test#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/verwalter/ontologies/2022/11/test> .
+
+<http://www.semanticweb.org/verwalter/ontologies/2022/11/test> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/digitalconstruction/0.5/Variables#hasPropertyState
+<https://w3id.org/digitalconstruction/0.5/Variables#hasPropertyState> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ocqa#hasCharacteristic2
+<https://w3id.org/ocqa#hasCharacteristic2> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#uncoverDefect
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#uncoverDefect> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/opm#hasPropertyState
+<https://w3id.org/opm#hasPropertyState> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDegradationCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDegradationCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDepreciationCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDepreciationCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDetectionNumber
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDetectionNumber> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDocumentationCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDocumentationCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEquipmentSwitchCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEquipmentSwitchCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasJourneyCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasJourneyCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaintananceCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaintananceCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPostPerformanceCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPostPerformanceCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialDelayCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialDelayCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialEvacuationCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialEvacuationCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialInterestCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialInterestCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialLawCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialLawCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasProbabilityFactor
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasProbabilityFactor> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasReductionCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasReductionCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSelfRepairCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSelfRepairCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSetUpCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSetUpCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSeverityFactor
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSeverityFactor> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSurveyExcecutionCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSurveyExcecutionCosts> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasWithdrawalCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasWithdrawalCosts> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/ocqa#Inspection
+<https://w3id.org/ocqa#Inspection> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <https://w3id.org/ocqa#Inspection> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#FailureUnevenness
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#FailureUnevenness> rdf:type owl:NamedIndividual ,
+                                                                                                   <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect> ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDetectionNumber> "8"^^xsd:int ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPostPerformanceCosts> "2500"^^xsd:int ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialDelayCosts> "3000"^^xsd:int ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialEvacuationCosts> "2000"^^xsd:int ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialInterestCosts> "400"^^xsd:int ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasPotentialLawCosts> "1000"^^xsd:int ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasProbabilityFactor> "5"^^xsd:int ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasReductionCosts> "5000"^^xsd:int ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSelfRepairCosts> "4000"^^xsd:int ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSeverityFactor> "3"^^xsd:int ;
+                                                                                          <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasWithdrawalCosts> "1400"^^xsd:int .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Executioncosts3957fg03
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Executioncosts3957fg03> rdf:type owl:NamedIndividual ,
+                                                                                                                    <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts> ;
+                                                                                                           <https://w3id.org/digitalconstruction/0.5/Variables#hasPropertyState> <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154> ,
+                                                                                                                                                                                 <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335> ;
+                                                                                                           <https://w3id.org/opm#hasPropertyState> <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg> .
+
+
+###  https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Inspection_hfid-1564-dfsfse
+<https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Inspection_hfid-1564-dfsfse> rdf:type owl:NamedIndividual ,
+                                                                                                                         <https://w3id.org/ocqa#Inspection> ,
+                                                                                                                         <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement> ;
+                                                                                                                <https://w3id.org/ocqa#hasCharacteristic2> <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154> ,
+                                                                                                                                                           <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335> ;
+                                                                                                                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#uncoverDefect> <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#FailureUnevenness> ;
+                                                                                                                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDegradationCosts> "2"^^xsd:int ;
+                                                                                                                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDepreciationCosts> "2"^^xsd:int ;
+                                                                                                                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDocumentationCosts> "4"^^xsd:int ;
+                                                                                                                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEquipmentSwitchCosts> "2"^^xsd:int ;
+                                                                                                                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasJourneyCosts> "50"^^xsd:int ;
+                                                                                                                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaintananceCosts> "1"^^xsd:int ;
+                                                                                                                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSetUpCosts> "2"^^xsd:int ;
+                                                                                                                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSurveyExcecutionCosts> "20"^^xsd:int .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

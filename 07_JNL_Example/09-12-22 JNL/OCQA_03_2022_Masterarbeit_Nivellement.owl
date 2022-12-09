@@ -6,6 +6,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ocqa="https://w3id.org/ocqa#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:Variables="https://w3id.org/digitalconstruction/0.5/Variables#"
      xmlns:Erweiterung="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#">
@@ -29,6 +30,12 @@
     <!-- https://w3id.org/digitalconstruction/0.5/Variables#hasPropertyState -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Variables#hasPropertyState"/>
+    
+
+
+    <!-- https://w3id.org/ocqa#hasCharacteristic2 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa#hasCharacteristic2"/>
     
 
 
@@ -204,6 +211,26 @@
     
 
 
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ocqa#hasCharacteristic2"/>
+                <owl:hasValue rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ocqa#hasCharacteristic2"/>
+                <owl:hasValue rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -264,10 +291,13 @@
     
 
 
-    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Inspection -->
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Inspection_hfid-1564-dfsfse -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Inspection">
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement_Inspection_hfid-1564-dfsfse">
         <rdf:type rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdf:type rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Nivellement"/>
+        <ocqa:hasCharacteristic2 rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154"/>
+        <ocqa:hasCharacteristic2 rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335"/>
         <Erweiterung:uncoverDefect rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#FailureUnevenness"/>
         <Erweiterung:hasDegradationCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Erweiterung:hasDegradationCosts>
         <Erweiterung:hasDepreciationCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Erweiterung:hasDepreciationCosts>

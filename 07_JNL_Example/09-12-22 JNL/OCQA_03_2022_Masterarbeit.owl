@@ -156,7 +156,6 @@ Anmerkung 1 zum Begriff: Prüfkosten entstehen durch das für Prüfungen eingese
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDegradationCosts">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFixCosts"/>
         <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
-        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
         <rdfs:comment xml:lang="de">Aufbaukosten, um das Prüfmittel abzubauen</rdfs:comment>
         <rdfs:label xml:lang="en">hasDegradationCosts</rdfs:label>
         <rdfs:label xml:lang="de">hatAbbaukosten</rdfs:label>
@@ -169,7 +168,6 @@ Anmerkung 1 zum Begriff: Prüfkosten entstehen durch das für Prüfungen eingese
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDepreciationCosts">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts"/>
         <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
-        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
         <rdfs:label xml:lang="en">hasDepreciationCosts</rdfs:label>
         <rdfs:label xml:lang="de">hatAbschreibungskosten</rdfs:label>
     </owl:DatatypeProperty>
@@ -215,7 +213,6 @@ Anmerkung 1 zum Begriff: Prüfkosten entstehen durch das für Prüfungen eingese
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEnergyCosts">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts"/>
         <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
-        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
         <rdfs:label xml:lang="en">hasEnergyCosts</rdfs:label>
         <rdfs:label xml:lang="de">hatEnergieKosten</rdfs:label>
     </owl:DatatypeProperty>
@@ -227,7 +224,6 @@ Anmerkung 1 zum Begriff: Prüfkosten entstehen durch das für Prüfungen eingese
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasEquipmentSwitchCosts">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasLobourCosts"/>
         <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
-        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
         <rdfs:label xml:lang="en">hasEquipmentSwitchCosts</rdfs:label>
         <rdfs:label xml:lang="de">hatGeräteUmstellKosten</rdfs:label>
     </owl:DatatypeProperty>
@@ -338,7 +334,6 @@ zum Beispiel Kosten durch Imageverlust.</rdfs:comment>
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasInspectionEquipmentCosts">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts"/>
         <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
-        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
         <rdfs:label xml:lang="en">hasInspectionEquipmentCosts</rdfs:label>
         <rdfs:label xml:lang="de">hatArbeitsmittelkosten</rdfs:label>
     </owl:DatatypeProperty>
@@ -385,7 +380,6 @@ zum Beispiel Kosten durch Imageverlust.</rdfs:comment>
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaintananceCosts">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts"/>
         <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
-        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
         <rdfs:label xml:lang="en">hasMaintananceCosts</rdfs:label>
         <rdfs:label xml:lang="de">hatInstandhaltungskosten</rdfs:label>
     </owl:DatatypeProperty>
@@ -397,7 +391,6 @@ zum Beispiel Kosten durch Imageverlust.</rdfs:comment>
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasAppraisalCosts"/>
         <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
-        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
         <rdfs:comment xml:lang="de">Materialkosten ergeben sich, wenn der mengenmäßige Verbrauch an Roh-, Hilfs- und Betriebsstoffen mit den zugehörigen Preisen bewertet wird.</rdfs:comment>
         <rdfs:label xml:lang="en">hasMaterialCosts</rdfs:label>
         <rdfs:label xml:lang="de">hatMaterialkosten</rdfs:label>
@@ -506,7 +499,6 @@ Anmerkung 1 zum Begriff: Zu den Fehlerverhütungskosten gehören insbesondere di
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasQualityRelatedCosts -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasQualityRelatedCosts">
-        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
         <rdfs:comment xml:lang="de">DIN 55350
 Summe von Fehlerverhütungs-, Prüf- und Fehlerkosten
 Anmerkung 1 zum Begriff: Qualitätsbezogene Kosten werden in einer Organisation nach deren eigenen Kriterien abgegrenzt und erfasst.
@@ -564,7 +556,6 @@ Außer in den Fällen der § 281 Abs. 2 und 323 Abs. 2 bedarf es der Fristsetzun
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasSetUpCosts">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFixCosts"/>
         <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
-        <rdfs:domain rdf:resource="https://w3id.org/ocqa#InspectionEquipment"/>
         <rdfs:label xml:lang="en">hasSetUpCosts</rdfs:label>
         <rdfs:label xml:lang="de">hatAufbaukosten</rdfs:label>
     </owl:DatatypeProperty>
@@ -635,9 +626,9 @@ Außer in den Fällen der § 281 Abs. 2 und 323 Abs. 2 bedarf es der Fristsetzun
     
 
 
-    <!-- https://w3id.org/ocqa#Characteristic -->
+    <!-- https://w3id.org/ocqa#Characteristics -->
 
-    <owl:Class rdf:about="https://w3id.org/ocqa#Characteristic"/>
+    <owl:Class rdf:about="https://w3id.org/ocqa#Characteristics"/>
     
 
 
@@ -662,7 +653,7 @@ Außer in den Fällen der § 281 Abs. 2 und 323 Abs. 2 bedarf es der Fristsetzun
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts -->
 
     <owl:Class rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ocqa#Characteristic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ocqa#Characteristics"/>
         <rdfs:label xml:lang="en">InspectionExcecutionCosts</rdfs:label>
         <rdfs:label xml:lang="de">Prüfdurchführungskosten</rdfs:label>
     </owl:Class>

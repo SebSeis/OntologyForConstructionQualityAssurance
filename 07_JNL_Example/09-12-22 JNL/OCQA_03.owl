@@ -385,7 +385,8 @@ Anhang SL enthalten sind. Die ursprüngliche Definition wurde durch Hinzufügen 
 
 
 ###  https://w3id.org/ocqa#Characteristics
-:Characteristics rdf:type owl:Class .
+:Characteristics rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/digitalconstruction/0.5/Variables#Property> .
 
 
 ###  https://w3id.org/ocqa#ClassifiedFailure
