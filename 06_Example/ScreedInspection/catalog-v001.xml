@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://w3id.org/digitalconstruction/0.5/Information" uri="file:/C:/Users/verwalter/Documents/GitHub/OntologyForConstructionQualityAssurance/09_DiCon/information.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/ocr/0.2" uri="file:/C:/Users/verwalter/Documents/GitHub/OntologyForConstructionQualityAssurance/01_OCR-Regulation/ocr.owl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/concontract-0.1" uri="file:/C:/Users/verwalter/Documents/GitHub/OntologyForConstructionQualityAssurance/04_OCC-Contract/ConContract.owl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/ocqa/screedExtension" uri="file:/C:/Users/verwalter/Documents/GitHub/OntologyForConstructionQualityAssurance/06_Example/Extensions/Screed-Extension.owl"/>

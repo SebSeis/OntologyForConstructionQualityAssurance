@@ -118,8 +118,12 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 # https://w3id.org/ocqa#hasCharacteristic
 
 :hasCharacteristic a owl:ObjectProperty ;
-	rdfs:domain :ClassifiedFailure ;
 	rdfs:range :Characteristic .
+# 
+# https://w3id.org/ocqa#hasDocumentationCost
+
+:hasDocumentationCost a owl:ObjectProperty ;
+	rdfs:subPropertyOf :hasLabourCost .
 # 
 # https://w3id.org/ocqa#hasFailure
 
@@ -294,8 +298,7 @@ Otherwise inspection cost estimation can be done by the sum over equipment cost,
 # 
 # https://w3id.org/ocqa#hasDocumentationCost
 
-:hasDocumentationCost a owl:DatatypeProperty ;
-	rdfs:subPropertyOf :hasLabourCost .
+:hasDocumentationCost a owl:DatatypeProperty .
 # 
 # https://w3id.org/ocqa#hasDuration
 
