@@ -27,10 +27,9 @@ prefix erweiterung:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbei
 			CONSTRUCT {
 				$this ocqa:hasAppraisalCosts ?AppraisalCosts .
 			}
-			WHERE { 
-				schema:hasCount ?Anzahl.
-				schema:hasFixCosts ?Fixkosten.
-                schema:hasLobourCosts ?Lohnkosten.
+			WHERE { schema:hasCount ?Anzahl;
+				schema:hasFixCosts ?Fixkosten;
+                schema:hasLobourCosts ?Lohnkosten;
                 schema:hasMaterialCosts ?Materialkosten.
 				BIND (?Fixkosten + (?Anzahl * (?Lohnkosten + ?Materialkosten)) AS ?InspectionCost).
 			}

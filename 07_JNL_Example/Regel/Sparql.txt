@@ -1,0 +1,120 @@
+// Bestimmung Einzelkosten
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ocqa: <https://w3id.org/ocqa#>
+PREFIX ex: <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
+SELECT (sum(?x) AS ?test)
+    WHERE {
+?y rdf:type ocqa:Inspection.
+?y ex:hasDegradationCosts ?x.
+}GROUP BY ?y
+
+//SELECT SUM Prüfkosten
+
+
+// Select min Fehlerkosten
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ocqa: <https://w3id.org/ocqa#>
+PREFIX ocqaE: <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
+PREFIX ex: <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
+SELECT (min(?x) AS ?MinDirektFehlerkosten)
+    WHERE { 
+    { ?y rdf:type ex:VirtualDefect.  ?y ex:hasPostPerformanceCosts ?x }
+         UNION
+    {?y rdf:type ex:VirtualDefect.  ?y ex:hasWithdrawalCosts ?x }
+        UNION
+    { ?y rdf:type ex:VirtualDefect.  ?y ex:hasReductionCosts ?x }
+         UNION
+    {?y rdf:type ex:VirtualDefect.  ?y ex:hasSelfRepairCosts ?x }
+}
+
+// GET RPZ Faktoren
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ocqa: <https://w3id.org/ocqa#>
+PREFIX ex: <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
+SELECT ?x
+    WHERE { 
+    { ?y rdf:type ex:VirtualDefect.  ?y ex:hasSeverityFactor ?x }
+         UNION
+    {?y rdf:type ex:VirtualDefect.  ?y ex:hasProbabilityFactor ?x }
+        UNION
+    { ?y rdf:type ex:VirtualDefect.  ?y ex:hasDetectionNumber ?x }
+}
+
+//Multiply RPZ -- ohne Property State
+@prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:                 <http://www.w3.org/ns/shacl#> .
+@prefix dash:               <http://datashapes.org/dash#> .
+@prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:                 <http://www.semanticweb.org/verwalter/ontologies/2022/1/Example_Screed_Sichtpruefung#> .
+@prefix owl:                <http://www.w3.org/2002/07/owl#> .
+@prefix ocqa:               <https://w3id.org/ocqa/0.3#>.
+@prefix ex:                 <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>.
+@prefix ocqa_JNL_rules:     <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Rules#>.
+
+ocqa_JNL_rules:CalculateRPZ
+a sh:NodeShape;
+sh:targetClass ex:VirtualDefect;
+sh:rule [
+		a sh:SPARQLRule ;
+		sh:construct """
+            prefix ex:                  <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
+            prefix rdf:                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+			CONSTRUCT {
+				$this ex:hasRPZ ?RPZ .
+			}
+			WHERE { #Characteristic Factors multiplied
+				$this ex:hasSeverityFactor ?A .
+				$this ex:hasProbabilityFactor ?W .
+               	$this ex:hasDetectionNumber ?W .
+				BIND (?W * ?A * AS ?RPZ) .
+			}
+			""" ;
+	] ;
+.
+
+
+//Berechne Prüfurchführungskosten
+//Multiply RPZ -- ohne Property State
+@prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:                 <http://www.w3.org/ns/shacl#> .
+@prefix dash:               <http://datashapes.org/dash#> .
+@prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:                 <http://www.semanticweb.org/verwalter/ontologies/2022/1/Example_Screed_Sichtpruefung#> .
+@prefix owl:                <http://www.w3.org/2002/07/owl#> .
+@prefix ocqa:               <https://w3id.org/ocqa/0.3#>.
+@prefix ex:                 <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>.
+@prefix ocqa_JNL_rules:     <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Rules#>.
+
+ocqa_JNL_rules:InspectionDurationCosts
+a sh:NodeShape;
+sh:targetClass ocqa:Inspection;
+sh:rule [
+		a sh:SPARQLRule ;
+		sh:construct """
+            prefix ex:                  <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
+            prefix rdf:                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+			CONSTRUCT {
+				$this ex:hasRPZ ?RPZ .
+			}
+			WHERE { #Characteristic Factors multiplied
+				$this ex:hasSeverityFactor ?A .
+				$this ex:hasProbabilityFactor ?W .
+               	$this ex:hasDetectionNumber ?W .
+				BIND (?W * ?A * AS ?RPZ) .
+			}
+			""" ;
+	] ;
+.

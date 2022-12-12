@@ -28,8 +28,8 @@ prefix erweiterung:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbei
 				$this ocqa:hasRPZ ?RPZ .
 			}
 			WHERE { 
-				schema:hasSeverityFactor ?Bedeutung.
-				schema:hasDetectionNumber ?Entdeckungswahrscheinlichkeit.
+				$this schema:hasSeverityFactor ?Bedeutung;
+				schema:hasDetectionNumber ?Entdeckungswahrscheinlichkeit;
                 schema:hasProbabilityFactor ?Wahrscheinlichkeit.
 				BIND (?Bedeutung * ?Entdeckungswahrscheinlichkeit * ?Wahrscheinlichkeit   AS ?InspectionCost).
 			}
