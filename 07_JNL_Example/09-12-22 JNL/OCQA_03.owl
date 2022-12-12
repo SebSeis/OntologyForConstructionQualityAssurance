@@ -107,6 +107,14 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 :hasCharacteristic2 rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/ocqa#hasCharacteristicBauteilkosten
+:hasCharacteristicBauteilkosten rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ocqa#hasCharacteristicRepairPercentage
+:hasCharacteristicRepairPercentage rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/ocqa#hasFailureType
 :hasFailureType rdf:type owl:ObjectProperty ;
                 rdfs:domain :Failure .
@@ -621,6 +629,13 @@ Anmerkung 1 zum Begriff: Dieser Begriff stellt eine der gemeinsamen Benennungen 
 
 ###  https://w3id.org/ocqa#Plan
 :Plan rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa#PostPerformanceCosts
+:PostPerformanceCosts rdf:type owl:Class ;
+                      rdfs:subClassOf :Characteristics ;
+                      rdfs:label "Nacherfüllungskosten"@de ,
+                                 "PostPerformanceCosts"@en .
 
 
 ###  https://w3id.org/ocqa#Preventive_Action

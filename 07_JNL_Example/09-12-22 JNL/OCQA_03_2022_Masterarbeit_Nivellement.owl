@@ -39,6 +39,18 @@
     
 
 
+    <!-- https://w3id.org/ocqa#hasCharacteristicBauteilkosten -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa#hasCharacteristicBauteilkosten"/>
+    
+
+
+    <!-- https://w3id.org/ocqa#hasCharacteristicRepairPercentage -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa#hasCharacteristicRepairPercentage"/>
+    
+
+
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#uncoverDefect -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#uncoverDefect"/>
@@ -59,6 +71,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasCount -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasCount"/>
     
 
 
@@ -92,15 +110,33 @@
     
 
 
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFixCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasFixCosts"/>
+    
+
+
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasJourneyCosts -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasJourneyCosts"/>
     
 
 
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasLobourCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasLobourCosts"/>
+    
+
+
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaintananceCosts -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaintananceCosts"/>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasMaterialCosts"/>
     
 
 
@@ -199,6 +235,12 @@
     
 
 
+    <!-- https://w3id.org/ocqa#PostPerformanceCosts -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa#PostPerformanceCosts"/>
+    
+
+
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts -->
 
     <owl:Class rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts"/>
@@ -248,6 +290,12 @@
     
 
 
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Estrichpreis_03Hdn67 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Estrichpreis_03Hdn67"/>
+    
+
+
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg"/>
@@ -260,10 +308,18 @@
     
 
 
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Nacherfüllungssetz_034mnK49 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Nacherfüllungssetz_034mnK49"/>
+    
+
+
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#FailureUnevenness -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#FailureUnevenness">
         <rdf:type rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#VirtualDefect"/>
+        <ocqa:hasCharacteristicBauteilkosten rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Estrichpreis_03Hdn67"/>
+        <ocqa:hasCharacteristicRepairPercentage rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Nacherfüllungssetz_034mnK49"/>
         <Erweiterung:hasDetectionNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</Erweiterung:hasDetectionNumber>
         <Erweiterung:hasPostPerformanceCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2500</Erweiterung:hasPostPerformanceCosts>
         <Erweiterung:hasPotentialDelayCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3000</Erweiterung:hasPotentialDelayCosts>
@@ -299,12 +355,16 @@
         <ocqa:hasCharacteristic2 rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Duration_Nivellement_902154"/>
         <ocqa:hasCharacteristic2 rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Lohn_578335"/>
         <Erweiterung:uncoverDefect rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#FailureUnevenness"/>
+        <Erweiterung:hasCount rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</Erweiterung:hasCount>
         <Erweiterung:hasDegradationCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Erweiterung:hasDegradationCosts>
         <Erweiterung:hasDepreciationCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Erweiterung:hasDepreciationCosts>
         <Erweiterung:hasDocumentationCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</Erweiterung:hasDocumentationCosts>
         <Erweiterung:hasEquipmentSwitchCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Erweiterung:hasEquipmentSwitchCosts>
+        <Erweiterung:hasFixCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">54</Erweiterung:hasFixCosts>
         <Erweiterung:hasJourneyCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</Erweiterung:hasJourneyCosts>
+        <Erweiterung:hasLobourCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.0</Erweiterung:hasLobourCosts>
         <Erweiterung:hasMaintananceCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</Erweiterung:hasMaintananceCosts>
+        <Erweiterung:hasMaterialCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</Erweiterung:hasMaterialCosts>
         <Erweiterung:hasSetUpCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Erweiterung:hasSetUpCosts>
         <Erweiterung:hasSurveyExcecutionCosts rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</Erweiterung:hasSurveyExcecutionCosts>
         <rdfs:comment xml:lang="de">Die Durchführung einer Nivellement Messung besteht gemäß Pfretzschner aus den folgenden Arbeitsschritten.  
@@ -315,6 +375,16 @@
 5. Berechnung der Höhendifferenz h.
 6. Nach der Ausrichtung wird das gesamte Profil aufgenommen. Gemäß der Abbildung x erfordern Höhendifferenzen teilweise ein Umstellen und Neuausrichtung des Nivellier.</rdfs:comment>
         <rdfs:label xml:lang="de">NivellementMessung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Estrich_PostPerformanceCosts_93nf/GE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#Estrich_PostPerformanceCosts_93nf/GE">
+        <rdf:type rdf:resource="https://w3id.org/ocqa#PostPerformanceCosts"/>
+        <ocqa:hasCharacteristicBauteilkosten rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Estrichpreis_03Hdn67"/>
+        <ocqa:hasCharacteristicRepairPercentage rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Nacherfüllungssetz_034mnK49"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

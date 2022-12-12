@@ -1,0 +1,39 @@
+@prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:                 <http://www.w3.org/ns/shacl#> .
+@prefix dash:               <http://datashapes.org/dash#> .
+@prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:                 <http://www.semanticweb.org/verwalter/ontologies/2022/1/Example_Screed_Sichtpruefung#> .
+@prefix owl:                <http://www.w3.org/2002/07/owl#> .
+@prefix ocqa:               <https://w3id.org/ocqa/0.3#>.
+@prefix ocqa_screed:        <https://w3id.org/ocqa_screed#>.
+@prefix ocqa_rules:         <https://w3id.org/ocqa_rules#>.
+@prefix nivellement:        <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#>.
+
+
+ocqa_rules:CalculatePostPerformanceCostsForEstrich
+a sh:NodeShape;
+sh:targetClass nivellement:VirtualDefect;
+sh:rule [
+		a sh:SPARQLRule ;
+		sh:construct """
+            prefix ocqa:                <https://w3id.org/ocqa/0.3#>
+			prefix nivellement:         <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#>
+            prefix rdf:                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+			prefix ocqa:                <https://w3id.org/ocqa#>
+prefix nivellement:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#>
+prefix erweiterung:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
+
+			CONSTRUCT {
+				$this ocqa:hasPostPerformanceCosts ?PostPerformanceCosts .
+			}
+			WHERE { 
+                $this   ocqa:hasCharacteristicBauteilkosten ?propertyBauteilkosten;
+                        ocqa:hasCharacteristicRepairPercentage ?propertyMehrkostenSatz.
+				?propertyBauteilkosten schema:value ?Bauteilkosten.
+				?propertyMehrkostenSatz schema:value ?Mehrkosten.
+				BIND (?Bauteilkosten * ?Mehrkosten AS ?PostPerformanceCosts).
+			}
+			""" ;
+	] ;
+.

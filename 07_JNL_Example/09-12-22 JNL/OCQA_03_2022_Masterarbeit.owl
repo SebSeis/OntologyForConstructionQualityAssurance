@@ -151,6 +151,16 @@ Anmerkung 1 zum Begriff: Prüfkosten entstehen durch das für Prüfungen eingese
     
 
 
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasCount -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasCount">
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa#Inspection"/>
+        <rdfs:label xml:lang="en">hasCount</rdfs:label>
+        <rdfs:label xml:lang="de">hatAnzahl</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDegradationCosts -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#hasDegradationCosts">
@@ -650,6 +660,12 @@ Außer in den Fällen der § 281 Abs. 2 und 323 Abs. 2 bedarf es der Fristsetzun
     
 
 
+    <!-- https://w3id.org/ocqa#PostPerformanceCosts -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa#PostPerformanceCosts"/>
+    
+
+
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts -->
 
     <owl:Class rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts">
@@ -697,6 +713,16 @@ Außer in den Fällen der § 281 Abs. 2 und 323 Abs. 2 bedarf es der Fristsetzun
     
 
 
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Estrichpreis_03Hdn67 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Estrichpreis_03Hdn67">
+        <rdf:type rdf:resource="https://w3id.org/ocqa#PostPerformanceCosts"/>
+        <rdf:type rdf:resource="https://w3id.org/opm#PropertyState"/>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2000.0</schema:value>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Inspector_Number_956253rg">
@@ -713,6 +739,16 @@ Außer in den Fällen der § 281 Abs. 2 und 323 Abs. 2 bedarf es der Fristsetzun
         <rdf:type rdf:resource="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#InspectionExcecutionCosts"/>
         <rdf:type rdf:resource="https://w3id.org/opm#PropertyState"/>
         <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#int">66</schema:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Nacherfüllungssetz_034mnK49 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#PropertyState_Nacherfüllungssetz_034mnK49">
+        <rdf:type rdf:resource="https://w3id.org/ocqa#PostPerformanceCosts"/>
+        <rdf:type rdf:resource="https://w3id.org/opm#PropertyState"/>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.2</schema:value>
     </owl:NamedIndividual>
 </rdf:RDF>
 
