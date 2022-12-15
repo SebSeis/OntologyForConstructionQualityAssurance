@@ -1,0 +1,87 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dicc: <https://w3id.org/digitalconstruction/0.5/Contexts#> .
+@prefix dicv: <https://w3id.org/digitalconstruction/0.5/Variables#> .
+@prefix dice: <https://w3id.org/digitalconstruction/0.5/Entities#> .
+@prefix dicp: <https://w3id.org/digitalconstruction/0.5/Processes#> .
+@prefix dica: <https://w3id.org/digitalconstruction/0.5/Agents#> .
+@prefix dici: <https://w3id.org/digitalconstruction/0.5/Information#> .
+@prefix ifc: <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#> . 
+
+<https://w3id.org/digitalconstruction/0.5/Alignment/IFC/ifc.ttl> 
+  rdf:type owl:Ontology ;
+  dcterms:created "2021-04-18"^^xsd:date ;
+  dcterms:creator "Seppo Törmä" ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  rdfs:comment "Alignment of the Digital Construction Ontologies with ifcOWL ontology" ;
+  rdfs:label "Alignment of DiCon and ifcOWL"@en ;
+  owl:imports <https://w3id.org/digitalconstruction/0.5/Information/information.ttl> ;
+  owl:imports <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL/ontology.ttl> .
+
+ifc:IfcSite rdfs:subClassOf dice:Location .
+dice:RealEstate rdfs:subClassOf ifc:IfcSite .
+ifc:IfcBuilding rdfs:subClassOf dice:Building . 
+ifc:IfcElement rdfs:subClassOf dice:BuildingObject .
+
+ifc:SpatialElement rdfs:subClassOf dice:Location .
+ifc:IfcZone rdfs:subClassOf dice:Location .
+
+ifc:IfcAsset rdfs:subClassOf dice:Asset .
+
+ifc:IfcSensor rdfs:subClassOf dice:Sensor .
+
+ifc:IfcActor owl:equivalentClass dica:Actor .
+ifc:IfcPerson owl:equivalentClass dica:Person .
+ifc:IfcOrganization owl:equivalentClass dica:Organization . 
+ifc:IfcOccupant owl:equivalentClass dica:Occupant . 
+# ifc:IfcCrewResource rdfs:subClassOf dica:TaskTeam . 
+
+ifc:IfcResource owl:equivalentClass dicp:Resource .
+# ifc:IfcConstructionResource rdfs:subClassOf dicp:Resource .
+ifc:IfcConstructionEquipmentResource rdfs:subClassOf dice:Equipment .
+ifc:IfcConstructionMaterialResource rdfs:subClassOf dice:MaterialBatch .
+
+
+ifc:IfcProject rdfs:subClassOf dicp:Project .
+ifc:IfcProcess rdfs:subClassOf dicp:Process .
+ifc:IfcTask rdfs:subClassOf dice:Activity .
+
+ifc:IfcContext rdfs:subClassOf dicc:Context .
+
+ifc:IfcApproval rdfs:subClassOf dici:InformationContentEntity .
+ifc:IfcPermit rdfs:subClassOf dici:InformationContentEntity .
+
+ifc:IfcGroup owl:equivalentClass dice:Group .
+
+ifc:IfcObjective rdfs:subClassOf dici:Goal .
+
+ifc:IfcWorkPlan rdfs:subClassOf dici:Plan .
+ifc:IfcWorkSchedule rdfs:subClassOf dici:Plan .
+
+# PropertyChainAxioms 
+
+[ a owl:ObjectProperty ;
+  owl:propertyChainAxiom (ifc:isTypedBy_IfcObject
+                          ifc:relatingType_IfcRelDefinesByType 
+                          ifc:hasAssignments_IfcObjectDefinition         
+                          ifc:relatingProduct_IfcRelAssignsToProduct ) ] rdfs:subPropertyOf dice:isAssignedToType . 
+[ a owl:ObjectProperty ;
+  owl:propertyChainAxiom (ifc:hasAssignments_IfcObjectDefinition         
+                          ifc:relatingProduct_IfcRelAssignsToProduct ) ] rdfs:subPropertyOf dice:isAssignedToInstance . 
+ifc:IfcProxy rdfs:subClassOf dice:Category .
+ifc:tag_IfcProxy rdfs:subPropertyOf dice:hasLabel .
+
+# To consider:
+#   IfcClassification
+#   IfcConstraint
+#   IfcCostItem
+#   IfcMaterial
+#   IfcMaterialLayer
+#   IfcMaterialLayerSet
+#   IfcMetric
+#   IfcProperty
+#   IfcSystem
+

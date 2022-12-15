@@ -1,0 +1,277 @@
+@prefix : <https://w3id.org/digitalconstruction/0.5/Alignment/IFC/ifc.ttl#> .
+@prefix ifc: <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dica: <https://w3id.org/digitalconstruction/0.5/Agents#> .
+@prefix dicc: <https://w3id.org/digitalconstruction/0.5/Contexts#> .
+@prefix dice: <https://w3id.org/digitalconstruction/0.5/Entities#> .
+@prefix dici: <https://w3id.org/digitalconstruction/0.5/Information#> .
+@prefix dicp: <https://w3id.org/digitalconstruction/0.5/Processes#> .
+@prefix dicv: <https://w3id.org/digitalconstruction/0.5/Variables#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/digitalconstruction/0.5/Alignment/IFC/ifc.ttl> .
+
+<https://w3id.org/digitalconstruction/0.5/Alignment/IFC/ifc.ttl> rdf:type owl:Ontology ;
+                                                                  owl:imports <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL/ontology.ttl> ,
+                                                                              <https://w3id.org/digitalconstruction/0.5/Information/information.ttl> ;
+                                                                  dcterms:created "2021-04-18"^^xsd:date ;
+                                                                  dcterms:creator "Seppo Törmä" ;
+                                                                  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                                  rdfs:comment "Alignment of the Digital Construction Ontologies with ifcOWL ontology" ;
+                                                                  rdfs:label "Alignment of DiCon and ifcOWL"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  _:genid-nodeid-node1gkbns23sx1
+_:genid-nodeid-node1gkbns23sx1 rdf:type owl:ObjectProperty .
+
+[ owl:inverseOf _:genid-nodeid-node1gkbns23sx1 ;
+   rdfs:subPropertyOf dice:isAssignedToType
+ ] .
+
+
+###  _:genid-nodeid-node1gkbns23sx6
+_:genid-nodeid-node1gkbns23sx6 rdf:type owl:ObjectProperty .
+
+[ owl:inverseOf _:genid-nodeid-node1gkbns23sx6 ;
+   rdfs:subPropertyOf dice:isAssignedToInstance
+ ] .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#isAssignedToInstance
+dice:isAssignedToInstance rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#isAssignedToType
+dice:isAssignedToType rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#tag_IfcProxy
+ifc:tag_IfcProxy rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf dice:hasLabel .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#hasLabel
+dice:hasLabel rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcActor
+ifc:IfcActor owl:equivalentClass dica:Actor .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcApproval
+ifc:IfcApproval rdfs:subClassOf dici:InformationContentEntity .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcAsset
+ifc:IfcAsset rdfs:subClassOf dice:Asset .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBuilding
+ifc:IfcBuilding rdfs:subClassOf dice:Building .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcConstructionEquipmentResource
+ifc:IfcConstructionEquipmentResource rdfs:subClassOf dice:Equipment .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcConstructionMaterialResource
+ifc:IfcConstructionMaterialResource rdfs:subClassOf dice:MaterialBatch .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcContext
+ifc:IfcContext rdfs:subClassOf dicc:Context .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcElement
+ifc:IfcElement rdfs:subClassOf dice:BuildingObject .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcGroup
+ifc:IfcGroup owl:equivalentClass dice:Group .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcObjective
+ifc:IfcObjective rdfs:subClassOf dici:Goal .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcOccupant
+ifc:IfcOccupant owl:equivalentClass dica:Occupant .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcOrganization
+ifc:IfcOrganization owl:equivalentClass dica:Organization .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcPermit
+ifc:IfcPermit rdfs:subClassOf dici:InformationContentEntity .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcPerson
+ifc:IfcPerson owl:equivalentClass dica:Person .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcProcess
+ifc:IfcProcess rdfs:subClassOf dicp:Process .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcProject
+ifc:IfcProject rdfs:subClassOf dicp:Project .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcProxy
+ifc:IfcProxy rdfs:subClassOf dice:Category .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcResource
+ifc:IfcResource owl:equivalentClass dicp:Resource .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcSensor
+ifc:IfcSensor rdfs:subClassOf dice:Sensor .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcSite
+ifc:IfcSite rdfs:subClassOf dice:Location .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcTask
+ifc:IfcTask rdfs:subClassOf dice:Activity .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcWorkPlan
+ifc:IfcWorkPlan rdfs:subClassOf dici:Plan .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcWorkSchedule
+ifc:IfcWorkSchedule rdfs:subClassOf dici:Plan .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcZone
+ifc:IfcZone rdfs:subClassOf dice:Location .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#SpatialElement
+ifc:SpatialElement rdf:type owl:Class ;
+                   rdfs:subClassOf dice:Location .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Agents#Actor
+dica:Actor rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Agents#Occupant
+dica:Occupant rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Agents#Organization
+dica:Organization rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Agents#Person
+dica:Person rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Contexts#Context
+dicc:Context rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#Activity
+dice:Activity rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#Asset
+dice:Asset rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#Building
+dice:Building rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject
+dice:BuildingObject rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#Category
+dice:Category rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#Equipment
+dice:Equipment rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#Group
+dice:Group rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#Location
+dice:Location rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#MaterialBatch
+dice:MaterialBatch rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#RealEstate
+dice:RealEstate rdf:type owl:Class ;
+                rdfs:subClassOf ifc:IfcSite .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#Sensor
+dice:Sensor rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Information#Goal
+dici:Goal rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Information#InformationContentEntity
+dici:InformationContentEntity rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Information#Plan
+dici:Plan rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Processes#Process
+dicp:Process rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Processes#Project
+dicp:Project rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Processes#Resource
+dicp:Resource rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

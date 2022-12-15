@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/list#"
+     xml:base="https://w3id.org/list"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dce="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:expr="https://w3id.org/express#"
+     xmlns:list="https://w3id.org/list#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="https://w3id.org/list">
+        <owl:imports rdf:resource="https://w3id.org/list"/>
+        <cc:license>http://creativecommons.org/licenses/by/3.0/</cc:license>
+        <dce:creator>Pieter Pauwels (pipauwel.pauwels@ugent.be)</dce:creator>
+        <dce:creator>Walter Terkaj (walter.terkaj@itia.cnr.it)</dce:creator>
+        <dce:date>2015/12/11</dce:date>
+        <dce:description>OWL ontology for LIST concepts</dce:description>
+        <dce:language>en</dce:language>
+        <dce:title>LIST</dce:title>
+        <vann:preferredNamespacePrefix>list</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/list</vann:preferredNamespaceUri>
+        <rdfs:comment>A set of entities used to describe the OWL list pattern. </rdfs:comment>
+        <rdfs:comment>This ontology is identical to the ontology originally published by Drummond et al., with namespace http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl# and available at web location http://owl.cs.manchester.ac.uk/wp-content/uploads/2015/07/list.owl_.txt on 11 December 2015.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://owl-workshop.man.ac.uk/acceptedLong/submission_12.pdf</rdfs:seeAlso>
+        <owl:versionInfo>1.0.0 </owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/list#hasContents -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/list#hasContents">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/list#hasListProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/list#hasListProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/list#hasListProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/list#OWLList"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/list#hasNext -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/list#hasNext">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/list#isFollowedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/list#isFollowedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/list#isFollowedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/list#hasListProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/list#OWLList"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/list#EmptyList -->
+
+    <owl:Class rdf:about="https://w3id.org/list#EmptyList">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/list#OWLList"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/list#hasContents"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/list#OWLList"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/list#isFollowedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/list#OWLList -->
+
+    <owl:Class rdf:about="https://w3id.org/list#OWLList">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/list#isFollowedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/list#OWLList"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
