@@ -12,29 +12,27 @@
 @prefix erweiterung:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>.
 
 
-ocqa_rules:CalculatePostPerformanceCostsForEstrich
+ocqa_rules:CalculateInspectionCosts
 a sh:NodeShape;
-sh:targetClass erweiterung:VirtualDefect;
+sh:targetClass nivellement:Nivellement;
 sh:rule [
 		a sh:SPARQLRule ;
 		sh:construct """
-            prefix ocqa:                <https://w3id.org/ocqa#>
+            prefix ocqa:                <https://w3id.org/ocqa/0.3#>
 			prefix nivellement:         <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#>
             prefix rdf:                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+			prefix ocqa:                <https://w3id.org/ocqa#>
+			prefix nivellement:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#>
 			prefix erweiterung:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
-			prefix express: <https://w3id.org/express#> 
-prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-prefix xsd:   <http://www.w3.org/2001/XMLSchema#> 
 
 			CONSTRUCT {
-				$this erweiterung:hasPostPerformanceCosts ?PostPerformanceCosts .
+				$this erweiterung:hasAppraisalCosts ?AppraisalCosts .
 			}
-			WHERE { 
-                $this   ocqa:hasCharacteristicBauteilkosten ?propertyBauteilkosten;
-                        ocqa:hasCharacteristicRepairPercentage ?propertyMehrkostenSatz.
-				?propertyBauteilkosten schema:value ?Bauteilkosten.
-				?propertyMehrkostenSatz schema:value ?Mehrkosten.
-				BIND (?Bauteilkosten * ?Mehrkosten AS ?PostPerformanceCosts).
+			WHERE { $this erweiterung:hasCount ?Anzahl;
+				erweiterung:hasFixCosts ?Fixkosten;
+                erweiterung:hasLobourCosts ?Lohnkosten;
+                erweiterung:hasMaterialCosts ?Materialkosten.
+				BIND (?Fixkosten + (?Anzahl * (?Lohnkosten + ?Materialkosten)) AS ?AppraisalCosts).
 			}
 			""" ;
 	] ;

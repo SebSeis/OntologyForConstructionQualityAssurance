@@ -18,13 +18,12 @@ sh:targetClass erweiterung:VirtualDefect;
 sh:rule [
 		a sh:SPARQLRule ;
 		sh:construct """
-            prefix ocqa:                <https://w3id.org/ocqa#>
+            prefix ocqa:                <https://w3id.org/ocqa/0.3#>
 			prefix nivellement:         <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#>
             prefix rdf:                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-			prefix erweiterung:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
-			prefix express: <https://w3id.org/express#> 
-prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-prefix xsd:   <http://www.w3.org/2001/XMLSchema#> 
+			prefix ocqa:                <https://w3id.org/ocqa#>
+prefix nivellement:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#>
+prefix erweiterung:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
 
 			CONSTRUCT {
 				$this erweiterung:hasPostPerformanceCosts ?PostPerformanceCosts .
