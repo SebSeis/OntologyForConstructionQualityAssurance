@@ -1,0 +1,115 @@
+@prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:                 <http://www.w3.org/ns/shacl#> .
+@prefix dash:               <http://datashapes.org/dash#> .
+@prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:                 <http://www.semanticweb.org/exampleInspectionCost#> .
+@prefix owl:                <http://www.w3.org/2002/07/owl#> .
+@prefix ocqa:               <https://w3id.org/ocqa#>.
+@prefix schema:				<https://schema.org/>.
+@prefix ocqa_screed:        <https://w3id.org/ocqa_screed#>.
+@prefix ocqa_rules:        <https://w3id.org/ocqa_rules#>.
+@prefix nivellement:              <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#>.
+@prefix diconvariable:      <https://w3id.org/digitalconstruction/0.5/Variables#>.
+
+#Defines the parameter multiply
+ocqa_rules:multiply
+a sh:SPARQLFunction ;
+	rdfs:comment "Multiplies its two arguments $op1 and $op2." ;
+	sh:parameter [
+		sh:path ex:op1 ;
+		sh:datatype xsd:integer ;
+		sh:description "The first operand" ;
+	] ;
+	sh:parameter [
+		sh:path ex:op2 ;
+		sh:datatype xsd:integer ;
+		sh:description "The second operand" ;
+	] ;
+	sh:returnType xsd:integer ;
+	sh:select """
+		SELECT ($op1 * $op2 AS ?result)
+		WHERE {
+		}
+		""" .
+
+#Berchnung der Prüfmittelkosten
+ocqa_rules:ConditionAppraisalCost_EquipmentCost
+a sh:NodeShape;
+sh:targetClass ocqa:Inspection;
+sh:property[
+		sh:path ex:hasCount ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:property[
+		sh:path ocqa:hasInspectionEquipment ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] .
+
+#Berchnung der Prüfmittelkosten
+ocqa_rules:CalculateAppraisalCost_EquipmentCost
+a sh:NodeShape;
+sh:targetClass ocqa:Inspection;
+sh:rule [
+		a sh:TripleRule ;
+		sh:subject sh:this ;
+		sh:predicate ex:hasEquipmentCost ;    # Computes the values of the ex:area property at the focus nodes
+		sh:object [
+			ocqa_rules:multiply( [ sh:path ex:hasCount ] [ sh:path (ocqa:hasInspectionEquipment ocqa:hasCostPerUnitCharacteristic ocqa:hasCharacteristicState schema:value) ] ) ;#diconvariable:hasValue
+		] ;
+		sh:condition ocqa_rules:ConditionAppraisalCost_EquipmentCost;
+	] .
+#Berechnung der Gesamtkosten
+ocqa_rules:CalculateAppraisalCost_TotalCost3
+a sh:NodeShape;
+sh:targetClass ocqa:Inspection3;
+sh:rule [
+			a sh:TripleRule ;
+		sh:subject sh:this ;
+		sh:predicate ex:hasEquipmentCost ;    # Computes the values of the ex:area property at the focus nodes
+		sh:object 
+			[ sh:expression 
+			[
+				sh:sum [ sh:path (ocqa:hasLabourCostPerInspection)]
+			]
+			];
+].
+
+ocqa_rules:CalculateAppraisalCost_TotalCost2
+a sh:NodeShape;
+sh:targetClass ocqa:Inspection;
+sh:rule [
+		a sh:SPARQLRule ;
+		sh:construct """
+			prefix nivellement:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#>
+            prefix rdf:                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+			prefix ocqa:                <https://w3id.org/ocqa#>
+			prefix erweiterung:                <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung#>
+			prefix ocqa_screed:        <https://w3id.org/ocqa_screed#>
+			prefix ocqa_rules:        <https://w3id.org/ocqa_rules#>
+			prefix nivellement:              <https://w3id.org/ocqa/0.3/JNL2022Masterarbeit/Erweiterung/Nivellement#>
+			prefix diconvariable:      <https://w3id.org/digitalconstruction/0.5/Variables#>
+			prefix ex:                 <http://www.semanticweb.org/exampleInspectionCost#>
+CONSTRUCT {
+				$this  ocqa:hasInspectionCost ?test#((?InspectionCost + ?InspectionCost2) AS ?test). #?test #(SUM(?InspectionCost) AS ?test)
+			}
+			WHERE {
+				#$this 	ocqa:hasFixCostPerInspection ?InspectionCost;
+				#		ocqa:hasLabourCostPerInspection ?InspectionCost2.
+				SELECT (SUM(?InspectionCost) AS ?test) #((?InspectionCost + ?InspectionCost2) AS ?test) #
+    			WHERE {
+      					$this ocqa:hasFixCostPerInspection ?InspectionCost;
+								ocqa:hasLabourCostPerInspection ?InspectionCost.
+    				}
+					#GROUP BY $this
+				#$this ocqa:hasFixCostPerInspection ?InspectionCost.
+				#$this ocqa:hasLabourCostPerInspection ?InspectionCost.
+				#?parent ex:sibling ?uncle .
+				#?uncle ex:gender ex:male .
+			}
+			#GROUP BY $this
+			""" ;
+			
+		].
