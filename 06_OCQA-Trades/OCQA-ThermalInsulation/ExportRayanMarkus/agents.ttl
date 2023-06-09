@@ -1,0 +1,703 @@
+@base <https://w3id.org/digitalconstruction/0.5/Agents#> .
+@prefix : <https://w3id.org/digitalconstruction/0.5/Agents#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dice: <https://w3id.org/digitalconstruction/0.5/Entities#> .
+@prefix dicp: <https://w3id.org/digitalconstruction/0.5/Processes#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+# 
+# http://purl.org/dc/elements/1.1/date
+# 
+# http://purl.org/dc/elements/1.1/title
+# 
+# http://purl.org/dc/terms/abstract
+# 
+# http://purl.org/dc/terms/created
+# 
+# http://purl.org/dc/terms/description
+# 
+# http://purl.org/dc/terms/license
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasAgent
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasAppointedParty
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasAppointingParty
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasBuiltAssetUser
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasControlOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasExecutingAgent
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasIntention
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasLandlord
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasLeadAppointedParty
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasLeaseOn
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasOccupant
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasOrganizationPart
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasOwner
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasProjectTeam
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasResponsibleAgent
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasShareholder
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasTenant
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isAgentIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isAppointedPartyIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isAppointingPartyOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isBuiltAssetUserOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isInControlOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isIntentionOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isLeadAppointedPartyIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isLeasedTo
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isOccupantIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isOrganizationPartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isOwnerOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isResponsiblefor
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#isShareholderOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isMemberOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isOccupantIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isOccupiedIn
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasBirthYear
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasGender
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasTeamSize
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Actor
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Agent
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Appointment
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#AssetOperationTeam
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#BuiltAssetOwner
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Corporation
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#DeliveryTeam
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Goal
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Intention
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#LegalEntity
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#LegalPerson
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#LegalPersonRole
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#LegallyCompetentNaturalPerson
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#ManualActuation
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#ManualObservation
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Occupant
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Organization
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Person
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#ProjectLeaderRole
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#ProjectOwnerRole
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#ProjectTeam
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#SiteManagerRole
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Stakeholder
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#StakeholderRole
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#SubcontractorRole
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#TaskTeam
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Team
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Tenant
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#VendorRole
+# 
+# Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+
+<Agents> a owl:Ontology;
+  owl:imports <Processes/processes.ttl>;
+  <http://purl.org/dc/elements/1.1/date> "2021-04-12";
+  <http://purl.org/dc/elements/1.1/title> "Digital Construction Agents";
+  <http://purl.org/dc/terms/created> "2020-01-12";
+  <http://purl.org/dc/terms/creator> "Seppo Törmä", "Yuan Zheng";
+  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/>;
+  <http://purl.org/vocab/vann/preferredNamespacePrefix> "dica";
+  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/digitalconstruction/0.5/Agents";
+  rdfs:comment "Agents ontology formalize the the representation of the actors and stakeholders over the construction lifecycle, to support data sharing of the social, organizational and contractural relations. The ontology is aligned with BFO, FOAF and ORG.";
+  rdfs:label "Digital Construction Agents";
+  rdfs:seeAlso <.> .
+
+<http://purl.org/dc/elements/1.1/creator> a owl:AnnotationProperty .
+
+<http://purl.org/dc/elements/1.1/date> a owl:AnnotationProperty .
+
+<http://purl.org/dc/elements/1.1/title> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/abstract> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/created> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/description> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/license> a owl:AnnotationProperty .
+
+<http://purl.org/vocab/vann/preferredNamespacePrefix> a owl:AnnotationProperty .
+
+<http://purl.org/vocab/vann/preferredNamespaceUri> a owl:AnnotationProperty .
+
+:hasAgent a owl:ObjectProperty;
+  rdfs:subPropertyOf dice:hasParticipant;
+  owl:inverseOf :isAgentIn;
+  rdfs:domain dice:Process;
+  rdfs:range :Agent;
+  rdfs:label "hasAgent" .
+
+:hasAppointedParty a owl:ObjectProperty;
+  owl:inverseOf :isAppointedPartyIn;
+  rdfs:domain :Appointment;
+  rdfs:range :Agent;
+  rdfs:label "hasAppointedParty" .
+
+:hasAppointingParty a owl:ObjectProperty;
+  owl:inverseOf :isAppointingPartyOf;
+  rdfs:domain :Appointment;
+  rdfs:range :Agent;
+  rdfs:label "hasAppointingParty" .
+
+:hasBuiltAssetUser a owl:ObjectProperty;
+  owl:inverseOf :isBuiltAssetUserOf;
+  rdfs:domain dice:BuiltAsset;
+  rdfs:range :Agent;
+  rdfs:comment "An agent that uses a built asset";
+  rdfs:label "hasBuiltAssetUser" .
+
+:hasControlOf a owl:ObjectProperty;
+  owl:inverseOf :isInControlOf;
+  rdfs:domain :LegalPerson;
+  rdfs:range dice:Asset;
+  rdfs:comment "An asset over which an legal person has a legally recognized control. For instance, a tenant has a control of an apartment during the tenancy";
+  rdfs:label "hasControlOf" .
+
+:hasExecutingAgent a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasAgent;
+  rdfs:comment "An agent of activity that is appointed to execute the activity";
+  rdfs:label "hasExecutingAgent" .
+
+:hasIntention a owl:ObjectProperty;
+  rdfs:subPropertyOf dice:bearerOf;
+  owl:inverseOf :isIntentionOf;
+  rdfs:domain :Agent;
+  rdfs:range :Intention;
+  rdfs:label "hasIntention" .
+
+:hasLandlord a owl:ObjectProperty;
+  owl:inverseOf :hasTenant;
+  rdfs:domain :Tenant;
+  rdfs:range :BuiltAssetOwner;
+  rdfs:comment "A tenant has a landlord who is a built asset owner";
+  rdfs:label "hasLandlord" .
+
+:hasLeadAppointedParty a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasAppointedParty;
+  owl:inverseOf :isLeadAppointedPartyIn;
+  rdfs:domain :Team;
+  rdfs:range :Agent;
+  rdfs:label "hasLeadAppointedParty" .
+
+:hasLeaseOn a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasControlOf;
+  owl:inverseOf :isLeasedTo;
+  rdfs:domain :LegalPerson;
+  rdfs:range dice:Asset;
+  rdfs:comment "A lease relationship between a legal person and an asset";
+  rdfs:label "hasLeaseOn" .
+
+:hasOccupant a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasBuiltAssetUser;
+  owl:inverseOf :isOccupantIn;
+  rdfs:domain dice:BuiltAsset;
+  rdfs:range :Person;
+  rdfs:comment "A person who is an occupant of a built asset";
+  rdfs:label "hasOccupant" .
+
+:hasOrganizationPart a owl:ObjectProperty;
+  rdfs:subPropertyOf dice:hasMemberPartAtAllTimes;
+  owl:inverseOf :isOrganizationPartOf;
+  rdfs:domain :Organization;
+  rdfs:range :Agent;
+  rdfs:label "hasOrganizationPart" .
+
+:hasOwner a owl:ObjectProperty;
+  owl:inverseOf :isOwnerOf;
+  rdfs:domain dice:Asset;
+  rdfs:range :LegalPerson;
+  rdfs:comment "A legally recognized owner of an asset";
+  rdfs:label "hasOwner" .
+
+:hasProjectTeam a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasExecutingAgent;
+  rdfs:domain dicp:Project;
+  rdfs:range :DeliveryTeam;
+  rdfs:label "hasProjectTeam" .
+
+:hasResponsibleAgent a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasAgent;
+  rdfs:comment "The agent of activity with overall reponsibility that the activity gets executed";
+  rdfs:label "hasResponsibleAgent" .
+
+:hasShareholder a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasOwner;
+  owl:inverseOf :isShareholderOf;
+  rdfs:domain :Corporation;
+  rdfs:range :LegalPerson;
+  rdfs:comment "Partial ownership: a corporation is partially owned by a legal person";
+  rdfs:label "hasShareholder" .
+
+:hasTenant a owl:ObjectProperty;
+  rdfs:domain :BuiltAssetOwner;
+  rdfs:range :Tenant;
+  rdfs:comment "A built asset owner has a tenant";
+  rdfs:label "hasTenant" .
+
+:isAgentIn a owl:ObjectProperty;
+  rdfs:subPropertyOf dice:participatesIn;
+  rdfs:domain :Agent;
+  rdfs:range dice:Process;
+  rdfs:label "isAgentIn" .
+
+:isAppointedPartyIn a owl:ObjectProperty;
+  rdfs:domain :Agent;
+  rdfs:range :Appointment;
+  rdfs:label "isAppointedPartyIn" .
+
+:isAppointingPartyOf a owl:ObjectProperty;
+  rdfs:domain :Agent;
+  rdfs:range :Appointment;
+  rdfs:label "isAppointingPartyOf" .
+
+:isBuiltAssetUserOf a owl:ObjectProperty;
+  rdfs:domain :Agent;
+  rdfs:range dice:BuiltAsset;
+  rdfs:comment "A built asset that an agent uses";
+  rdfs:label "isBuiltAssetUserOf" .
+
+:isInControlOf a owl:ObjectProperty;
+  rdfs:domain dice:Asset;
+  rdfs:range :LegalPerson;
+  rdfs:comment "The legal person that has legally recognized control over the asset. For instance, a tenant has a control of an apartment during the tenancy";
+  rdfs:label "isInControlOf" .
+
+:isIntentionOf a owl:ObjectProperty;
+  rdfs:subPropertyOf dice:inheresIn;
+  rdfs:domain :Intention;
+  rdfs:range :Agent;
+  rdfs:label "isIntentionOf" .
+
+:isLeadAppointedPartyIn a owl:ObjectProperty;
+  rdfs:subPropertyOf :isAppointedPartyIn;
+  rdfs:domain :Agent;
+  rdfs:range :Team;
+  rdfs:label "isLeadAppointedPartyIn" .
+
+:isLeasedTo a owl:ObjectProperty;
+  rdfs:subPropertyOf :isInControlOf;
+  rdfs:domain dice:Asset;
+  rdfs:range :LegalPerson;
+  rdfs:comment "A leased to relationship between an asset and a legal person";
+  rdfs:label "isLeasedTo" .
+
+:isOccupantIn a owl:ObjectProperty;
+  rdfs:subPropertyOf :isBuiltAssetUserOf;
+  rdfs:domain :Person;
+  rdfs:range dice:BuiltAsset;
+  rdfs:comment "A built asset in which a person is an occupant";
+  rdfs:label "isOccupantIn" .
+
+:isOrganizationPartOf a owl:ObjectProperty;
+  rdfs:subPropertyOf dice:isMemberPartOf;
+  rdfs:domain :Agent;
+  rdfs:range :Organization;
+  rdfs:label "isOrganizationPartOf" .
+
+:isOwnerOf a owl:ObjectProperty;
+  rdfs:domain :LegalPerson;
+  rdfs:range dice:Asset;
+  rdfs:comment "A legally recognized asset of an owner";
+  rdfs:label "isOwnerOf" .
+
+:isResponsiblefor a owl:ObjectProperty;
+  rdfs:domain :Agent;
+  rdfs:range dicp:Activity .
+
+:isShareholderOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :isOwnerOf;
+  rdfs:domain :LegalPerson;
+  rdfs:range :Corporation;
+  rdfs:comment "Partial ownetship: a legal person is a partial owner of a corporation";
+  rdfs:label "isShareholderOf" .
+
+dice:isMemberOf a owl:ObjectProperty .
+
+dice:isOccupantIn a owl:ObjectProperty .
+
+dice:isOccupiedIn a owl:ObjectProperty .
+
+:hasBirthYear a owl:DatatypeProperty;
+  rdfs:domain :Person;
+  rdfs:range xsd:nonNegativeInteger;
+  rdfs:label "hasBirthYear" .
+
+:hasGender a owl:DatatypeProperty;
+  rdfs:domain :Person;
+  rdfs:range xsd:string;
+  rdfs:label "hasGender" .
+
+:hasTeamSize a owl:DatatypeProperty;
+  rdfs:domain :Team;
+  rdfs:range xsd:integer;
+  rdfs:comment "hasTeamSize" .
+
+:Actor a owl:Class;
+  owl:equivalentClass _:genid1;
+  rdfs:comment """An agent that performs activities.
+
+Person, organization or organizational unit involved in a construction process (ISO 19650-1, def 3.2.1). 
+
+Note 1: Organizational units include, but are not limited to, departments, teams.
+
+Note 2: In the context of ISO 19650-1, construction processes take place during the delivery phase
+and the operational phase.""";
+  rdfs:label "Actor" .
+
+_:genid1 a owl:Class;
+  owl:intersectionOf _:genid4 .
+
+_:genid4 a rdf:List;
+  rdf:first :Agent;
+  rdf:rest _:genid2 .
+
+_:genid2 a rdf:List;
+  rdf:first _:genid3;
+  rdf:rest rdf:nil .
+
+_:genid3 a owl:Restriction;
+  owl:someValuesFrom dicp:Activity;
+  owl:onProperty :isAgentIn .
+
+:Agent a owl:Class;
+  rdfs:subClassOf dice:MaterialEntity;
+  rdfs:comment "Agents are actors or stakeholders associated with construction lifecycles";
+  rdfs:label "Agent" .
+
+:Appointment a owl:Class;
+  rdfs:subClassOf dice:RelationalQuality;
+  rdfs:label "Appointment" .
+
+:AssetOperationTeam a owl:Class;
+  rdfs:subClassOf :Team;
+  rdfs:comment "A team working in the operational phase of assets (ISO 19650-3)";
+  rdfs:label "AssetOperationTeam" .
+
+:BuiltAssetOwner a owl:Class;
+  rdfs:subClassOf :Agent, _:genid5;
+  rdfs:label "BuiltAssetOwner" .
+
+_:genid5 a owl:Class;
+  owl:intersectionOf _:genid8 .
+
+_:genid8 a rdf:List;
+  rdf:first :LegalPerson;
+  rdf:rest _:genid6 .
+
+_:genid6 a rdf:List;
+  rdf:first _:genid7;
+  rdf:rest rdf:nil .
+
+_:genid7 a owl:Restriction;
+  owl:someValuesFrom dice:BuiltAsset;
+  owl:onProperty :isOwnerOf .
+
+:Corporation a owl:Class;
+  rdfs:subClassOf :LegalEntity, dice:Asset;
+  rdfs:comment "A legal entity established for commercial purposes";
+  rdfs:label "Corporation" .
+
+:DeliveryTeam a owl:Class;
+  owl:equivalentClass :ProjectTeam;
+  rdfs:subClassOf :Team;
+  rdfs:comment """Lead appointed party and their appointed parties (ISO 19650-1, def. 3.2.6).
+
+Note 1: A delivery team can be any size, from one person carrying out all the necessary functions through to complex, multi-layered task teams. The size and structure of each delivery team are in response to the scale and complexity of the asset management or project delivery activities.
+
+Note 2: Multiple delivery teams can be appointed simultaneously and/or sequentially in connection with a single asset or project, in response to the scale and complexity of the asset management or project delivery activities.
+
+Note 3: A delivery team can consist of multiple task teams from within the lead appointed party’s organization and any appointed parties.
+
+Note 4: A delivery team can be assembled by the appointing party rather than the lead appointed party. (ISO 19650-1, def. 3.2.6)""";
+  rdfs:label "DeliveryTeam" .
+
+:Goal a owl:Class;
+  rdfs:subClassOf :Intention;
+  rdfs:label "Goal" .
+
+:Intention a owl:Class;
+  rdfs:subClassOf dice:Disposition;
+  rdfs:label "Intention" .
+
+:LegalEntity a owl:Class;
+  owl:equivalentClass _:genid9;
+  rdfs:comment "Organization that has legal rights and responsibilities in the applicable jurisdiction. Alignes with org:FormalOrganization ";
+  rdfs:label "LegalEntity" .
+
+_:genid9 a owl:Class;
+  owl:intersectionOf _:genid11 .
+
+_:genid11 a rdf:List;
+  rdf:first :LegalPerson;
+  rdf:rest _:genid10 .
+
+_:genid10 a rdf:List;
+  rdf:first :Organization;
+  rdf:rest rdf:nil .
+
+:LegalPerson a owl:Class;
+  owl:equivalentClass _:genid12;
+  rdfs:comment "Agent that has legal rights and responsibilities in the applicable jurisdiction. ";
+  rdfs:label "LegalPerson" .
+
+_:genid12 a owl:Class;
+  owl:intersectionOf _:genid15 .
+
+_:genid15 a rdf:List;
+  rdf:first :Agent;
+  rdf:rest _:genid13 .
+
+_:genid13 a rdf:List;
+  rdf:first _:genid14;
+  rdf:rest rdf:nil .
+
+_:genid14 a owl:Restriction;
+  owl:someValuesFrom :LegalPersonRole;
+  owl:onProperty dice:hasRole .
+
+:LegalPersonRole a owl:Class;
+  rdfs:subClassOf dice:Role;
+  rdfs:label "LegalPersonRole" .
+
+:LegallyCompetentNaturalPerson a owl:Class;
+  owl:equivalentClass _:genid16;
+  rdfs:comment "A person that has legal rights and responsibilities in the applicable jurisdiction";
+  rdfs:label "LegallyCompetentNaturalPerson" .
+
+_:genid16 a owl:Class;
+  owl:intersectionOf _:genid18 .
+
+_:genid18 a rdf:List;
+  rdf:first :LegalPerson;
+  rdf:rest _:genid17 .
+
+_:genid17 a rdf:List;
+  rdf:first :Person;
+  rdf:rest rdf:nil .
+
+:ManualActuation a owl:Class;
+  rdfs:subClassOf dicp:Actuation, _:genid19;
+  rdfs:label "ManualActuation" .
+
+_:genid19 a owl:Restriction;
+  owl:allValuesFrom :Agent;
+  owl:onProperty dicp:isActuatedBy .
+
+:ManualObservation a owl:Class;
+  rdfs:subClassOf dicp:Observation, _:genid20;
+  rdfs:label "ManualObservation" .
+
+_:genid20 a owl:Restriction;
+  owl:allValuesFrom :Agent;
+  owl:onProperty dicp:isObservedBy .
+
+:Occupant a owl:Class;
+  owl:equivalentClass _:genid21;
+  rdfs:comment "A person that is occupant in some built asset";
+  rdfs:label "Occupant" .
+
+_:genid21 a owl:Class;
+  owl:intersectionOf _:genid24 .
+
+_:genid24 a rdf:List;
+  rdf:first :Person;
+  rdf:rest _:genid22 .
+
+_:genid22 a rdf:List;
+  rdf:first _:genid23;
+  rdf:rest rdf:nil .
+
+_:genid23 a owl:Restriction;
+  owl:someValuesFrom dice:BuiltAsset;
+  owl:onProperty dice:isOccupantIn .
+
+:Organization a owl:Class;
+  rdfs:subClassOf :Agent;
+  rdfs:comment "An organized group of people with a particular purpose involved in the process.";
+  rdfs:label "Organization" .
+
+:Person a owl:Class;
+  rdfs:subClassOf :Agent;
+  rdfs:comment "A human being involved in the construction process.";
+  rdfs:label "Person" .
+
+:ProjectLeaderRole a owl:Class;
+  rdfs:subClassOf dice:Role;
+  rdfs:label "ProjectLeaderRole" .
+
+:ProjectOwnerRole a owl:Class;
+  rdfs:subClassOf dice:Role;
+  rdfs:label "ProjectOwnerRole" .
+
+:ProjectTeam a owl:Class;
+  rdfs:subClassOf :Team .
+
+:SiteManagerRole a owl:Class;
+  rdfs:subClassOf dice:Role;
+  rdfs:label "SiteManagerRole" .
+
+:Stakeholder a owl:Class;
+  owl:equivalentClass _:genid25;
+  rdfs:comment "An agent that has a stake on the execution of the activities but does not (necessarily) itself execute them.";
+  rdfs:label "Stakeholder" .
+
+_:genid25 a owl:Class;
+  owl:intersectionOf _:genid28 .
+
+_:genid28 a rdf:List;
+  rdf:first :Agent;
+  rdf:rest _:genid26 .
+
+_:genid26 a rdf:List;
+  rdf:first _:genid27;
+  rdf:rest rdf:nil .
+
+_:genid27 a owl:Class;
+  owl:complementOf :Actor .
+
+:StakeholderRole a owl:Class;
+  rdfs:subClassOf dice:Role;
+  rdfs:label "StakeholderRole" .
+
+:SubcontractorRole a owl:Class;
+  rdfs:subClassOf dice:Role;
+  rdfs:label "SubcontractorRole" .
+
+:TaskTeam a owl:Class;
+  rdfs:subClassOf :Team;
+  rdfs:comment "Individuals assembled to perform a specific task (ISO 19650-1, def. 3.2.6)";
+  rdfs:label "TaskTeam" .
+
+:Team a owl:Class;
+  rdfs:subClassOf :Organization, dice:Group;
+  rdfs:comment "A set of persons working together for some purpose";
+  rdfs:label "Team" .
+
+:Tenant a owl:Class;
+  rdfs:subClassOf _:genid29;
+  rdfs:comment "A legal person that has a lease on some built asset";
+  rdfs:label "Tenant" .
+
+_:genid29 a owl:Class;
+  owl:intersectionOf _:genid32 .
+
+_:genid32 a rdf:List;
+  rdf:first :LegalPerson;
+  rdf:rest _:genid30 .
+
+_:genid30 a rdf:List;
+  rdf:first _:genid31;
+  rdf:rest rdf:nil .
+
+_:genid31 a owl:Restriction;
+  owl:someValuesFrom dice:BuiltAsset;
+  owl:onProperty :hasLeaseOn .
+
+:VendorRole a owl:Class;
+  rdfs:subClassOf dice:Role;
+  rdfs:label "VendorRole" .

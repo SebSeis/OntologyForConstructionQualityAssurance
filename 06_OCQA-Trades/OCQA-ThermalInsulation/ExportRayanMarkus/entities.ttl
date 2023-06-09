@@ -1,0 +1,2586 @@
+@base <https://w3id.org/digitalconstruction/0.5/Entities#> .
+@prefix : <https://w3id.org/digitalconstruction/0.5/Entities#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dicc: <https://w3id.org/digitalconstruction/0.5/Contexts#> .
+@prefix dicv: <https://w3id.org/digitalconstruction/0.5/Variables#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+# 
+# http://purl.org/dc/elements/1.1/date
+# 
+# http://purl.org/dc/elements/1.1/title
+# 
+# http://purl.org/dc/terms/abstract
+# 
+# http://purl.org/dc/terms/created
+# 
+# http://purl.org/dc/terms/creator
+# 
+# http://purl.org/dc/terms/description
+# 
+# http://purl.org/dc/terms/license
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#assignsInstanceTo
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#assignsTypeTo
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#bearerOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#belongsTo
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#categorises
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#classifies
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#concretizes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#concretizesAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#containsIdentifiedEntities
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#continuantPartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#continuantPartOfAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#environs
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#existsAt
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#firstInstantOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#genericallyDependsOn
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#genericallyDependsOnAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasAdjacentElement
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasBuilding
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasBuildingUnit
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasCapability
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasContinuantPart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasContinuantPartAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasDetermined
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasDuration
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasEnd
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasEntitiesFrom
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasEntityState
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasEquipment
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasFirstInstant
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasHistory
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasLastInstant
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasLocationAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMaterialBasis
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMaterialBasisAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMaximumCartesianPosition
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMaximumGeodeticPosition
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMember
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMemberPart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMemberPartAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMinimumCartesianPosition
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMinimumGeodeticPosition
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasOccurrentPart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasPart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasParticipant
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasParticipantAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasProperContinuantPart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasProperContinuantPartAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasProperOccurrentPart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasProperTemporalPart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasQuality
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasRealization
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasRole
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasScope
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasSpatialExtent
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasSpatialOrientation
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasSpatialOrigin
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasSpatialPosition
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasStart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasSubGroup
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasSubLocation
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasTemporalPart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#historyOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#identifies
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#includesRole
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#inheresIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isAssignedToInstance
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isAssignedToType
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isBuildingOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isBuildingUnitOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isCapabilityOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isCarrierOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isCarrierOfAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isClassifiedBy
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isConcretizedBy
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isConcretizedByAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isDeterminedBy
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isEndOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isEntityStateOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isEnvironmentOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isEquipmentIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isIdentifiedBy
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isIncludedRoleIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isLabeledBy
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isLocatedIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isLocationOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isMemberPartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isPartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isQualityOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isRoleOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isStartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isSubGroupOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#isSubLocationOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#labeledBy
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#labels
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#lastInstantOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#locatedIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#locatedInAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#locationOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#locationOfAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#materialBasisOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#materialBasisOfAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#memberOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#memberPartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#memberPartOfAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#occupiesSpatialRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#occupiesSpatialRegionAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#occupiesSpatiotemporalRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#occupiesTemporalRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#occurrentPartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#occursIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#participatesIn
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#participatesInAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#precededBy
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#precedes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#properContinuantPartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#properContinuantPartOfAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#properOccurrentPartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#properTemporalPartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#realizes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#spatiallyProjectsOnto
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#spatiallyProjectsOntoAtAllTimes
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#specificallyDependedOnBy
+
+<Entities> a owl:Ontology;
+  owl:imports <Contexts/contexts.ttl>, <Variables/variables.ttl>;
+  <http://purl.org/dc/elements/1.1/date> "2021-03-31";
+  <http://purl.org/dc/elements/1.1/title> "Digital Construction Entities";
+  <http://purl.org/dc/terms/created> "2020-01-12";
+  <http://purl.org/dc/terms/creator> "Seppo Törmä", "Yuan Zheng";
+  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/>;
+  <http://purl.org/vocab/vann/preferredNamespacePrefix> "dice";
+  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/digitalconstruction/0.5/Entities";
+  rdfs:comment "Digital Construction Entities Ontology defines the basic classes and properties needed for the representation of construction and renovation projects. Examples are building object, location, material batch, equipment, agent, information content entity, activity and related time concepts. The ontology is based on BFO. ";
+  rdfs:label "Digital Construction Entities";
+  rdfs:seeAlso <.> .
+
+<http://purl.org/dc/elements/1.1/creator> a owl:AnnotationProperty .
+
+<http://purl.org/dc/elements/1.1/date> a owl:AnnotationProperty .
+
+<http://purl.org/dc/elements/1.1/title> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/abstract> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/created> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/creator> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/description> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/license> a owl:AnnotationProperty .
+
+<http://purl.org/vocab/vann/preferredNamespacePrefix> a owl:AnnotationProperty .
+
+<http://purl.org/vocab/vann/preferredNamespaceUri> a owl:AnnotationProperty .
+
+:assignsInstanceTo a owl:ObjectProperty;
+  rdfs:subPropertyOf :identifies;
+  owl:inverseOf :isAssignedToInstance;
+  rdfs:domain :Identifier;
+  rdfs:range :MaterialEntity;
+  rdfs:label "assignsInstanceTo" .
+
+:assignsTypeTo a owl:ObjectProperty;
+  rdfs:subPropertyOf :classifies;
+  owl:inverseOf :isAssignedToType;
+  rdfs:domain :Category;
+  rdfs:range :MaterialEntity;
+  rdfs:comment "Assignment of a selected type to an entity. An example is product assignment.";
+  rdfs:label "assignsTypeTo" .
+
+:bearerOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :specificallyDependedOnBy;
+  rdfs:domain _:genid1;
+  rdfs:range :SpecificallyDependentContinuant;
+  rdfs:comment "bearerOf is equivalent to the BFO property 'bearer of' (http://purl.obolibrary.org/obo/BFO_0000196)";
+  rdfs:label "bearerOf" .
+
+_:genid1 a owl:Class;
+  owl:intersectionOf _:genid4 .
+
+_:genid4 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid2 .
+
+_:genid2 a rdf:List;
+  rdf:first _:genid3;
+  rdf:rest rdf:nil .
+
+_:genid3 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:belongsTo a owl:ObjectProperty;
+  rdfs:subPropertyOf :labeledBy;
+  owl:inverseOf :categorises;
+  rdfs:label "belongsTo" .
+
+:labeledBy a owl:ObjectProperty .
+
+:categorises a owl:ObjectProperty;
+  owl:equivalentProperty :classifies;
+  rdfs:subPropertyOf :labels .
+
+:classifies a owl:ObjectProperty;
+  rdfs:subPropertyOf :labels;
+  owl:inverseOf :isClassifiedBy;
+  rdfs:domain :Category;
+  rdfs:range :Entity;
+  rdfs:label "classifies" .
+
+:concretizes a owl:ObjectProperty;
+  rdfs:domain _:genid5;
+  rdfs:range :GenericallyDependentContinuant;
+  rdfs:comment "concretizes is equivalent to the BFO property 'concretizes at some time' (http://purl.obolibrary.org/obo/BFO_0000059)";
+  rdfs:label "concretizes" .
+
+_:genid5 a owl:Class;
+  owl:unionOf _:genid7 .
+
+_:genid7 a rdf:List;
+  rdf:first :Process;
+  rdf:rest _:genid6 .
+
+_:genid6 a rdf:List;
+  rdf:first :SpecificallyDependentContinuant;
+  rdf:rest rdf:nil .
+
+:concretizesAtAllTimes a owl:ObjectProperty;
+  rdfs:subPropertyOf :concretizes;
+  rdfs:domain _:genid8;
+  rdfs:range :GenericallyDependentContinuant;
+  rdfs:comment "concretizesAtAllTimes is equivalent to the BFO property 'concretizes at all times' (http://purl.obolibrary.org/obo/BFO_0000164)";
+  rdfs:label "concretizesAtAllTimes" .
+
+_:genid8 a owl:Class;
+  owl:unionOf _:genid10 .
+
+_:genid10 a rdf:List;
+  rdf:first :Process;
+  rdf:rest _:genid9 .
+
+_:genid9 a rdf:List;
+  rdf:first :SpecificallyDependentContinuant;
+  rdf:rest rdf:nil .
+
+:containsIdentifiedEntities a owl:ObjectProperty;
+  owl:inverseOf :hasEntitiesFrom;
+  rdfs:domain :Entity;
+  rdfs:range :EntityScope;
+  rdfs:label "containsIdentifiedEntities" .
+
+:continuantPartOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :isPartOf;
+  rdfs:domain :Continuant;
+  rdfs:range :Continuant;
+  rdfs:comment "continuantPartOf is equivalent to the BFO property 'continuant part of at some time' (http://purl.obolibrary.org/obo/BFO_0000176)";
+  rdfs:label "continuantPartOf" .
+
+:continuantPartOfAtAllTimes a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf :continuantPartOf;
+  rdfs:domain :Continuant;
+  rdfs:range :Continuant;
+  rdfs:comment "continuantPartOfAtAllTimes is equivalent to the BFO property 'continuant part of at all times' (http://purl.obolibrary.org/obo/BFO_0000177)";
+  rdfs:label "continuantPartOfAtAllTimes" .
+
+:environs a owl:ObjectProperty;
+  rdfs:domain _:genid11;
+  rdfs:range _:genid14;
+  rdfs:comment "environs is equivalent to the BFO property 'environs' (http://purl.obolibrary.org/obo/BFO_0000183)";
+  rdfs:label "environs" .
+
+_:genid11 a owl:Class;
+  owl:unionOf _:genid13 .
+
+_:genid13 a rdf:List;
+  rdf:first :MaterialEntity;
+  rdf:rest _:genid12 .
+
+_:genid12 a rdf:List;
+  rdf:first :Site;
+  rdf:rest rdf:nil .
+
+_:genid14 a owl:Class;
+  owl:unionOf _:genid16 .
+
+_:genid16 a rdf:List;
+  rdf:first :Process;
+  rdf:rest _:genid15 .
+
+_:genid15 a rdf:List;
+  rdf:first :ProcessBoundary;
+  rdf:rest rdf:nil .
+
+:existsAt a owl:ObjectProperty;
+  rdfs:comment "existsAt is equivalent to the BFO property 'exists at' (http://purl.obolibrary.org/obo/BFO_0000108)";
+  rdfs:label "existsAt" .
+
+:firstInstantOf a owl:ObjectProperty;
+  rdfs:domain :TimeInstant;
+  rdfs:range :TemporalRegion;
+  rdfs:comment "firstInstantOf is equivalent to the BFO property 'first instant of' (http://purl.obolibrary.org/obo/BFO_0000221)";
+  rdfs:label "firstInstantOf" .
+
+:genericallyDependsOn a owl:ObjectProperty;
+  rdfs:domain :GenericallyDependentContinuant;
+  rdfs:range _:genid17;
+  rdfs:comment "genericallyDependsOn is equivalent to the BFO property 'generically depends on at some time' (http://purl.obolibrary.org/obo/BFO_0000084)";
+  rdfs:label "genericallyDependsOn" .
+
+_:genid17 a owl:Class;
+  owl:intersectionOf _:genid20 .
+
+_:genid20 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid18 .
+
+_:genid18 a rdf:List;
+  rdf:first _:genid19;
+  rdf:rest rdf:nil .
+
+_:genid19 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:genericallyDependsOnAtAllTimes a owl:ObjectProperty;
+  rdfs:subPropertyOf :genericallyDependsOn;
+  rdfs:domain :GenericallyDependentContinuant;
+  rdfs:range _:genid21;
+  rdfs:comment "genericallyDependsOnAtAllTimes is equivalent to the BFO property 'generically depends on at all times' (http://purl.obolibrary.org/obo/BFO_0000219)";
+  rdfs:label "genericallyDependsOnAtAllTimes" .
+
+_:genid21 a owl:Class;
+  owl:intersectionOf _:genid24 .
+
+_:genid24 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid22 .
+
+_:genid22 a rdf:List;
+  rdf:first _:genid23;
+  rdf:rest rdf:nil .
+
+_:genid23 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:hasAdjacentElement a owl:ObjectProperty, owl:SymmetricProperty;
+  rdfs:domain :IndependentContinuant;
+  rdfs:range :IndependentContinuant;
+  rdfs:label "hasAdjacentElement" .
+
+:hasBuilding a owl:ObjectProperty;
+  owl:inverseOf :isBuildingOf;
+  rdfs:domain :RealEstate;
+  rdfs:range :Building;
+  rdfs:label "hasBuilding" .
+
+:hasBuildingUnit a owl:ObjectProperty;
+  owl:inverseOf :isBuildingUnitOf;
+  rdfs:domain :Building;
+  rdfs:range :BuildingUnit;
+  rdfs:label "hasBuildingUnit" .
+
+:hasCapability a owl:ObjectProperty;
+  rdfs:subPropertyOf :bearerOf;
+  owl:inverseOf :isCapabilityOf;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :Capability;
+  rdfs:label "hasCapability" .
+
+:hasContinuantPart a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasPart;
+  rdfs:domain :Continuant;
+  rdfs:range :Continuant;
+  rdfs:comment "hasContinuantPart is equivalent to the BFO property 'has continuant part at some time' (http://purl.obolibrary.org/obo/BFO_0000178)";
+  rdfs:label "hasContinuantPart" .
+
+:hasContinuantPartAtAllTimes a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf :hasContinuantPart;
+  rdfs:domain :Continuant;
+  rdfs:range :Continuant;
+  rdfs:comment "hasContinuantPartAtAllTimes is equivalent to the BFO property 'has continuant part at all times' (http://purl.obolibrary.org/obo/BFO_0000110)";
+  rdfs:label "hasContinuantPartAtAllTimes" .
+
+:hasDetermined a owl:ObjectProperty;
+  owl:inverseOf :isDeterminedBy;
+  rdfs:domain :MaterialEntity;
+  rdfs:range dicv:PropertyState;
+  rdfs:comment "The property state(s) that have been determined by a material entity (an agent or a sensor).";
+  rdfs:label "hasDetermined" .
+
+:hasDuration a owl:ObjectProperty;
+  rdfs:domain :TimeInterval;
+  rdfs:range :TimeDuration;
+  rdfs:label "hasDuration" .
+
+:hasEnd a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasLastInstant;
+  owl:inverseOf :isEndOf;
+  rdfs:domain :TimeInterval;
+  rdfs:range :TimeInstant;
+  rdfs:label "hasEnd" .
+
+:hasEntitiesFrom a owl:ObjectProperty;
+  rdfs:domain :EntityScope;
+  rdfs:range :Entity;
+  rdfs:label "hasEntitiesFrom" .
+
+:hasEntityState a owl:ObjectProperty;
+  owl:inverseOf :isEntityStateOf;
+  rdfs:domain :Entity;
+  rdfs:range :EntityState;
+  rdfs:comment "State of an entity";
+  rdfs:label "hasEntityState" .
+
+:hasEquipment a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasParticipant;
+  owl:inverseOf :isEquipmentIn;
+  rdfs:domain :Process;
+  rdfs:range :Equipment;
+  rdfs:label "hasEquipment" .
+
+:hasFirstInstant a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain :TemporalRegion;
+  rdfs:range :TimeInstant;
+  rdfs:comment "hasFirstInstant is equivalent to the BFO property 'has first instant' (http://purl.obolibrary.org/obo/BFO_0000222)";
+  rdfs:label "hasFirstInstant" .
+
+:hasHistory a owl:ObjectProperty;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :History;
+  rdfs:comment "hasHistory is equivalent to the BFO property 'has history' (http://purl.obolibrary.org/obo/BFO_0000185)";
+  rdfs:label "hasHistory" .
+
+:hasLastInstant a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain :TemporalRegion;
+  rdfs:range :TimeInstant;
+  rdfs:comment "hasLastInstant is equivalent to the BFO property 'has last instant' (http://purl.obolibrary.org/obo/BFO_0000224)";
+  rdfs:label "hasLastInstant" .
+
+:hasLocationAtAllTimes a owl:ObjectProperty .
+
+:hasMaterialBasis a owl:ObjectProperty;
+  rdfs:domain :Disposition;
+  rdfs:range :MaterialEntity;
+  rdfs:comment "hasMaterialBasis is equivalent to the BFO property 'has material basis at some time' (http://purl.obolibrary.org/obo/BFO_0000218)";
+  rdfs:label "hasMaterialBasis" .
+
+:hasMaterialBasisAtAllTimes a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasMaterialBasis;
+  rdfs:domain :Disposition;
+  rdfs:range :MaterialEntity;
+  rdfs:comment "hasMaterialBasisAtAllTimes is equivalent to the BFO property 'has material basis at all times' (http://purl.obolibrary.org/obo/BFO_0000113)";
+  rdfs:label "hasMaterialBasisAtAllTimes" .
+
+:hasMaximumCartesianPosition a owl:ObjectProperty;
+  rdfs:domain :CartesianBoundingBox;
+  rdfs:range :CartesianPosition;
+  rdfs:label "hasMaximumCartesianPosition" .
+
+:hasMaximumGeodeticPosition a owl:ObjectProperty;
+  rdfs:domain :GeodeticBoundingBox;
+  rdfs:range :GeodeticPosition;
+  rdfs:label "hasMaximumGeodeticPosition" .
+
+:hasMember a owl:ObjectProperty;
+  rdfs:subPropertyOf owl:topObjectProperty;
+  owl:inverseOf :memberOf;
+  rdfs:domain :Group;
+  rdfs:range :Entity;
+  rdfs:label "hasMember" .
+
+:hasMemberPart a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasContinuantPart;
+  owl:inverseOf :isMemberPartOf;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :MaterialEntity;
+  rdfs:comment "hasMemberPart is equivalent to the BFO property 'has member part at some time' (http://purl.obolibrary.org/obo/BFO_0000115)";
+  rdfs:label "hasMemberPart" .
+
+:hasMemberPartAtAllTimes a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasContinuantPartAtAllTimes, :hasMemberPart;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :MaterialEntity;
+  rdfs:comment "hasMemberPartAtAllTimes is equivalent to the BFO property 'has member part at all times' (http://purl.obolibrary.org/obo/BFO_0000172)";
+  rdfs:label "hasMemberPartAtAllTimes" .
+
+:hasMinimumCartesianPosition a owl:ObjectProperty;
+  rdfs:domain :CartesianBoundingBox;
+  rdfs:range :CartesianPosition;
+  rdfs:label "hasMinumumCartesianPosition" .
+
+:hasMinimumGeodeticPosition a owl:ObjectProperty;
+  rdfs:domain :GeodeticBoundingBox;
+  rdfs:range :GeodeticPosition;
+  rdfs:label "hasMinimumGeodeticPosition" .
+
+:hasOccurrentPart a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf :hasPart;
+  rdfs:domain :Occurrent;
+  rdfs:range :Occurrent;
+  rdfs:comment "hasOccurrentPart is equivalent to the BFO property 'has occurrent part' (http://purl.obolibrary.org/obo/BFO_0000117)";
+  rdfs:label "hasOccurrentPart" .
+
+:hasPart a owl:ObjectProperty;
+  rdfs:subPropertyOf owl:topObjectProperty;
+  owl:inverseOf :isPartOf;
+  rdfs:domain :Entity;
+  rdfs:range :Entity;
+  rdfs:label "hasPart" .
+
+:hasParticipant a owl:ObjectProperty;
+  owl:inverseOf :participatesIn;
+  rdfs:domain :Process;
+  rdfs:range _:genid25;
+  rdfs:comment "hasParticipant is equivalent to the BFO property 'has participant at some time' (http://purl.obolibrary.org/obo/BFO_0000057)";
+  rdfs:label "hasParticipant" .
+
+_:genid25 a owl:Class;
+  owl:unionOf _:genid32 .
+
+_:genid32 a rdf:List;
+  rdf:first :GenericallyDependentContinuant;
+  rdf:rest _:genid31 .
+
+_:genid31 a rdf:List;
+  rdf:first :SpecificallyDependentContinuant;
+  rdf:rest _:genid26 .
+
+_:genid26 a rdf:List;
+  rdf:first _:genid27;
+  rdf:rest rdf:nil .
+
+_:genid27 a owl:Class;
+  owl:intersectionOf _:genid30 .
+
+_:genid30 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid28 .
+
+_:genid28 a rdf:List;
+  rdf:first _:genid29;
+  rdf:rest rdf:nil .
+
+_:genid29 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:hasParticipantAtAllTimes a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasParticipant;
+  rdfs:domain :Process;
+  rdfs:range _:genid33;
+  rdfs:comment "hasParticipantAtAllTimes is equivalent to the BFO property 'has participant at all times' (http://purl.obolibrary.org/obo/BFO_0000167)";
+  rdfs:label "hasParticipantAtAllTimes" .
+
+_:genid33 a owl:Class;
+  owl:unionOf _:genid40 .
+
+_:genid40 a rdf:List;
+  rdf:first :GenericallyDependentContinuant;
+  rdf:rest _:genid39 .
+
+_:genid39 a rdf:List;
+  rdf:first :SpecificallyDependentContinuant;
+  rdf:rest _:genid34 .
+
+_:genid34 a rdf:List;
+  rdf:first _:genid35;
+  rdf:rest rdf:nil .
+
+_:genid35 a owl:Class;
+  owl:intersectionOf _:genid38 .
+
+_:genid38 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid36 .
+
+_:genid36 a rdf:List;
+  rdf:first _:genid37;
+  rdf:rest rdf:nil .
+
+_:genid37 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:hasProperContinuantPart a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasContinuantPart;
+  rdfs:domain :Continuant;
+  rdfs:range :Continuant;
+  rdfs:comment "hasProperContinuantPart is equivalent to the BFO property 'has proper continuant part at some time' (http://purl.obolibrary.org/obo/BFO_0000174)";
+  rdfs:label "hasProperContinuantPart" .
+
+:hasProperContinuantPartAtAllTimes a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf :hasContinuantPartAtAllTimes, :hasProperContinuantPart;
+  rdfs:domain :Continuant;
+  rdfs:range :Continuant;
+  rdfs:comment "hasProperContinuantPartAtAllTimes is equivalent to the BFO property 'has proper continuant part at all times' (http://purl.obolibrary.org/obo/BFO_0000111)";
+  rdfs:label "hasProperContinuantPartAtAllTimes" .
+
+:hasProperOccurrentPart a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasOccurrentPart;
+  rdfs:domain :Occurrent;
+  rdfs:range :Occurrent;
+  rdfs:comment "hasProperOccurrentPart is equivalent to the BFO property 'has proper occurrent part' (http://purl.obolibrary.org/obo/BFO_0000118)";
+  rdfs:label "hasProperOccurrentPart" .
+
+:hasProperTemporalPart a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasTemporalPart;
+  rdfs:domain :Occurrent;
+  rdfs:range :Occurrent;
+  rdfs:comment "hasProperTemporalPart is equivalent to the BFO property 'has proper temporal part' (http://purl.obolibrary.org/obo/BFO_0000181)";
+  rdfs:label "hasProperTemporalPart" .
+
+:hasQuality a owl:ObjectProperty;
+  rdfs:subPropertyOf :bearerOf;
+  owl:inverseOf :isQualityOf;
+  rdfs:range :Quality;
+  rdfs:label "hasQuality" .
+
+:hasRealization a owl:ObjectProperty;
+  rdfs:domain :RealizableEntity;
+  rdfs:range :Process;
+  rdfs:comment "hasRealization is equivalent to the BFO property 'has realization' (http://purl.obolibrary.org/obo/BFO_0000054)";
+  rdfs:label "hasRealization" .
+
+:hasRole a owl:ObjectProperty;
+  owl:inverseOf :isRoleOf;
+  rdfs:range :Role;
+  rdfs:label "hasRole" .
+
+:hasScope a owl:ObjectProperty;
+  rdfs:domain :Labeling;
+  rdfs:range :Category;
+  rdfs:comment "Defines the broader category that is the scope of the label";
+  rdfs:label "hasScope" .
+
+:hasSpatialExtent a owl:ObjectProperty;
+  rdfs:domain :SpatialRegion;
+  rdfs:range :SpatialExtent;
+  rdfs:label "hasSpatialExtent" .
+
+:hasSpatialOrientation a owl:ObjectProperty;
+  rdfs:domain :CartesianPosition;
+  rdfs:range :SpatialOrientation;
+  rdfs:label "hasSpatialOrientation" .
+
+:hasSpatialOrigin a owl:ObjectProperty;
+  rdfs:domain :CartesianPosition;
+  rdfs:range :SpatialPosition;
+  rdfs:label "hasSpatialOrigin" .
+
+:hasSpatialPosition a owl:ObjectProperty;
+  rdfs:domain :SpatialRegion;
+  rdfs:range :SpatialPosition;
+  rdfs:label "hasSpatialPosition" .
+
+:hasStart a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasFirstInstant;
+  owl:inverseOf :isStartOf;
+  rdfs:domain :TimeInterval;
+  rdfs:range :TimeInstant;
+  rdfs:label "hasStart" .
+
+:hasSubGroup a owl:ObjectProperty;
+  owl:inverseOf :isSubGroupOf;
+  rdfs:domain :Group;
+  rdfs:range :Group;
+  rdfs:label "hasSubGroup" .
+
+:hasSubLocation a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasLocationAtAllTimes;
+  owl:inverseOf :isSubLocationOf;
+  rdfs:domain :Location;
+  rdfs:range :Location;
+  rdfs:label "hasSubLocation" .
+
+:hasTemporalPart a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf :hasOccurrentPart;
+  rdfs:domain :Occurrent;
+  rdfs:range :Occurrent;
+  rdfs:comment "hasTemporalPart is equivalent to the BFO property 'has temporal part' (http://purl.obolibrary.org/obo/BFO_0000121)";
+  rdfs:label "hasTemporalPart" .
+
+:historyOf a owl:ObjectProperty, owl:FunctionalProperty, owl:InverseFunctionalProperty;
+  rdfs:domain :History;
+  rdfs:range :MaterialEntity;
+  rdfs:comment "historyOf is equivalent to the BFO property 'history of' (http://purl.obolibrary.org/obo/BFO_0000184)";
+  rdfs:label "historyOf" .
+
+:identifies a owl:ObjectProperty;
+  rdfs:subPropertyOf :labels;
+  owl:inverseOf :isIdentifiedBy;
+  rdfs:domain :Identifier;
+  rdfs:range :Entity;
+  rdfs:label "identifies" .
+
+:includesRole a owl:ObjectProperty;
+  owl:inverseOf :isIncludedRoleIn;
+  rdfs:domain :Entity;
+  rdfs:range :Role;
+  rdfs:label "includesRole" .
+
+:inheresIn a owl:ObjectProperty;
+  rdfs:subPropertyOf :specificallyDependsOn;
+  rdfs:domain :SpecificallyDependentContinuant;
+  rdfs:range _:genid41;
+  rdfs:comment "inheresIn is equivalent to the BFO property 'inheres in' (http://purl.obolibrary.org/obo/BFO_0000197)";
+  rdfs:label "inheresIn" .
+
+_:genid41 a owl:Class;
+  owl:intersectionOf _:genid44 .
+
+_:genid44 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid42 .
+
+_:genid42 a rdf:List;
+  rdf:first _:genid43;
+  rdf:rest rdf:nil .
+
+_:genid43 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:isAssignedToInstance a owl:ObjectProperty;
+  rdfs:subPropertyOf :isIdentifiedBy;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :Identifier;
+  rdfs:label "isAssignedToInstance" .
+
+:isAssignedToType a owl:ObjectProperty;
+  rdfs:subPropertyOf :isClassifiedBy;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :Category;
+  rdfs:comment "Assigns a selected type to an entity. The classification is not descriptive but rather a restriction to some subtype of the original type. An example is product assignment.";
+  rdfs:label "isAssignedToType" .
+
+:isBuildingOf a owl:ObjectProperty;
+  rdfs:domain :Building;
+  rdfs:range :RealEstate .
+
+:isBuildingUnitOf a owl:ObjectProperty;
+  rdfs:domain :BuildingUnit;
+  rdfs:range :Building .
+
+:isCapabilityOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :inheresIn;
+  rdfs:domain :Capability;
+  rdfs:range :MaterialEntity;
+  rdfs:label "isCapabilityOf" .
+
+:isCarrierOf a owl:ObjectProperty;
+  rdfs:domain _:genid45;
+  rdfs:range :GenericallyDependentContinuant;
+  rdfs:comment "isCarrierOf is equivalent to the BFO property 'is carrier of at some time' (http://purl.obolibrary.org/obo/BFO_0000101)";
+  rdfs:label "isCarrierOf" .
+
+_:genid45 a owl:Class;
+  owl:intersectionOf _:genid48 .
+
+_:genid48 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid46 .
+
+_:genid46 a rdf:List;
+  rdf:first _:genid47;
+  rdf:rest rdf:nil .
+
+_:genid47 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:isCarrierOfAtAllTimes a owl:ObjectProperty;
+  rdfs:subPropertyOf :isCarrierOf;
+  rdfs:domain _:genid49;
+  rdfs:range :GenericallyDependentContinuant;
+  rdfs:comment "isCarrierOfAtAllTimes is equivalent to the BFO property 'is carrier of at all times' (http://purl.obolibrary.org/obo/BFO_0000220)";
+  rdfs:label "isCarrierOfAtAllTimes" .
+
+_:genid49 a owl:Class;
+  owl:intersectionOf _:genid52 .
+
+_:genid52 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid50 .
+
+_:genid50 a rdf:List;
+  rdf:first _:genid51;
+  rdf:rest rdf:nil .
+
+_:genid51 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:isClassifiedBy a owl:ObjectProperty;
+  rdfs:subPropertyOf :labeledBy;
+  rdfs:domain :Entity;
+  rdfs:range :Category;
+  rdfs:label "isClassifiedBy" .
+
+:isConcretizedBy a owl:ObjectProperty;
+  rdfs:domain :GenericallyDependentContinuant;
+  rdfs:range _:genid53;
+  rdfs:comment "isConcretizedBy is equivalent to the BFO property 'is concretized by at some time' (http://purl.obolibrary.org/obo/BFO_0000058)";
+  rdfs:label "isConcretizedBy" .
+
+_:genid53 a owl:Class;
+  owl:unionOf _:genid55 .
+
+_:genid55 a rdf:List;
+  rdf:first :Process;
+  rdf:rest _:genid54 .
+
+_:genid54 a rdf:List;
+  rdf:first :SpecificallyDependentContinuant;
+  rdf:rest rdf:nil .
+
+:isConcretizedByAtAllTimes a owl:ObjectProperty;
+  rdfs:subPropertyOf :isConcretizedBy;
+  rdfs:domain :GenericallyDependentContinuant;
+  rdfs:range _:genid56;
+  rdfs:comment "isConcretizedByAtAllTimes is equivalent to the BFO property 'is concretized by at all times' (http://purl.obolibrary.org/obo/BFO_0000165)";
+  rdfs:label "isConcretizedByAtAllTimes" .
+
+_:genid56 a owl:Class;
+  owl:unionOf _:genid58 .
+
+_:genid58 a rdf:List;
+  rdf:first :Process;
+  rdf:rest _:genid57 .
+
+_:genid57 a rdf:List;
+  rdf:first :SpecificallyDependentContinuant;
+  rdf:rest rdf:nil .
+
+:isDeterminedBy a owl:ObjectProperty;
+  rdfs:domain dicv:PropertyState;
+  rdfs:range :MaterialEntity;
+  rdfs:comment "The material entity that has determined the value of the property state. For example, an agent or a sensor";
+  rdfs:label "isDeterminedBy" .
+
+:isEndOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :hasFirstInstant;
+  rdfs:domain :TimeInstant;
+  rdfs:range :TimeInterval;
+  rdfs:label "isEndOf" .
+
+:isEntityStateOf a owl:ObjectProperty;
+  rdfs:domain :EntityState;
+  rdfs:range :Entity;
+  rdfs:comment "Entity that the state applies to";
+  rdfs:label "isEntityStateOf" .
+
+:isEnvironmentOf a owl:ObjectProperty;
+  owl:inverseOf :occursIn;
+  rdfs:label "isEnvironmentOf" .
+
+:isEquipmentIn a owl:ObjectProperty;
+  rdfs:subPropertyOf :participatesIn;
+  rdfs:domain :Equipment;
+  rdfs:range :Process;
+  rdfs:label "isEquipmentIn" .
+
+:isIdentifiedBy a owl:ObjectProperty;
+  rdfs:subPropertyOf :labeledBy;
+  rdfs:domain :Entity;
+  rdfs:range :Identifier;
+  rdfs:label "isIdentifiedBy" .
+
+:isIncludedRoleIn a owl:ObjectProperty;
+  rdfs:domain :Role;
+  rdfs:range :Entity;
+  rdfs:label "isIncludedRoleIn" .
+
+:isLabeledBy a owl:ObjectProperty;
+  rdfs:subPropertyOf dicv:hasProperty;
+  owl:inverseOf :labels;
+  rdfs:domain :Entity;
+  rdfs:range :Labeling;
+  rdfs:label "isLabeledBy" .
+
+:isLocatedIn a owl:ObjectProperty;
+  owl:inverseOf :isLocationOf;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :Location;
+  rdfs:label "isLocatedIn" .
+
+:isLocationOf a owl:ObjectProperty;
+  rdfs:domain :Location;
+  rdfs:range :MaterialEntity;
+  rdfs:label "isLocationOf" .
+
+:isMemberPartOf a owl:ObjectProperty;
+  rdfs:label "isMemberPartOf" .
+
+:isPartOf a owl:ObjectProperty;
+  rdfs:subPropertyOf owl:topObjectProperty;
+  rdfs:domain :Entity;
+  rdfs:range :Entity;
+  rdfs:label "isPartOf" .
+
+:isQualityOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :inheresIn;
+  rdfs:domain :Quality;
+  rdfs:label "isQualityOf" .
+
+:isRoleOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :inheresIn;
+  rdfs:domain :Role;
+  rdfs:label "isRoleOf" .
+
+:isStartOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :firstInstantOf;
+  rdfs:domain :TimeInstant;
+  rdfs:range :TimeInterval;
+  rdfs:label "isStartOf" .
+
+:isSubGroupOf a owl:ObjectProperty;
+  rdfs:domain :Group;
+  rdfs:range :Group;
+  rdfs:label "isSubGroupOf" .
+
+:isSubLocationOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :locatedInAtAllTimes;
+  rdfs:domain :Location;
+  rdfs:range :Location;
+  rdfs:label "isSubLocationOf" .
+
+:labels a owl:ObjectProperty;
+  rdfs:subPropertyOf dicv:isPropertyOf;
+  rdfs:domain :Labeling;
+  rdfs:range :Entity .
+
+:lastInstantOf a owl:ObjectProperty;
+  rdfs:domain :TimeInstant;
+  rdfs:range :TemporalRegion;
+  rdfs:comment "lastInstantOf is equivalent to the BFO property 'last instant of' (http://purl.obolibrary.org/obo/BFO_0000223)";
+  rdfs:label "lastInstantOf" .
+
+:locatedIn a owl:ObjectProperty;
+  rdfs:domain _:genid59;
+  rdfs:range _:genid63;
+  rdfs:comment "locatedIn is equivalent to the BFO property 'located in at some time' (http://purl.obolibrary.org/obo/BFO_0000171)";
+  rdfs:label "locatedIn" .
+
+_:genid59 a owl:Class;
+  owl:intersectionOf _:genid62 .
+
+_:genid62 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid60 .
+
+_:genid60 a rdf:List;
+  rdf:first _:genid61;
+  rdf:rest rdf:nil .
+
+_:genid61 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+_:genid63 a owl:Class;
+  owl:intersectionOf _:genid66 .
+
+_:genid66 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid64 .
+
+_:genid64 a rdf:List;
+  rdf:first _:genid65;
+  rdf:rest rdf:nil .
+
+_:genid65 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:locatedInAtAllTimes a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf :locatedIn;
+  rdfs:domain _:genid67;
+  rdfs:range _:genid71;
+  rdfs:comment "locatedInAtAllTimes is equivalent to the BFO property 'located in at all times' (http://purl.obolibrary.org/obo/BFO_0000082)";
+  rdfs:label "locatedInAtAllTimes" .
+
+_:genid67 a owl:Class;
+  owl:intersectionOf _:genid70 .
+
+_:genid70 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid68 .
+
+_:genid68 a rdf:List;
+  rdf:first _:genid69;
+  rdf:rest rdf:nil .
+
+_:genid69 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+_:genid71 a owl:Class;
+  owl:intersectionOf _:genid74 .
+
+_:genid74 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid72 .
+
+_:genid72 a rdf:List;
+  rdf:first _:genid73;
+  rdf:rest rdf:nil .
+
+_:genid73 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:locationOf a owl:ObjectProperty;
+  rdfs:domain _:genid75;
+  rdfs:range _:genid79;
+  rdfs:comment "locationOf is equivalent to the BFO property 'location of at some time' (http://purl.obolibrary.org/obo/BFO_0000124)";
+  rdfs:label "locationOf" .
+
+_:genid75 a owl:Class;
+  owl:intersectionOf _:genid78 .
+
+_:genid78 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid76 .
+
+_:genid76 a rdf:List;
+  rdf:first _:genid77;
+  rdf:rest rdf:nil .
+
+_:genid77 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+_:genid79 a owl:Class;
+  owl:intersectionOf _:genid82 .
+
+_:genid82 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid80 .
+
+_:genid80 a rdf:List;
+  rdf:first _:genid81;
+  rdf:rest rdf:nil .
+
+_:genid81 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:locationOfAtAllTimes a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf :locationOf;
+  rdfs:domain _:genid83;
+  rdfs:range _:genid87;
+  rdfs:comment "locationOfAtAllTimes is equivalent to the BFO property 'location of at all times' (http://purl.obolibrary.org/obo/BFO_0000170)";
+  rdfs:label "locationOfAtAllTimes" .
+
+_:genid83 a owl:Class;
+  owl:intersectionOf _:genid86 .
+
+_:genid86 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid84 .
+
+_:genid84 a rdf:List;
+  rdf:first _:genid85;
+  rdf:rest rdf:nil .
+
+_:genid85 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+_:genid87 a owl:Class;
+  owl:intersectionOf _:genid90 .
+
+_:genid90 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid88 .
+
+_:genid88 a rdf:List;
+  rdf:first _:genid89;
+  rdf:rest rdf:nil .
+
+_:genid89 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:materialBasisOf a owl:ObjectProperty;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :Disposition;
+  rdfs:comment "materialBasisOf is equivalent to the BFO property 'material basis of at some time' (http://purl.obolibrary.org/obo/BFO_0000127)";
+  rdfs:label "materialBasisOf" .
+
+:materialBasisOfAtAllTimes a owl:ObjectProperty;
+  rdfs:subPropertyOf :materialBasisOf;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :Disposition;
+  rdfs:comment "materialBasisOfAtAllTimes is equivalent to the BFO property 'material basis of at all times' (http://purl.obolibrary.org/obo/BFO_0000163)";
+  rdfs:label "materialBasisOfAtAllTimes" .
+
+:memberOf a owl:ObjectProperty;
+  rdfs:domain :Entity;
+  rdfs:range :Group;
+  rdfs:label "memberOf" .
+
+:memberPartOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :continuantPartOf;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :MaterialEntity;
+  rdfs:comment "memberPartOf is equivalent to the BFO property 'member part of at some time' (http://purl.obolibrary.org/obo/BFO_0000129)";
+  rdfs:label "memberPartOf" .
+
+:memberPartOfAtAllTimes a owl:ObjectProperty;
+  rdfs:subPropertyOf :continuantPartOfAtAllTimes, :memberPartOf;
+  rdfs:domain :MaterialEntity;
+  rdfs:range :MaterialEntity;
+  rdfs:comment "memberPartOfAtAllTimes is equivalent to the BFO property 'member part of at all times' (http://purl.obolibrary.org/obo/BFO_0000173)";
+  rdfs:label "memberPartOfAtAllTimes" .
+
+:occupiesSpatialRegion a owl:ObjectProperty;
+  rdfs:domain _:genid91;
+  rdfs:range :SpatialRegion;
+  rdfs:comment "occupiesSpatialRegion is equivalent to the BFO property 'occupies spatial region at some time' (http://purl.obolibrary.org/obo/BFO_0000210)";
+  rdfs:label "occupiesSpatialRegion" .
+
+_:genid91 a owl:Class;
+  owl:intersectionOf _:genid94 .
+
+_:genid94 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid92 .
+
+_:genid92 a rdf:List;
+  rdf:first _:genid93;
+  rdf:rest rdf:nil .
+
+_:genid93 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:occupiesSpatialRegionAtAllTimes a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :occupiesSpatialRegion;
+  rdfs:domain _:genid95;
+  rdfs:range :SpatialRegion;
+  rdfs:comment "occupiesSpatialRegionAtAllTimes is equivalent to the BFO property 'occupies spatial region at all times' (http://purl.obolibrary.org/obo/BFO_0000211)";
+  rdfs:label "occupiesSpatialRegionAtAllTimes" .
+
+_:genid95 a owl:Class;
+  owl:intersectionOf _:genid98 .
+
+_:genid98 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid96 .
+
+_:genid96 a rdf:List;
+  rdf:first _:genid97;
+  rdf:rest rdf:nil .
+
+_:genid97 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:occupiesSpatiotemporalRegion a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain _:genid99;
+  rdfs:range :SpatiotemporalRegion;
+  rdfs:comment "occupiesSpatiotemporalRegion is equivalent to the BFO property 'occupies spatiotemporal region' (http://purl.obolibrary.org/obo/BFO_0000200)";
+  rdfs:label "occupiesSpatiotemporalRegion" .
+
+_:genid99 a owl:Class;
+  owl:unionOf _:genid101 .
+
+_:genid101 a rdf:List;
+  rdf:first :Process;
+  rdf:rest _:genid100 .
+
+_:genid100 a rdf:List;
+  rdf:first :ProcessBoundary;
+  rdf:rest rdf:nil .
+
+:occupiesTemporalRegion a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain _:genid102;
+  rdfs:range :TemporalRegion;
+  rdfs:comment "occupiesTemporalRegion is equivalent to the BFO property 'occupies temporal region' (http://purl.obolibrary.org/obo/BFO_0000199)";
+  rdfs:label "occupiesTemporalRegion" .
+
+_:genid102 a owl:Class;
+  owl:unionOf _:genid104 .
+
+_:genid104 a rdf:List;
+  rdf:first :Process;
+  rdf:rest _:genid103 .
+
+_:genid103 a rdf:List;
+  rdf:first :ProcessBoundary;
+  rdf:rest rdf:nil .
+
+:occurrentPartOf a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf :isPartOf;
+  rdfs:domain :Occurrent;
+  rdfs:range :Occurrent;
+  rdfs:comment "occurrentPartOf is equivalent to the BFO property 'occurrent part of' (http://purl.obolibrary.org/obo/BFO_0000132)";
+  rdfs:label "occurrentPartOf" .
+
+:occursIn a owl:ObjectProperty;
+  rdfs:domain _:genid105;
+  rdfs:range _:genid108;
+  rdfs:comment "occursIn is equivalent to the BFO property 'occurs in' (http://purl.obolibrary.org/obo/BFO_0000066)";
+  rdfs:label "occursIn" .
+
+_:genid105 a owl:Class;
+  owl:unionOf _:genid107 .
+
+_:genid107 a rdf:List;
+  rdf:first :Process;
+  rdf:rest _:genid106 .
+
+_:genid106 a rdf:List;
+  rdf:first :ProcessBoundary;
+  rdf:rest rdf:nil .
+
+_:genid108 a owl:Class;
+  owl:unionOf _:genid110 .
+
+_:genid110 a rdf:List;
+  rdf:first :MaterialEntity;
+  rdf:rest _:genid109 .
+
+_:genid109 a rdf:List;
+  rdf:first :Site;
+  rdf:rest rdf:nil .
+
+:participatesIn a owl:ObjectProperty;
+  rdfs:domain _:genid111;
+  rdfs:range :Process;
+  rdfs:comment "participatesIn is equivalent to the BFO property 'participates in at some time' (http://purl.obolibrary.org/obo/BFO_0000056)";
+  rdfs:label "participatesIn" .
+
+_:genid111 a owl:Class;
+  owl:unionOf _:genid118 .
+
+_:genid118 a rdf:List;
+  rdf:first :GenericallyDependentContinuant;
+  rdf:rest _:genid117 .
+
+_:genid117 a rdf:List;
+  rdf:first :SpecificallyDependentContinuant;
+  rdf:rest _:genid112 .
+
+_:genid112 a rdf:List;
+  rdf:first _:genid113;
+  rdf:rest rdf:nil .
+
+_:genid113 a owl:Class;
+  owl:intersectionOf _:genid116 .
+
+_:genid116 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid114 .
+
+_:genid114 a rdf:List;
+  rdf:first _:genid115;
+  rdf:rest rdf:nil .
+
+_:genid115 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:participatesInAtAllTimes a owl:ObjectProperty;
+  rdfs:subPropertyOf :participatesIn;
+  rdfs:domain _:genid119;
+  rdfs:range :Process;
+  rdfs:comment "participatesInAtAllTimes is equivalent to the BFO property 'participates in at all times' (http://purl.obolibrary.org/obo/BFO_0000166)";
+  rdfs:label "participatesInAtAllTimes" .
+
+_:genid119 a owl:Class;
+  owl:unionOf _:genid126 .
+
+_:genid126 a rdf:List;
+  rdf:first :GenericallyDependentContinuant;
+  rdf:rest _:genid125 .
+
+_:genid125 a rdf:List;
+  rdf:first :SpecificallyDependentContinuant;
+  rdf:rest _:genid120 .
+
+_:genid120 a rdf:List;
+  rdf:first _:genid121;
+  rdf:rest rdf:nil .
+
+_:genid121 a owl:Class;
+  owl:intersectionOf _:genid124 .
+
+_:genid124 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid122 .
+
+_:genid122 a rdf:List;
+  rdf:first _:genid123;
+  rdf:rest rdf:nil .
+
+_:genid123 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:precededBy a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:domain :Occurrent;
+  rdfs:range :Occurrent;
+  rdfs:comment "precededBy is equivalent to the BFO property 'preceded by' (http://purl.obolibrary.org/obo/BFO_0000062)";
+  rdfs:label "precededBy" .
+
+:precedes a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:domain :Occurrent;
+  rdfs:range :Occurrent;
+  rdfs:comment "precedes is equivalent to the BFO property 'precedes' (http://purl.obolibrary.org/obo/BFO_0000063)";
+  rdfs:label "precedes" .
+
+:properContinuantPartOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :continuantPartOf;
+  rdfs:domain :Continuant;
+  rdfs:range :Continuant;
+  rdfs:comment "properContinuantPartOf is equivalent to the BFO property 'proper continuant part of at some time' (http://purl.obolibrary.org/obo/BFO_0000175)";
+  rdfs:label "properContinuantPartOf" .
+
+:properContinuantPartOfAtAllTimes a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf :continuantPartOfAtAllTimes, :properContinuantPartOf;
+  rdfs:domain :Continuant;
+  rdfs:range :Continuant;
+  rdfs:comment "properContinuantPartOfAtAllTimes is equivalent to the BFO property 'proper continuant part of at all times' (http://purl.obolibrary.org/obo/BFO_0000137)";
+  rdfs:label "properContinuantPartOfAtAllTimes" .
+
+:properOccurrentPartOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :occurrentPartOf;
+  rdfs:domain :Occurrent;
+  rdfs:range :Occurrent;
+  rdfs:comment "properOccurrentPartOf is equivalent to the BFO property 'proper occurrent part of' (http://purl.obolibrary.org/obo/BFO_0000138)";
+  rdfs:label "properOccurrentPartOf" .
+
+:properTemporalPartOf a owl:ObjectProperty;
+  rdfs:subPropertyOf :temporalPartOf;
+  rdfs:domain :Occurrent;
+  rdfs:range :Occurrent;
+  rdfs:comment "properTemporalPartOf is equivalent to the BFO property 'proper temporal part of' (http://purl.obolibrary.org/obo/BFO_0000136)";
+  rdfs:label "properTemporalPartOf" .
+
+:realizes a owl:ObjectProperty;
+  rdfs:domain :Process;
+  rdfs:range :RealizableEntity;
+  rdfs:comment "realizes is equivalent to the BFO property 'realizes' (http://purl.obolibrary.org/obo/BFO_0000055)";
+  rdfs:label "realizes" .
+
+:spatiallyProjectsOnto a owl:ObjectProperty;
+  rdfs:domain :SpatiotemporalRegion;
+  rdfs:range :SpatialRegion;
+  rdfs:comment "spatiallyProjectsOnto is equivalent to the BFO property 'spatially projects onto at some time' (http://purl.obolibrary.org/obo/BFO_0000216)";
+  rdfs:label "spatiallyProjectsOnto" .
+
+:spatiallyProjectsOntoAtAllTimes a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:subPropertyOf :spatiallyProjectsOnto;
+  rdfs:domain :SpatiotemporalRegion;
+  rdfs:range :SpatialRegion;
+  rdfs:comment "spatiallyProjectsOntoAtAllTimes is equivalent to the BFO property 'spatially projects onto at all times' (http://purl.obolibrary.org/obo/BFO_0000217)";
+  rdfs:label "spatiallyProjectsOntoAtAllTimes" .
+
+:specificallyDependedOnBy a owl:ObjectProperty;
+  rdfs:domain _:genid127 .
+
+_:genid127 owl:unionOf _:genid133 .
+
+_:genid133 rdf:rest _:genid128 .
+
+_:genid128 rdf:first _:genid129;
+  rdf:rest rdf:nil .
+
+_:genid129 a owl:Class;
+  owl:intersectionOf _:genid132 .
+
+_:genid132 rdf:rest _:genid130 .
+
+_:genid130 rdf:first _:genid131;
+  rdf:rest rdf:nil .
+
+_:genid131 a owl:Class;
+  owl:complementOf :SpatialRegion .
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#specificallyDependsOn
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#temporalPartOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#temporallyProjectsOnto
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasAltitude
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasDipAngle
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasGeodeticCoordinateSystem
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasLabel
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasLatitude
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasLongitude
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMaxLoad
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasNorthAngle
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasStrikeAngle
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasX
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasXAngle
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasXLength
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasY
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasYAngle
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasYLength
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasZ
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasZAngle
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasZLength
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Actuator
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Asset
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#AssetRole
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Building
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#BuildingServiceSystem
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#BuildingUnit
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#BuiltAsset
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Capability
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#CartesianBoundingBox
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#CartesianPosition
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#CartesianVolume
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Category
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Continuant
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#ContinuantFiatBoundary
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Device
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Disposition
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Entity
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#EntityScope
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#EntityState
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Equipment
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#FiatLine
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#FiatObjectPart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#FiatPoint
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#FiatSurface
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Function
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#GenericallyDependentContinuant
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#GeodeticBoundingBox
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#GeodeticPosition
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Group
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#History
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Identifier
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#ImmaterialEntity
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#IndependentContinuant
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Labeling
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Location
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#NonResidentialUnit
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Object
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#ObjectAggregate
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Occurrent
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#OneAngleOrientation
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#OneDimensionalSpatialRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#OneDimensionalTemporalRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Process
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#ProcessBoundary
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Quality
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#RealEstate
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#RealizableEntity
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#RelationalQuality
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#ResidentialUnit
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Role
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Sensor
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Site
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#SpatialExtent
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#SpatialOrientation
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#SpatialPosition
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#SpatialQuality
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#SpatialRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#SpatiotemporalRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#SpecificallyDependentContinuant
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#TemporalQuality
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#TemporalRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#ThreeAngleOrientation
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#ThreeDimensionalSpatialRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#TimeDuration
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#TimeInstant
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#TimeInterval
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#TwoAngleOrientation
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#TwoDimensionalSpatialRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Vehicle
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Workspace
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#ZeroDimensionalSpatialRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#ZeroDimensionalTemporalRegion
+# 
+# https://w3id.org/digitalconstruction/0.5/Variables#Comparison
+# 
+# https://w3id.org/digitalconstruction/0.5/Variables#Constraint
+# 
+# https://w3id.org/digitalconstruction/0.5/Variables#Operator
+# 
+# https://w3id.org/digitalconstruction/0.5/Variables#PropertyState
+# 
+# https://w3id.org/digitalconstruction/0.5/Variables#QuantityKind
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+# 
+# Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+
+_:genid130 a rdf:List .
+
+_:genid132 a rdf:List;
+  rdf:first :IndependentContinuant .
+
+_:genid128 a rdf:List .
+
+_:genid133 a rdf:List;
+  rdf:first :SpecificallyDependentContinuant .
+
+_:genid127 a owl:Class .
+
+:specificallyDependedOnBy rdfs:range :SpecificallyDependentContinuant;
+  rdfs:comment "specificallyDependedOnBy is equivalent to the BFO property 'specifically depended on by' (http://purl.obolibrary.org/obo/BFO_0000194)";
+  rdfs:label "specificallyDependedOnBy" .
+
+:specificallyDependsOn a owl:ObjectProperty;
+  rdfs:domain :SpecificallyDependentContinuant;
+  rdfs:range _:genid134;
+  rdfs:comment "specificallyDependsOn is equivalent to the BFO property 'specifically depends on' (http://purl.obolibrary.org/obo/BFO_0000195)";
+  rdfs:label "specificallyDependsOn" .
+
+_:genid134 a owl:Class;
+  owl:unionOf _:genid140 .
+
+_:genid140 a rdf:List;
+  rdf:first :SpecificallyDependentContinuant;
+  rdf:rest _:genid135 .
+
+_:genid135 a rdf:List;
+  rdf:first _:genid136;
+  rdf:rest rdf:nil .
+
+_:genid136 a owl:Class;
+  owl:intersectionOf _:genid139 .
+
+_:genid139 a rdf:List;
+  rdf:first :IndependentContinuant;
+  rdf:rest _:genid137 .
+
+_:genid137 a rdf:List;
+  rdf:first _:genid138;
+  rdf:rest rdf:nil .
+
+_:genid138 a owl:Class;
+  owl:complementOf :SpatialRegion .
+
+:temporalPartOf a owl:ObjectProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf :occurrentPartOf;
+  rdfs:domain :Occurrent;
+  rdfs:range :Occurrent;
+  rdfs:comment "temporalPartOf is equivalent to the BFO property 'temporal part of' (http://purl.obolibrary.org/obo/BFO_0000139)";
+  rdfs:label "temporalPartOf" .
+
+:temporallyProjectsOnto a owl:ObjectProperty, owl:FunctionalProperty;
+  rdfs:domain :SpatiotemporalRegion;
+  rdfs:range :TemporalRegion;
+  rdfs:comment "temporallyProjectsOnto is equivalent to the BFO property 'temporally projects onto' (http://purl.obolibrary.org/obo/BFO_0000153)";
+  rdfs:label "temporallyProjectsOnto" .
+
+:hasAltitude a owl:DatatypeProperty;
+  rdfs:domain _:genid141;
+  rdfs:range xsd:decimal;
+  rdfs:label "hasAltitude" .
+
+_:genid141 a owl:Class;
+  owl:unionOf _:genid143 .
+
+_:genid143 a rdf:List;
+  rdf:first :GeodeticPosition;
+  rdf:rest _:genid142 .
+
+_:genid142 a rdf:List;
+  rdf:first :SpatialRegion;
+  rdf:rest rdf:nil .
+
+:hasDipAngle a owl:DatatypeProperty;
+  rdfs:domain :TwoAngleOrientation;
+  rdfs:range xsd:double;
+  rdfs:label "hasDipAngle" .
+
+:hasGeodeticCoordinateSystem a owl:DatatypeProperty;
+  rdfs:domain :GeodeticPosition;
+  rdfs:range xsd:string;
+  rdfs:label "hasGeodeticCoordinateSystem" .
+
+:hasLabel a owl:DatatypeProperty;
+  rdfs:domain :Labeling;
+  rdfs:range xsd:string;
+  rdfs:label "hasLabel" .
+
+:hasLatitude a owl:DatatypeProperty;
+  rdfs:domain _:genid144;
+  rdfs:range xsd:decimal;
+  rdfs:label "hasLatitude" .
+
+_:genid144 a owl:Class;
+  owl:unionOf _:genid146 .
+
+_:genid146 a rdf:List;
+  rdf:first :GeodeticPosition;
+  rdf:rest _:genid145 .
+
+_:genid145 a rdf:List;
+  rdf:first :SpatialRegion;
+  rdf:rest rdf:nil .
+
+:hasLongitude a owl:DatatypeProperty;
+  rdfs:domain _:genid147;
+  rdfs:range xsd:decimal;
+  rdfs:label "hasLongitude" .
+
+_:genid147 a owl:Class;
+  owl:unionOf _:genid149 .
+
+_:genid149 a rdf:List;
+  rdf:first :GeodeticPosition;
+  rdf:rest _:genid148 .
+
+_:genid148 a rdf:List;
+  rdf:first :SpatialRegion;
+  rdf:rest rdf:nil .
+
+:hasMaxLoad a owl:DatatypeProperty;
+  rdfs:domain :Vehicle;
+  rdfs:range owl:real;
+  rdfs:label "hasMaxLoad" .
+
+:hasNorthAngle a owl:DatatypeProperty;
+  rdfs:domain :OneAngleOrientation;
+  rdfs:range xsd:double;
+  rdfs:label "hasNorthAngle" .
+
+:hasStrikeAngle a owl:DatatypeProperty;
+  rdfs:domain :TwoAngleOrientation;
+  rdfs:range xsd:double;
+  rdfs:label "hasStrikeAngle" .
+
+:hasX a owl:DatatypeProperty;
+  rdfs:domain :CartesianPosition;
+  rdfs:range xsd:double;
+  rdfs:label "hasX" .
+
+:hasXAngle a owl:DatatypeProperty;
+  rdfs:domain :ThreeAngleOrientation;
+  rdfs:range xsd:double;
+  rdfs:label "hasXAngle" .
+
+:hasXLength a owl:DatatypeProperty;
+  rdfs:domain :CartesianVolume;
+  rdfs:range xsd:double;
+  rdfs:label "hasXLength" .
+
+:hasY a owl:DatatypeProperty;
+  rdfs:domain :CartesianPosition;
+  rdfs:range xsd:double;
+  rdfs:label "hasY" .
+
+:hasYAngle a owl:DatatypeProperty;
+  rdfs:domain :ThreeAngleOrientation;
+  rdfs:range xsd:double;
+  rdfs:label "hasYAngle" .
+
+:hasYLength a owl:DatatypeProperty;
+  rdfs:domain :CartesianVolume;
+  rdfs:range xsd:double;
+  rdfs:label "hasYLength" .
+
+:hasZ a owl:DatatypeProperty;
+  rdfs:domain :CartesianPosition;
+  rdfs:range xsd:double;
+  rdfs:label "hasZ" .
+
+:hasZAngle a owl:DatatypeProperty;
+  rdfs:domain :ThreeAngleOrientation;
+  rdfs:range xsd:double;
+  rdfs:label "hasZAngle" .
+
+:hasZLength a owl:DatatypeProperty;
+  rdfs:domain :CartesianVolume;
+  rdfs:range xsd:double;
+  rdfs:label "hasZLength" .
+
+:Actuator a owl:Class;
+  rdfs:subClassOf :Device;
+  rdfs:label "Actuator" .
+
+:Asset a owl:Class;
+  rdfs:subClassOf _:genid150, _:genid154;
+  rdfs:comment "Something that acts in the asset role";
+  rdfs:label "Asset" .
+
+_:genid150 a owl:Class;
+  owl:unionOf _:genid153 .
+
+_:genid153 a rdf:List;
+  rdf:first :GenericallyDependentContinuant;
+  rdf:rest _:genid152 .
+
+_:genid152 a rdf:List;
+  rdf:first :MaterialEntity;
+  rdf:rest _:genid151 .
+
+_:genid151 a rdf:List;
+  rdf:first :Site;
+  rdf:rest rdf:nil .
+
+_:genid154 a owl:Restriction;
+  owl:someValuesFrom :AssetRole;
+  owl:onProperty :hasRole .
+
+:AssetRole a owl:Class;
+  rdfs:subClassOf :Role;
+  rdfs:comment "A role in which an entity acts as an asset";
+  rdfs:label "AssetRole" .
+
+:Building a owl:Class;
+  rdfs:subClassOf :BuiltAsset;
+  rdfs:label "Building" .
+
+:BuildingObject a owl:Class;
+  rdfs:subClassOf :Object;
+  rdfs:comment "An entity that forms a part of an existing or designed building";
+  rdfs:label "BuildingObject" .
+
+:BuildingServiceSystem a owl:Class;
+  rdfs:subClassOf :ObjectAggregate;
+  rdfs:comment "A system of a building service. For example, a ventilation system or a heating system.";
+  rdfs:label "BuildingServiceSystem" .
+
+:BuildingUnit a owl:Class;
+  rdfs:subClassOf :BuiltAsset;
+  rdfs:comment "A separately used part of a building" .
+
+:BuiltAsset a owl:Class;
+  rdfs:subClassOf :Asset, :Location;
+  rdfs:comment "A location that is in a role of an asset. An asset that is part of the built environment (ISO 19650-1)";
+  rdfs:label "BuiltAsset" .
+
+:Capability a owl:Class;
+  rdfs:subClassOf :Disposition;
+  rdfs:label "Capability" .
+
+:CartesianBoundingBox a owl:Class;
+  rdfs:subClassOf :SpatialExtent;
+  rdfs:comment "Minimum bounding box of an entity given by a minimum cartesian position and maximum cartesian position";
+  rdfs:label "CartesianBoundingBox" .
+
+:CartesianPosition a owl:Class;
+  rdfs:subClassOf :SpatialPosition;
+  rdfs:comment "Cartesian position expressed as x, y, and z coordinates with respect to a spatial origin and spatial orientation";
+  rdfs:label "CartesianPosition" .
+
+:CartesianVolume a owl:Class;
+  rdfs:subClassOf :SpatialExtent;
+  rdfs:comment "Cartesian volume given by the lengths to x, y, and z directions";
+  rdfs:label "CartesianVolume" .
+
+:Category a owl:Class;
+  rdfs:subClassOf :Labeling;
+  owl:disjointWith :Identifier;
+  rdfs:comment "Category is a labeling of an entity the associates it with some defined class of things. For example, an object can be associated with a particular class in a classification system such as OmniClass, UniFormat, CoClass, or Talo2000. Category allows also to associate an entity with a category of entities represented in an external system or belonging to a particular project.";
+  rdfs:label "Category" .
+
+:Continuant a owl:Class;
+  rdfs:subClassOf :Entity, _:genid155;
+  owl:disjointWith :Occurrent;
+  rdfs:comment "Continuant is equivalent to the BFO class 'continuant' (http://purl.obolibrary.org/obo/BFO_0000002)";
+  rdfs:label "Continuant" .
+
+_:genid155 a owl:Restriction;
+  owl:allValuesFrom :Continuant;
+  owl:onProperty :continuantPartOfAtAllTimes .
+
+:ContinuantFiatBoundary a owl:Class;
+  rdfs:subClassOf :ImmaterialEntity, _:genid156, _:genid157;
+  rdfs:comment "ContinuantFiatBoundary is equivalent to the BFO class 'continuant fiat boundary' (http://purl.obolibrary.org/obo/BFO_0000140)";
+  rdfs:label "ContinuantFiatBoundary" .
+
+_:genid156 a owl:Restriction;
+  owl:allValuesFrom :ContinuantFiatBoundary;
+  owl:onProperty :hasContinuantPartAtAllTimes .
+
+_:genid157 a owl:Restriction;
+  owl:allValuesFrom :ContinuantFiatBoundary;
+  owl:onProperty :locationOfAtAllTimes .
+
+:Device a owl:Class;
+  rdfs:subClassOf :Object;
+  rdfs:comment """An object that performs a function, requiring at most only intermittent control by a user (an agent).
+
+Examples: Sensor, actuator, dishwasher, heater.""";
+  rdfs:label "Device" .
+
+:Disposition a owl:Class;
+  rdfs:subClassOf :RealizableEntity;
+  owl:disjointWith :Role;
+  rdfs:comment "Disposition is equivalent to the BFO class 'disposition' (http://purl.obolibrary.org/obo/BFO_0000016)";
+  rdfs:label "Disposition" .
+
+:Entity a owl:Class;
+  owl:equivalentClass dicv:Subject;
+  rdfs:comment "Entity is equivalent to the BFO class 'entity' (http://purl.obolibrary.org/obo/BFO_0000001)";
+  rdfs:label "Entity" .
+
+:EntityScope a owl:Class;
+  rdfs:subClassOf :Category;
+  rdfs:comment "Category that contains all entities in a scope of a given entity. For example, all entities in a system, or within a scope of a plan.";
+  rdfs:label "EntityScope" .
+
+:EntityState a owl:Class;
+  rdfs:subClassOf :Disposition;
+  rdfs:comment "Inherent state of an entity. For instance, possible states for a device are: initial, manufactured, installed, approved, and for a wall: initial, frame constructed, plated, plastered, painted, approved. The move from state to another requires the execution of appropriate activities.";
+  rdfs:label "EntityState" .
+
+:Equipment a owl:Class;
+  rdfs:subClassOf :Object;
+  rdfs:comment """An object needed to perform an activity, and when used is in continuous control of the agent involved in the activity. Equipment cannot execute activities by themselves.
+
+Examples: Vehices, cranes, and tools such as hammers and drills.""";
+  rdfs:label "Equipment" .
+
+:FiatLine a owl:Class;
+  rdfs:subClassOf :ContinuantFiatBoundary, _:genid158;
+  rdfs:comment "FiatLine is equivalent to the BFO class 'fiat line' (http://purl.obolibrary.org/obo/BFO_0000142)";
+  rdfs:label "FiatLine" .
+
+_:genid158 a owl:Restriction;
+  owl:allValuesFrom _:genid159;
+  owl:onProperty :hasContinuantPartAtAllTimes .
+
+_:genid159 a owl:Class;
+  owl:unionOf _:genid161 .
+
+_:genid161 a rdf:List;
+  rdf:first :FiatLine;
+  rdf:rest _:genid160 .
+
+_:genid160 a rdf:List;
+  rdf:first :FiatPoint;
+  rdf:rest rdf:nil .
+
+:FiatObjectPart a owl:Class;
+  rdfs:subClassOf :MaterialEntity;
+  rdfs:comment "FiatObjectPart is equivalent to the BFO class 'fiat object part' (http://purl.obolibrary.org/obo/BFO_0000024)";
+  rdfs:label "FiatObjectPart" .
+
+:FiatPoint a owl:Class;
+  rdfs:subClassOf :ContinuantFiatBoundary, _:genid162;
+  rdfs:comment "FiatPoint is equivalent to the BFO class 'fiat point' (http://purl.obolibrary.org/obo/BFO_0000147)";
+  rdfs:label "FiatPoint" .
+
+_:genid162 a owl:Restriction;
+  owl:allValuesFrom :FiatPoint;
+  owl:onProperty :hasContinuantPartAtAllTimes .
+
+:FiatSurface a owl:Class;
+  rdfs:subClassOf :ContinuantFiatBoundary, _:genid163;
+  rdfs:comment "FiatSurface is equivalent to the BFO class 'fiat surface' (http://purl.obolibrary.org/obo/BFO_0000146)";
+  rdfs:label "FiatSurface" .
+
+_:genid163 a owl:Restriction;
+  owl:allValuesFrom :ContinuantFiatBoundary;
+  owl:onProperty :hasContinuantPartAtAllTimes .
+
+:Function a owl:Class;
+  rdfs:subClassOf :Disposition;
+  rdfs:comment "Function is equivalent to the BFO class 'function' (http://purl.obolibrary.org/obo/BFO_0000034)";
+  rdfs:label "Function" .
+
+:GenericallyDependentContinuant a owl:Class;
+  rdfs:subClassOf :Continuant;
+  rdfs:comment "GenericallyDependentContinuant is equivalent to the BFO class 'generically dependent continuant' (http://purl.obolibrary.org/obo/BFO_0000031)";
+  rdfs:label "GenericallyDependentContinuant" .
+
+:GeodeticBoundingBox a owl:Class;
+  rdfs:subClassOf :SpatialExtent;
+  rdfs:comment "Minimum bounding box of a geodetic area determined by its minimum geodetic position and maximum geodetic position";
+  rdfs:label "GeodeticBoundingBox" .
+
+:GeodeticPosition a owl:Class;
+  rdfs:subClassOf :SpatialPosition;
+  rdfs:comment "Geodetic position expressed in longitude, latitude and altitude with respect to a geodetic coordinate system.";
+  rdfs:label "GeodeticPosition" .
+
+:Group a owl:Class;
+  rdfs:subClassOf :Entity;
+  rdfs:comment "A set of entities. Examples are sets created for management purposes, such as a procurement package, a cost control item, a shipment, a material kit, a workgroup, or the walls of a space. One group may contain entities belonging to otherwise disjoint fundamental categories, such as material batches, equipment, information content entities, and activities.";
+  rdfs:label "Group" .
+
+:History a owl:Class;
+  rdfs:subClassOf :Process;
+  rdfs:comment "History is equivalent to the BFO class 'history' (http://purl.obolibrary.org/obo/BFO_0000182)";
+  rdfs:label "History" .
+
+:Identifier a owl:Class;
+  rdfs:subClassOf :Labeling;
+  rdfs:comment "A specifier of a global or local identity of an entity, in a given identification scope. Examples are a GUID, a GTIN, a social security number, a room number within a building, a control point number in a building automatization system.";
+  rdfs:label "Identifier" .
+
+:ImmaterialEntity a owl:Class;
+  rdfs:subClassOf :IndependentContinuant;
+  owl:disjointWith :MaterialEntity;
+  rdfs:comment "ImmaterialEntity is equivalent to the BFO class 'immaterial entity' (http://purl.obolibrary.org/obo/BFO_0000141)";
+  rdfs:label "ImmaterialEntity" .
+
+:IndependentContinuant a owl:Class;
+  rdfs:subClassOf :Continuant, _:genid164;
+  rdfs:comment "IndependentContinuant is equivalent to the BFO class 'independent continuant' (http://purl.obolibrary.org/obo/BFO_0000004)";
+  rdfs:label "IndependentContinuant" .
+
+_:genid164 a owl:Restriction;
+  owl:allValuesFrom :IndependentContinuant;
+  owl:onProperty :continuantPartOfAtAllTimes .
+
+:Labeling a owl:Class;
+  rdfs:subClassOf :Quality;
+  rdfs:comment "Labeling is a generic mechanism to associate entities with any number of labels that are unique within a given category. The purpose is to enable the representation of connections to existing systems, databases or classification schemes.";
+  rdfs:label "Labeling" .
+
+:Location a owl:Class;
+  rdfs:subClassOf :Site;
+  rdfs:comment "A (logical) place where material entities can be located or activities can occur. Locations can form a hierarchy, for example, in a location breakdown structure consisting of a site, buildings, floors, zones, spaces, and workspaces";
+  rdfs:label "Location" .
+
+:MaterialEntity a owl:Class;
+  rdfs:subClassOf :IndependentContinuant, _:genid165, _:genid166;
+  rdfs:comment "MaterialEntity is equivalent to the BFO class 'material entity' (http://purl.obolibrary.org/obo/BFO_0000040)";
+  rdfs:label "MaterialEntity" .
+
+_:genid165 a owl:Restriction;
+  owl:allValuesFrom :MaterialEntity;
+  owl:onProperty :continuantPartOfAtAllTimes .
+
+_:genid166 a owl:Restriction;
+  owl:allValuesFrom _:genid167;
+  owl:onProperty :hasContinuantPartAtAllTimes .
+
+_:genid167 a owl:Class;
+  owl:unionOf _:genid170 .
+
+_:genid170 a rdf:List;
+  rdf:first :ContinuantFiatBoundary;
+  rdf:rest _:genid169 .
+
+_:genid169 a rdf:List;
+  rdf:first :MaterialEntity;
+  rdf:rest _:genid168 .
+
+_:genid168 a rdf:List;
+  rdf:first :Site;
+  rdf:rest rdf:nil .
+
+:NonResidentialUnit a owl:Class;
+  rdfs:subClassOf :BuildingUnit;
+  rdfs:comment "A building unit used for purposes other than living, such as commercial,  service or storage functions.";
+  rdfs:label "NonResidentialUnit" .
+
+:Object a owl:Class;
+  rdfs:subClassOf :MaterialEntity;
+  rdfs:comment "Object is equivalent to the BFO class 'object' (http://purl.obolibrary.org/obo/BFO_0000030)";
+  rdfs:label "Object" .
+
+:ObjectAggregate a owl:Class;
+  rdfs:subClassOf :MaterialEntity;
+  rdfs:comment "ObjectAggregate is equivalent to the BFO class 'object aggregate' (http://purl.obolibrary.org/obo/BFO_0000027)";
+  rdfs:label "ObjectAggregate" .
+
+:Occurrent a owl:Class;
+  rdfs:subClassOf :Entity;
+  rdfs:comment "Occurrent is equivalent to the BFO class 'occurrent' (http://purl.obolibrary.org/obo/BFO_0000003)";
+  rdfs:label "Occurrent" .
+
+:OneAngleOrientation a owl:Class;
+  rdfs:subClassOf :SpatialOrientation;
+  rdfs:comment "Orientation in two dimensions given by the orientation angle from true north";
+  rdfs:label "OneAngleOrientation" .
+
+:OneDimensionalSpatialRegion a owl:Class;
+  rdfs:subClassOf :SpatialRegion, _:genid171;
+  rdfs:comment "OneDimensionalSpatialRegion is equivalent to the BFO class 'one-dimensional spatial region' (http://purl.obolibrary.org/obo/BFO_0000026)";
+  rdfs:label "OneDimensionalSpatialRegion" .
+
+_:genid171 a owl:Restriction;
+  owl:allValuesFrom _:genid172;
+  owl:onProperty :hasContinuantPartAtAllTimes .
+
+_:genid172 a owl:Class;
+  owl:unionOf _:genid174 .
+
+_:genid174 a rdf:List;
+  rdf:first :OneDimensionalSpatialRegion;
+  rdf:rest _:genid173 .
+
+_:genid173 a rdf:List;
+  rdf:first :ZeroDimensionalSpatialRegion;
+  rdf:rest rdf:nil .
+
+:OneDimensionalTemporalRegion a owl:Class;
+  rdfs:subClassOf :TemporalRegion, _:genid175, _:genid179;
+  owl:disjointWith :ZeroDimensionalTemporalRegion;
+  rdfs:comment "OneDimensionalTemporalRegion is equivalent to the BFO class 'one-dimensional temporal region' (http://purl.obolibrary.org/obo/BFO_0000038)";
+  rdfs:label "OneDimensionalTemporalRegion" .
+
+_:genid175 a owl:Restriction;
+  owl:allValuesFrom _:genid176;
+  owl:onProperty :hasTemporalPart .
+
+_:genid176 a owl:Class;
+  owl:unionOf _:genid178 .
+
+_:genid178 a rdf:List;
+  rdf:first :OneDimensionalTemporalRegion;
+  rdf:rest _:genid177 .
+
+_:genid177 a rdf:List;
+  rdf:first :ZeroDimensionalTemporalRegion;
+  rdf:rest rdf:nil .
+
+_:genid179 a owl:Restriction;
+  owl:allValuesFrom :OneDimensionalTemporalRegion;
+  owl:onProperty :temporalPartOf .
+
+:Process a owl:Class;
+  rdfs:subClassOf :Occurrent, _:genid180, _:genid184;
+  rdfs:comment "Process is equivalent to the BFO class 'process' (http://purl.obolibrary.org/obo/BFO_0000015)";
+  rdfs:label "Process" .
+
+_:genid180 a owl:Restriction;
+  owl:allValuesFrom _:genid181;
+  owl:onProperty :hasOccurrentPart .
+
+_:genid181 a owl:Class;
+  owl:unionOf _:genid183 .
+
+_:genid183 a rdf:List;
+  rdf:first :Process;
+  rdf:rest _:genid182 .
+
+_:genid182 a rdf:List;
+  rdf:first :ProcessBoundary;
+  rdf:rest rdf:nil .
+
+_:genid184 a owl:Restriction;
+  owl:allValuesFrom :Process;
+  owl:onProperty :occurrentPartOf .
+
+:ProcessBoundary a owl:Class;
+  rdfs:subClassOf :Occurrent, _:genid185, _:genid186, _:genid187;
+  rdfs:comment "ProcessBoundary is equivalent to the BFO class 'process boundary' (http://purl.obolibrary.org/obo/BFO_0000035)";
+  rdfs:label "ProcessBoundary" .
+
+_:genid185 a owl:Restriction;
+  owl:allValuesFrom :ProcessBoundary;
+  owl:onProperty :hasOccurrentPart .
+
+_:genid186 a owl:Restriction;
+  owl:allValuesFrom :ProcessBoundary;
+  owl:onProperty :hasTemporalPart .
+
+_:genid187 a owl:Restriction;
+  owl:allValuesFrom _:genid188;
+  owl:onProperty :occurrentPartOf .
+
+_:genid188 a owl:Class;
+  owl:unionOf _:genid190 .
+
+_:genid190 a rdf:List;
+  rdf:first :Process;
+  rdf:rest _:genid189 .
+
+_:genid189 a rdf:List;
+  rdf:first :ProcessBoundary;
+  rdf:rest rdf:nil .
+
+:Quality a owl:Class;
+  rdfs:subClassOf :SpecificallyDependentContinuant, dicv:Property;
+  owl:disjointWith :RealizableEntity;
+  rdfs:comment "Quality is equivalent to the BFO class 'quality' (http://purl.obolibrary.org/obo/BFO_0000019)";
+  rdfs:label "Quality" .
+
+:RealEstate a owl:Class;
+  rdfs:subClassOf :BuiltAsset;
+  rdfs:comment "A property consisting of land or buildings.";
+  rdfs:label "RealEstate" .
+
+:RealizableEntity a owl:Class;
+  rdfs:subClassOf :SpecificallyDependentContinuant;
+  rdfs:comment "RealizableEntity is equivalent to the BFO class 'realizable entity' (http://purl.obolibrary.org/obo/BFO_0000017)";
+  rdfs:label "RealizableEntity" .
+
+:RelationalQuality a owl:Class;
+  rdfs:subClassOf :Quality;
+  rdfs:comment "RelationalQuality is equivalent to the BFO class 'relational quality' (http://purl.obolibrary.org/obo/BFO_0000145)";
+  rdfs:label "RelationalQuality" .
+
+:ResidentialUnit a owl:Class;
+  rdfs:subClassOf :BuildingUnit;
+  rdfs:comment """A building unit that is used as a residence.
+
+Examples: apartment, condomium, studio.""";
+  rdfs:label "ResidentialUnit" .
+
+:Role a owl:Class;
+  rdfs:subClassOf :RealizableEntity;
+  rdfs:comment "Role is equivalent to the BFO class 'role' (http://purl.obolibrary.org/obo/BFO_0000023)";
+  rdfs:label "Role" .
+
+:Sensor a owl:Class;
+  rdfs:subClassOf :Device;
+  rdfs:comment "A device that is capable of producing information about its environment.";
+  rdfs:label "Sensor" .
+
+:Site a owl:Class;
+  rdfs:subClassOf :ImmaterialEntity, _:genid191, _:genid195, _:genid199;
+  rdfs:comment "Site is equivalent to the BFO class 'site' (http://purl.obolibrary.org/obo/BFO_0000029)";
+  rdfs:label "Site" .
+
+_:genid191 a owl:Restriction;
+  owl:allValuesFrom _:genid192;
+  owl:onProperty :continuantPartOfAtAllTimes .
+
+_:genid192 a owl:Class;
+  owl:unionOf _:genid194 .
+
+_:genid194 a rdf:List;
+  rdf:first :MaterialEntity;
+  rdf:rest _:genid193 .
+
+_:genid193 a rdf:List;
+  rdf:first :Site;
+  rdf:rest rdf:nil .
+
+_:genid195 a owl:Restriction;
+  owl:allValuesFrom _:genid196;
+  owl:onProperty :hasContinuantPartAtAllTimes .
+
+_:genid196 a owl:Class;
+  owl:unionOf _:genid198 .
+
+_:genid198 a rdf:List;
+  rdf:first :ContinuantFiatBoundary;
+  rdf:rest _:genid197 .
+
+_:genid197 a rdf:List;
+  rdf:first :Site;
+  rdf:rest rdf:nil .
+
+_:genid199 a owl:Restriction;
+  owl:allValuesFrom :ThreeDimensionalSpatialRegion;
+  owl:onProperty :occupiesSpatialRegionAtAllTimes .
+
+:SpatialExtent a owl:Class;
+  rdfs:subClassOf :SpatialQuality;
+  rdfs:comment "The dimensions of a spatial region";
+  rdfs:label "SpatialExtent" .
+
+:SpatialOrientation a owl:Class;
+  rdfs:subClassOf :SpatialQuality;
+  rdfs:label "SpatialOrientation" .
+
+:SpatialPosition a owl:Class;
+  rdfs:subClassOf :SpatialQuality;
+  rdfs:comment "A position in a space";
+  rdfs:label "SpatialPosition" .
+
+:SpatialQuality a owl:Class;
+  rdfs:subClassOf :Quality;
+  rdfs:comment "A quality that concerns the spatial aspects of an entity";
+  rdfs:label "SpatialQuality" .
+
+:SpatialRegion a owl:Class;
+  rdfs:subClassOf :ImmaterialEntity, _:genid200;
+  rdfs:comment "SpatialRegion is equivalent to the BFO class 'spatial region' (http://purl.obolibrary.org/obo/BFO_0000006)";
+  rdfs:label "SpatialRegion" .
+
+_:genid200 a owl:Restriction;
+  owl:allValuesFrom :SpatialRegion;
+  owl:onProperty :continuantPartOfAtAllTimes .
+
+:SpatiotemporalRegion a owl:Class;
+  rdfs:subClassOf :Occurrent, _:genid201, _:genid202;
+  rdfs:comment "SpatiotemporalRegion is equivalent to the BFO class 'spatiotemporal region' (http://purl.obolibrary.org/obo/BFO_0000011)";
+  rdfs:label "SpatiotemporalRegion" .
+
+_:genid201 a owl:Restriction;
+  owl:allValuesFrom :SpatiotemporalRegion;
+  owl:onProperty :occurrentPartOf .
+
+_:genid202 a owl:Restriction;
+  owl:allValuesFrom :SpatiotemporalRegion;
+  owl:onProperty :temporalPartOf .
+
+:SpecificallyDependentContinuant a owl:Class;
+  rdfs:subClassOf :Continuant;
+  rdfs:comment "SpecificallyDependentContinuant is equivalent to the BFO class 'specifically dependent continuant' (http://purl.obolibrary.org/obo/BFO_0000020)";
+  rdfs:label "SpecificallyDependentContinuant" .
+
+:TemporalQuality a owl:Class;
+  rdfs:subClassOf :Quality;
+  rdfs:label "TemporalQuality" .
+
+:TemporalRegion a owl:Class;
+  rdfs:subClassOf :Occurrent, _:genid203, _:genid204;
+  rdfs:comment "TemporalRegion is equivalent to the BFO class 'temporal region' (http://purl.obolibrary.org/obo/BFO_0000008)";
+  rdfs:label "TemporalRegion" .
+
+_:genid203 a owl:Restriction;
+  owl:allValuesFrom :TemporalRegion;
+  owl:onProperty :occurrentPartOf .
+
+_:genid204 a owl:Restriction;
+  owl:allValuesFrom :TemporalRegion;
+  owl:onProperty :temporalPartOf .
+
+:ThreeAngleOrientation a owl:Class;
+  rdfs:subClassOf :SpatialOrientation;
+  rdfs:comment "Orientation given by three angles: angle about x-axis (alpha), angle about y-axis(beta) and angle about z-axis (gamma)";
+  rdfs:label "ThreeAngleOrientation" .
+
+:ThreeDimensionalSpatialRegion a owl:Class;
+  rdfs:subClassOf :SpatialRegion, _:genid205;
+  rdfs:comment "ThreeDimensionalSpatialRegion is equivalent to the BFO class 'three-dimensional spatial region' (http://purl.obolibrary.org/obo/BFO_0000028)";
+  rdfs:label "ThreeDimensionalSpatialRegion" .
+
+_:genid205 a owl:Restriction;
+  owl:allValuesFrom :SpatialRegion;
+  owl:onProperty :hasContinuantPartAtAllTimes .
+
+:TimeDuration a owl:Class;
+  rdfs:subClassOf :TemporalQuality;
+  rdfs:label "TimeDuration" .
+
+:TimeInstant a owl:Class;
+  rdfs:subClassOf :ZeroDimensionalTemporalRegion;
+  rdfs:comment "TimeInstant is equivalent to the BFO class 'temporal instant' (http://purl.obolibrary.org/obo/BFO_0000203)";
+  rdfs:label "TimeInstant" .
+
+:TimeInterval a owl:Class;
+  rdfs:subClassOf :OneDimensionalTemporalRegion;
+  rdfs:comment "TimeInterval is equivalent to the BFO class 'temporal interval' (http://purl.obolibrary.org/obo/BFO_0000202)";
+  rdfs:label "TimeInterval" .
+
+:TwoAngleOrientation a owl:Class;
+  rdfs:subClassOf :SpatialOrientation;
+  rdfs:comment "Orientation of a plane in two dimensions given by its angle about true north (the strike) and the angle of its slope (the dip)";
+  rdfs:label "TwoAngleOrientation" .
+
+:TwoDimensionalSpatialRegion a owl:Class;
+  rdfs:subClassOf :SpatialRegion, _:genid206;
+  rdfs:comment "TwoDimensionalSpatialRegion is equivalent to the BFO class 'two-dimensional spatial region' (http://purl.obolibrary.org/obo/BFO_0000009)";
+  rdfs:label "TwoDimensionalSpatialRegion" .
+
+_:genid206 a owl:Restriction;
+  owl:allValuesFrom _:genid207;
+  owl:onProperty :hasContinuantPartAtAllTimes .
+
+_:genid207 a owl:Class;
+  owl:unionOf _:genid210 .
+
+_:genid210 a rdf:List;
+  rdf:first :OneDimensionalSpatialRegion;
+  rdf:rest _:genid209 .
+
+_:genid209 a rdf:List;
+  rdf:first :TwoDimensionalSpatialRegion;
+  rdf:rest _:genid208 .
+
+_:genid208 a rdf:List;
+  rdf:first :ZeroDimensionalSpatialRegion;
+  rdf:rest rdf:nil .
+
+:Vehicle a owl:Class;
+  rdfs:subClassOf :Equipment;
+  rdfs:comment "An equipment for transporting shipments. The vehice also moves from origin to the target of the transportation activity. Examples are trucks or forklifts.";
+  rdfs:label "Vehicle" .
+
+:Workspace a owl:Class;
+  rdfs:subClassOf :Location;
+  rdfs:comment "A site of work. There can be multiple different kinds of workspaces needed by an activity: labor crew space, equipment space, hazard space, and so on.";
+  rdfs:label "Workspace" .
+
+:ZeroDimensionalSpatialRegion a owl:Class;
+  rdfs:subClassOf :SpatialRegion, _:genid211;
+  rdfs:comment "ZeroDimensionalSpatialRegion is equivalent to the BFO class 'zero-dimensional spatial region' (http://purl.obolibrary.org/obo/BFO_0000018)";
+  rdfs:label "ZeroDimensionalSpatialRegion" .
+
+_:genid211 a owl:Restriction;
+  owl:allValuesFrom :ZeroDimensionalSpatialRegion;
+  owl:onProperty :hasContinuantPartAtAllTimes .
+
+:ZeroDimensionalTemporalRegion a owl:Class;
+  rdfs:subClassOf :TemporalRegion, _:genid212;
+  rdfs:comment "ZeroDimensionalTemporalRegion is equivalent to the BFO class 'zero-dimensional temporal region' (http://purl.obolibrary.org/obo/BFO_0000148)";
+  rdfs:label "ZeroDimensionalTemporalRegion" .
+
+_:genid212 a owl:Restriction;
+  owl:allValuesFrom :ZeroDimensionalTemporalRegion;
+  owl:onProperty :hasTemporalPart .
+
+dicv:Comparison rdfs:subClassOf :RelationalQuality .
+
+dicv:Constraint rdfs:subClassOf :RelationalQuality .
+
+dicv:Operator rdfs:subClassOf :RelationalQuality .
+
+dicv:PropertyState rdfs:subClassOf :SpecificallyDependentContinuant .
+
+dicv:QuantityKind rdfs:subClassOf :GenericallyDependentContinuant .
+
+_:genid213 a owl:AllDisjointClasses;
+  owl:members _:genid216 .
+
+_:genid216 a rdf:List;
+  rdf:first :BuildingObject;
+  rdf:rest _:genid215 .
+
+_:genid215 a rdf:List;
+  rdf:first :Equipment;
+  rdf:rest _:genid214 .
+
+_:genid214 a rdf:List;
+  rdf:first :Location;
+  rdf:rest rdf:nil .
