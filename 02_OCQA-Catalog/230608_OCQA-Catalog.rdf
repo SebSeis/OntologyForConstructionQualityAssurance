@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ocqa-catalog#"
+     xml:base="https://w3id.org/ocqa-catalog"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:opm="https://w3id.org/opm#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/ocqa-catalog#">
+        <owl:versionIRI rdf:resource="https://w3id.org/ocqa-catalog/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/opm#"/>
+        <terms:creator>Sebastian Seiß</terms:creator>
+        <terms:description>The Ontology for Quality Assurance is a simple ontology defining the core concepts for quality quality assurence in construction.</terms:description>
+        <terms:issued>2022-01-01</terms:issued>
+        <terms:license>https://creativecommons.org/licenses/by/1.0</terms:license>
+        <terms:modified>2022-06-07</terms:modified>
+        <terms:title>Ontology for Construction Quality Assurence catalog module</terms:title>
+        <vann:preferredNamespacePrefix>ocqa-catalog</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/ocqa-catalog#</vann:preferredNamespaceUri>
+        <rdfs:comment>Version 0.1 - CatalogModule</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#containsCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa-catalog#containsCharacteristic">
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa-catalog#Characteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa-catalog#hasCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/seas/hasProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/ocqa-catalog#Characteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#hasCharacteristicState -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa-catalog#hasCharacteristicState">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/seas/evaluation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ocqa-catalog#Characteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/ocqa-catalog#CharacteristicState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#hasCostCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa-catalog#hasCostCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa-catalog#hasCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#hasFailureProbability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa-catalog#hasFailureProbability">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa-catalog#hasCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#hasHourlyRateCostCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ocqa-catalog#hasHourlyRateCostCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ocqa-catalog#hasCostCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/dcat#dataset -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/dcat#dataset">
+        <rdfs:domain rdf:resource="https://www.w3.org/TR/vocab-dcat-3/#Catalog"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/dcat#Dataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/seas/Property -->
+
+    <rdf:Description rdf:about="http://w3id.org/seas/Property">
+        <owl:equivalentClass rdf:resource="https://w3id.org/ocqa-catalog#Characteristic"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#Characteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa-catalog#Characteristic">
+        <owl:equivalentClass rdf:resource="https://w3id.org/opm#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#CharacteristicCatalog -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa-catalog#CharacteristicCatalog">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/TR/vocab-dcat-3/#Catalog"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#CharacteristicState -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa-catalog#CharacteristicState">
+        <owl:equivalentClass rdf:resource="https://w3id.org/opm#PropertyState"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/seas/Evaluation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#CostCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa-catalog#CostCharacteristic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ocqa-catalog#Characteristic"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ocqa-catalog#FailureProbabilityCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#FailureProbabilityCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa-catalog#FailureProbabilityCharacteristic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ocqa-catalog#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#HourlyRateCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa-catalog#HourlyRateCharacteristic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ocqa-catalog#CostCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ocqa-catalog#SubCharacteristicCatalog -->
+
+    <owl:Class rdf:about="https://w3id.org/ocqa-catalog#SubCharacteristicCatalog">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/dcat#Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/TR/vocab-dcat-3/#Catalog -->
+
+    <owl:Class rdf:about="https://www.w3.org/TR/vocab-dcat-3/#Catalog"/>
+    
+
+
+    <!-- https://www.w3.org/ns/dcat#Dataset -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/dcat#Dataset"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

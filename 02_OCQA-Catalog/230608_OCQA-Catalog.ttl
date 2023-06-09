@@ -1,0 +1,119 @@
+@prefix : <https://w3id.org/ocqa-catalog#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/ocqa-catalog#> .
+
+<https://w3id.org/ocqa-catalog#> rdf:type owl:Ontology ;
+                                  owl:versionIRI <https://w3id.org/ocqa-catalog/0.1> ;
+                                  owl:imports <https://w3id.org/opm#> ;
+                                  <http://purl.org/dc/terms/creator> "Sebastian Seiß" ;
+                                  <http://purl.org/dc/terms/description> "The Ontology for Quality Assurance is a simple ontology defining the core concepts for quality quality assurence in construction." ;
+                                  <http://purl.org/dc/terms/issued> "2022-01-01" ;
+                                  <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/1.0" ;
+                                  <http://purl.org/dc/terms/modified> "2022-06-07" ;
+                                  <http://purl.org/dc/terms/title> "Ontology for Construction Quality Assurence catalog module" ;
+                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "ocqa-catalog" ;
+                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ocqa-catalog#" ;
+                                  rdfs:comment "Version 0.1 - CatalogModule" ;
+                                  owl:versionInfo 0.1 .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/ocqa-catalog#containsCharacteristic
+:containsCharacteristic rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Characteristic .
+
+
+###  https://w3id.org/ocqa-catalog#hasCharacteristic
+:hasCharacteristic rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://w3id.org/seas/hasProperty> ;
+                   rdfs:range :Characteristic .
+
+
+###  https://w3id.org/ocqa-catalog#hasCharacteristicState
+:hasCharacteristicState rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf <http://w3id.org/seas/evaluation> ;
+                        rdfs:domain :Characteristic ;
+                        rdfs:range :CharacteristicState .
+
+
+###  https://w3id.org/ocqa-catalog#hasCostCharacteristic
+:hasCostCharacteristic rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasCharacteristic .
+
+
+###  https://w3id.org/ocqa-catalog#hasFailureProbability
+:hasFailureProbability rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasCharacteristic .
+
+
+###  https://w3id.org/ocqa-catalog#hasHourlyRateCostCharacteristic
+:hasHourlyRateCostCharacteristic rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :hasCostCharacteristic .
+
+
+###  https://www.w3.org/ns/dcat#dataset
+<https://www.w3.org/ns/dcat#dataset> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <https://www.w3.org/TR/vocab-dcat-3/#Catalog> ;
+                                     rdfs:range <https://www.w3.org/ns/dcat#Dataset> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/seas/Property
+<http://w3id.org/seas/Property> owl:equivalentClass :Characteristic .
+
+
+###  https://w3id.org/ocqa-catalog#Characteristic
+:Characteristic rdf:type owl:Class ;
+                owl:equivalentClass <https://w3id.org/opm#Property> .
+
+
+###  https://w3id.org/ocqa-catalog#CharacteristicCatalog
+:CharacteristicCatalog rdf:type owl:Class ;
+                       rdfs:subClassOf <https://www.w3.org/TR/vocab-dcat-3/#Catalog> .
+
+
+###  https://w3id.org/ocqa-catalog#CharacteristicState
+:CharacteristicState rdf:type owl:Class ;
+                     owl:equivalentClass <https://w3id.org/opm#PropertyState> ;
+                     rdfs:subClassOf <http://w3id.org/seas/Evaluation> .
+
+
+###  https://w3id.org/ocqa-catalog#CostCharacteristic
+:CostCharacteristic rdf:type owl:Class ;
+                    rdfs:subClassOf :Characteristic ;
+                    owl:disjointWith :FailureProbabilityCharacteristic .
+
+
+###  https://w3id.org/ocqa-catalog#FailureProbabilityCharacteristic
+:FailureProbabilityCharacteristic rdf:type owl:Class ;
+                                  rdfs:subClassOf :Characteristic .
+
+
+###  https://w3id.org/ocqa-catalog#HourlyRateCharacteristic
+:HourlyRateCharacteristic rdf:type owl:Class ;
+                          rdfs:subClassOf :CostCharacteristic .
+
+
+###  https://w3id.org/ocqa-catalog#SubCharacteristicCatalog
+:SubCharacteristicCatalog rdf:type owl:Class ;
+                          rdfs:subClassOf <https://www.w3.org/ns/dcat#Dataset> .
+
+
+###  https://www.w3.org/TR/vocab-dcat-3/#Catalog
+<https://www.w3.org/TR/vocab-dcat-3/#Catalog> rdf:type owl:Class .
+
+
+###  https://www.w3.org/ns/dcat#Dataset
+<https://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://w3id.org/digitalconstruction/0.5/Units" uri="file:/C:/Users/verwalter/Documents/GitHub/OntologyForConstructionQualityAssurance/09_DiCon/units.ttl"/>
-    <uri id="Imports Wizard Entry" name="https://w3id.org/digitalconstruction/0.5/Information" uri="file:/C:/Users/verwalter/Documents/GitHub/OntologyForConstructionQualityAssurance/09_DiCon/information.ttl"/>
-    <uri id="Imports Wizard Entry" name="https://w3id.org/ocr/0.2" uri="file:/C:/Users/verwalter/Documents/GitHub/OntologyForConstructionQualityAssurance/01_OCR-Regulation/ocr.owl"/>
-    <uri id="Imports Wizard Entry" name="http://w3id.org/digitalconstruction/0.5/Units" uri="https://w3id.org/digitalconstruction/0.5/Units/units.ttl"/>
-    <uri id="Imports Wizard Entry" name="https://w3id.org/digitalconstruction/0.5/Information" uri="https://w3id.org/digitalconstruction/0.5/Information/information.ttl"/>
-    <uri id="User Entered Import Resolution" name="https://w3id.org/ocr/0.1" uri="file:/C:/Users/verwalter/OneDrive%20-%20Technische%20Universität%20Ilmenau/Neuer%20Ordner/03_Datenmodell/01_OCR-Regulation/ocr.owl"/>
-    <uri id="User Entered Import Resolution" name="https://w3id.org/concontract-0.1" uri="file:/C:/Users/verwalter/OneDrive%20-%20Technische%20Universität%20Ilmenau/Neuer%20Ordner/03_Datenmodell/04_concontract/ConContract.owl"/>
+    <uri id="Imports Wizard Entry" name="http://w3id.org/digitalconstruction/0.5/Units" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/09_DiCon/units.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/digitalconstruction/0.5/Information" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/09_DiCon/information.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ocqa-rules/0.1" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/05_OCQA-Rules/230609_OCQA-Rules.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ocqa-catalog/0.1" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/02_OCQA-Catalog/230608_OCQA-Catalog.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ocqa-contract/0.1" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/04_OCQA-Contract/230609_OCQA-Contract.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ocqa-regulation/0.1" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/03_OCQA-Regulation/230608_OCQA-Regulation.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa-catalog" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/02_OCQA-Catalog/230608_OCQA-Catalog.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1667076374278" name="https://w3id.org/ocqa" uri="20220402_GitHubTest_ocqa/documentation/myDocumentation/ontology.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1686232839529" name="https://w3id.org/ocqa" uri="Alte_Ontologien/20220402_GitHubTest_ocqa/documentation/myDocumentation/ontology.rdf"/>
     </group>
 </catalog>
