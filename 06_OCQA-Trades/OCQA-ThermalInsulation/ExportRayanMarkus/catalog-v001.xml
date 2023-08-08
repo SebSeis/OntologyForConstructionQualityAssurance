@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa-rules/0.1" uri="230609_OCQA-Rules.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa-regulation/0.1" uri="230608_OCQA-Regulation.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa-contract/0.1" uri="230609_OCQA-Contract.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa-catalog/0.1" uri="230608_OCQA-Catalog.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/digitalconstruction/0.5/Information" uri="information.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa/0.3" uri="230608_OCQA_03.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
 </catalog>

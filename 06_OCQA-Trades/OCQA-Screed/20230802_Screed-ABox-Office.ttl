@@ -1,0 +1,120 @@
+@prefix : <http://www.semanticweb.org/sebas/ontologies/2023/7/untitled-ontology-45/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sebas/ontologies/2023/7/untitled-ontology-45/> .
+
+<https://example.de/ocqa-screed-inspections> rdf:type owl:Ontology ;
+                                              <http://purl.org/dc/terms/creator> "DERICHS u KONERTZ Baugesellschaft mbH u Co. KG" ;
+                                              rdfs:comment "This file contains the a box for screed inspections of the site Neubau Bürogebäude" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject
+<https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject> rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/0.5/Processes#Activity
+<https://w3id.org/digitalconstruction/0.5/Processes#Activity> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa#InspectionPlan
+<https://w3id.org/ocqa#InspectionPlan> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa-contract#BOQItem
+<https://w3id.org/ocqa-contract#BOQItem> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa-screed#FlatnessInspection
+<https://w3id.org/ocqa-screed#FlatnessInspection> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa-screed#ScreedDIN
+<https://w3id.org/ocqa-screed#ScreedDIN> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa-screed#Screeding
+<https://w3id.org/ocqa-screed#Screeding> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa-screed#SpiritLevel
+<https://w3id.org/ocqa-screed#SpiritLevel> rdf:type owl:Class .
+
+
+###  https://w3id.org/ocqa-screed#WedgeGauge
+<https://w3id.org/ocqa-screed#WedgeGauge> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/sebas/ontologies/2023/7/untitled-ontology-45/ZQHZFOYLX
+:ZQHZFOYLX rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/ocqa-screed#WedgeGauge> .
+
+
+###  https://example.de/ocqa-screed-inspections#NQ80YU64K
+:NQ80YU64K rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/ocqa-screed#SpiritLevel> .
+
+
+###  https://example.de/ocqa-screed-inspections#Takt5
+:Takt5 rdf:type owl:NamedIndividual ,
+                <https://w3id.org/digitalconstruction/0.5/Processes#Activity> .
+
+
+###  https://example.de/ocqa-screed-inspections#113
+<https://example.de/ocqa-screed-inspections#113> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/ocqa#InspectionPlan> .
+
+
+###  https://example.de/ocqa-screed-inspections#14545
+<https://example.de/ocqa-screed-inspections#14545> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/ocqa-screed#Screeding> .
+
+
+###  https://example.de/ocqa-screed-inspections#18202
+<https://example.de/ocqa-screed-inspections#18202> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/ocqa-screed#ScreedDIN> .
+
+
+###  https://example.de/ocqa-screed-inspections#18560
+<https://example.de/ocqa-screed-inspections#18560> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/ocqa-screed#ScreedDIN> .
+
+
+###  https://example.de/ocqa-screed-inspections#2EXbspDnzBfQetvaNkppij
+<https://example.de/ocqa-screed-inspections#2EXbspDnzBfQetvaNkppij> rdf:type owl:NamedIndividual ,
+                                                                             <https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject> .
+
+
+###  https://example.de/ocqa-screed-inspections#3310.25.5.24
+<https://example.de/ocqa-screed-inspections#3310.25.5.24> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/ocqa-contract#BOQItem> .
+
+
+###  https://example.de/ocqa-screed-inspections#42015
+<https://example.de/ocqa-screed-inspections#42015> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/ocqa-screed#FlatnessInspection> .
+
+
+###  https://example.de/ocqa-screed-inspections#42016
+<https://example.de/ocqa-screed-inspections#42016> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/ocqa-screed#FlatnessInspection> .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
