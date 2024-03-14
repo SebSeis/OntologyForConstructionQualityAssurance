@@ -1,0 +1,875 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/digitalconstruction/0.5/Processes#"
+     xml:base="https://w3id.org/digitalconstruction/0.5/Processes"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dice="https://w3id.org/digitalconstruction/0.5/Entities#"
+     xmlns:dicv="https://w3id.org/digitalconstruction/0.5/Variables#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/digitalconstruction/0.5/Processes">
+        <owl:imports rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities/entities.ttl"/>
+        <dc:creator>Seppo Törmä</dc:creator>
+        <dc:creator>Yuan Zheng</dc:creator>
+        <dc:date>2021-04-15</dc:date>
+        <dc:title>Digital Construction Processes</dc:title>
+        <terms:abstract>Processes ontology defines the concepts and relations for activities and resources. </terms:abstract>
+        <terms:created>2019-12-20</terms:created>
+        <terms:description>Process ontology for digital construction</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <vann:preferredNamespacePrefix>dicp</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/digitalconstruction/0.5/Processes</vann:preferredNamespaceUri>
+        <rdfs:label>Digital Construction Processes</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/digitalconstruction/0.5"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#actsOnProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#actsOnProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Actuation"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#Property"/>
+        <rdfs:label>actsOnProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#actuates -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#actuates">
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isActuatedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Actuation"/>
+        <rdfs:label>actuates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasAssignedResource -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasAssignedResource">
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isResourceIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#ResourceRole"/>
+        <rdfs:comment>The resource role that is assigned to this activity.</rdfs:comment>
+        <rdfs:label>hasAssignedResource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasCondition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasCondition">
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isConditionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#Constraint"/>
+        <rdfs:comment>The constraint that has to be in effect at the start of the activity. E.g., the agent has to be in the location of the activity</rdfs:comment>
+        <rdfs:label>hasCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasCostUnit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasCostUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasEffect -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasEffect">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isEffectOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>The constraint that has to be in effect in the end of the activity. E.g., the moved item has to be in the target location of the activity</rdfs:comment>
+        <rdfs:label>hasEffect</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasFinalLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasFinalLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasLocation"/>
+        <rdfs:label>hasFinalLocation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasInitialLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasInitialLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasLocation"/>
+        <rdfs:label>hasInitialLocation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasInputObject -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasInputObject">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasObject"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isInputObjectIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Entity"/>
+        <rdfs:comment>The subproperty of :hasObject. An object that an activity has in the beginning but not anymore in the end. For example, demolition has as its input object a building.</rdfs:comment>
+        <rdfs:label>hasInputObject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasLocation">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Location"/>
+        <rdfs:comment>The location in which the activity happens. Can be a trajectory if the activity does not stay in the same location</rdfs:comment>
+        <rdfs:label>hasLocation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasLocationPhase -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasLocationPhase">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isLocationPhaseOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>A subproperty of :hasSubActivity. A subactivity that corresponds to a location-specific phase. </rdfs:comment>
+        <rdfs:label>hasLocationPhase</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasObject -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasObject">
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isObjectIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Entity"/>
+        <rdfs:comment>The object that an activity acts on or is focused to. For example, a transportation activity can have as its object a container, or painting can have as its object a wall.</rdfs:comment>
+        <rdfs:label>hasObject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasObjectPhase -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasObjectPhase">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isObjectPhaseOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>A subproperty of :hasSubActivity. A subactivity that corresponds to an object-specific phase. </rdfs:comment>
+        <rdfs:label>hasObjectPhase</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasObservedProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasObservedProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Observation"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#Property"/>
+        <rdfs:label>hasObservedProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasObservedResult -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasObservedResult">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Observation"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeState"/>
+        <rdfs:label>hasObservedResult</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasOutputObject -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasOutputObject">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasObject"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isOutputObjectIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Entity"/>
+        <rdfs:comment>The subproperty of :hasObject. An object that an activity has in the end even though it didn&apos;t have it in the beginning. For example, procurement has its output object a purchased product.</rdfs:comment>
+        <rdfs:label>hasOutputObject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasProcessPhase -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasProcessPhase">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isProcessPhaseOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>A subproperty of :hasSubActivity. A subactivity that corresponds to a phase in the process. </rdfs:comment>
+        <rdfs:label>hasProcessPhase</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasProductionRate -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasProductionRate">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#CapabilityToWork"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#hasProperOccurrentPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isSubActivityOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:label>hasSubActivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isActuatedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isActuatedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Actuation"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity"/>
+        <rdfs:label>isActuatedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isConditionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isConditionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#Constraint"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:label>isConditionOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isEffectOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isEffectOf">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#Constraint"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:label>isEffectOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isInputObjectIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isInputObjectIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isObjectIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Entity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>The subproperty of :isObjectIn. An activity that has the object in the beginning but not anymore in the end. For example, building is the input object in demolition.</rdfs:comment>
+        <rdfs:label>isInputObjectIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isLocationPhaseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isLocationPhaseOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isSubActivityOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>A subproperty of :isSubActivityOf. A activity whose location-specific phase this activity is.</rdfs:comment>
+        <rdfs:label>isLocationPhaseOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isNeededByActivity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isNeededByActivity">
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#needsCapability"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Capability"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>The activity that needs a capability from some of its ingredients</rdfs:comment>
+        <rdfs:label>isNeededByActivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isObjectIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isObjectIn">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Entity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>The activity that acts on the object. For example, a shipment is the object of transportation.</rdfs:comment>
+        <rdfs:label>isObjectIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isObjectPhaseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isObjectPhaseOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isSubActivityOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>A subproperty of :isSubActivityOf. A activity whose object-specific phase this activity is.</rdfs:comment>
+        <rdfs:label>isObjectPhaseOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isObservedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isObservedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#observes"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Observation"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity"/>
+        <rdfs:label>isObservedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isOccupiedByActivity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isOccupiedByActivity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#occupiesTemporalRegion"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#occupiesTimeInterval"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#TimeInterval"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:label>isOccupiedByActivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isOutputObjectIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isOutputObjectIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isObjectIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Entity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>The subproperty :isObjectIn. An activity that has the object in the end even though it didn&apos;t have it in the beginning. For example, a purchased product is an output object of procurement.</rdfs:comment>
+        <rdfs:label>isOutputObjectIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isProcessPhaseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isProcessPhaseOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isSubActivityOf"/>
+        <rdfs:comment>The subproperty of :isSubActivityOf.</rdfs:comment>
+        <rdfs:label>isProcessPhaseOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isResourceIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isResourceIn">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#ResourceRole"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>The activity in whose execution this entity plays a resource role .</rdfs:comment>
+        <rdfs:label>isResourceIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#isSubActivityOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#isSubActivityOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#properOccurrentPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:label>isSubActivityOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#needsCapability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#needsCapability">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Capability"/>
+        <rdfs:comment>A capability that some ingredient of an activity needs to provided to make the execution of the activity possible.</rdfs:comment>
+        <rdfs:label>needsCapability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#observes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#observes">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Observation"/>
+        <rdfs:label>observes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#occupiesTimeInterval -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#occupiesTimeInterval">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#occupiesTemporalRegion"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#TimeInterval"/>
+        <rdfs:label>occupiesTimeInterval</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasActivityCost -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasActivityCost">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasCostUnit -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasCostUnit"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasUnitCost -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasUnitCost">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasUsageAmount -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasUsageAmount">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#ResourceRole"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>The amount of resource usage in its resource role with respect to a specific activity. Usage amount can be related to the cost unit and unit cost of the resource. For example, 10 (hours of work as resource in activity1), 20 (kg of material spent in activity2)</rdfs:comment>
+        <rdfs:label>hasUsageAmount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#Activity -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#Activity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Process"/>
+        <rdfs:comment>A process that is intentionally performed by an agent.</rdfs:comment>
+        <rdfs:label>Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#ActivityCost -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#ActivityCost">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#isPropertyFor"/>
+                <owl:hasValue rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasActivityCost"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#CostProperty"/>
+        <rdfs:label>ActivityCost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#Actuation -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#Actuation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>A process of acting on some property of a feature of interest.</rdfs:comment>
+        <rdfs:label>Actuation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#AutomatedActuation -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#AutomatedActuation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Actuation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isActuatedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Actuator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>AutomatedActuation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#AutomatedObservation -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#AutomatedObservation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#isObservedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>AutomatedObservation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#BehaviorProcess -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#BehaviorProcess">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Process"/>
+        <rdfs:comment>A process in which the agent performs activities in reponse to stimuli.</rdfs:comment>
+        <rdfs:label>BehaviorProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#CapabilityConstraint -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#CapabilityConstraint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#Constraint"/>
+        <rdfs:label>CapabilityConstraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#CapabilityToUse -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#CapabilityToUse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Capability"/>
+        <rdfs:label>CapabilityToUse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#CapabilityToWork -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#CapabilityToWork">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Capability"/>
+        <rdfs:label>CapabilityToWork</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#ConstructionProject -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#ConstructionProject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Project"/>
+        <rdfs:label>ConstructionProject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#CostItem -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#CostItem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Group"/>
+        <rdfs:comment>A group of entities (including physical entities, information entities and activities) whose costs are controlled as one whole. The cost associated with a cost item is an aggregation (sum) of the costs of its members and included cost items</rdfs:comment>
+        <rdfs:label>CostItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#CostProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#CostProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"/>
+        <rdfs:label>CostProperty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#Observation -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#Observation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>A process of capturing information about some property of a feature of interest.</rdfs:comment>
+        <rdfs:label>Observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#ProcurementPackage -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#ProcurementPackage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Group"/>
+        <rdfs:comment>A group of entities (including physical entities, information entities, and activities) that are procured as one whole</rdfs:comment>
+        <rdfs:label>ProcurementPackage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#isPropertyFor"/>
+                <owl:hasValue rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasProductionRate"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"/>
+        <rdfs:label>ProductionRate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#Project -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#Project">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment>A ObjectActivity with specific goals</rdfs:comment>
+        <rdfs:label>Project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#RenovationProject -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#RenovationProject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#ConstructionProject"/>
+        <rdfs:label>RenovationProject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#Resource -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#Resource">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#Entity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#hasRole"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#ResourceRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Resource is any entity that plays a ResourceRole</rdfs:comment>
+        <rdfs:label>Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#ResourceCost -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#ResourceCost">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#CostProperty"/>
+        <rdfs:label>ResourceCost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#ResourceRole -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#ResourceRole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Role"/>
+        <rdfs:comment>A role in which an entity acts as a resource in an activity</rdfs:comment>
+        <rdfs:label>ResourceRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#Service -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#Service">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Process"/>
+        <rdfs:comment>A process in which service providers perform functions in response to requests of service requestors.</rdfs:comment>
+        <rdfs:label>Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#Shipment -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#Shipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Group"/>
+        <rdfs:comment>A group of entities (including physical entities and information entities) that are transported and delivered as one whole</rdfs:comment>
+        <rdfs:label>Shipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#UnitCost -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#UnitCost">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#isPropertyFor"/>
+                <owl:hasValue rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasUnitCost"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#ResourceCost"/>
+        <rdfs:label>UnitCost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasActivityCost -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasActivityCost"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasProductionRate -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasProductionRate"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasUnitCost -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasUnitCost"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasActivityCost">
+        <rdfs:comment>The cost of an activity</rdfs:comment>
+        <rdfs:label>hasActivityCost</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasCostUnit">
+        <rdfs:label>hasCostUnit</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasProductionRate">
+        <rdfs:label>hasProductionRate</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasUnitCost">
+        <rdfs:comment>The unit cost of a resource. Unit cost (e.g., 10€/m2), together with the information about cost unit (here, m2) and usage amount of expressed in cost units (e.g., 32) can be used to compute the total cost (here, 320€). Or if unit cost is 50€/hr and the cost unit is hr and usage amount 12, the total cost is 600€</rdfs:comment>
+        <rdfs:label>hasUnitCost</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

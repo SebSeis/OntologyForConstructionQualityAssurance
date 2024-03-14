@@ -4,9 +4,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dica: <https://w3id.org/digitalconstruction/0.5/Agents> .
-@prefix dice: <https://w3id.org/digitalconstruction/0.5/Entities#> .
-@prefix dicp: <https://w3id.org/digitalconstruction/0.5/Processes#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -50,27 +47,13 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/digitalconstruction/0.5/Entities#hasEquipment
-# 
-# https://w3id.org/digitalconstruction/0.5/Entities#hasLastInstant
-# 
-# https://w3id.org/digitalconstruction/0.5/Entities#isStartOf
-# 
 # https://w3id.org/ocqa#detect
 # 
 # https://w3id.org/ocqa#hasActivityType
 # 
-# https://w3id.org/ocqa#hasActualCharacteristic
-# 
-# https://w3id.org/ocqa#hasAssignedCharacteristicValue
-# 
 # https://w3id.org/ocqa#hasCausation
 # 
-# https://w3id.org/ocqa#hasCharacteristic
-# 
 # https://w3id.org/ocqa#hasDocumentation
-# 
-# https://w3id.org/ocqa#hasInspCharacteristic
 # 
 # https://w3id.org/ocqa#hasInspection
 # 
@@ -86,10 +69,6 @@
 # 
 # https://w3id.org/ocqa#hasSample
 # 
-# https://w3id.org/ocqa#simultane
-# 
-# https://w3id.org/ocqa#succeed
-# 
 # 
 # 
 # #################################################################
@@ -98,10 +77,6 @@
 # #
 # #################################################################
 # 
-# 
-# https://schema.org/maxValue
-# 
-# https://schema.org/value
 # 
 # https://w3id.org/ocqa#Aufwandswert
 # 
@@ -123,11 +98,7 @@
 # 
 # https://w3id.org/ocqa#hasInpsectionPerUnit
 # 
-# https://w3id.org/ocqa#hasInsepctionStatus
-# 
 # https://w3id.org/ocqa#hasInspectionCost
-# 
-# https://w3id.org/ocqa#hasInspectionFrequency
 # 
 # https://w3id.org/ocqa#hasInspectionInterval
 # 
@@ -164,17 +135,9 @@
 # 
 # https://w3id.org/digitalconstruction/0.5/Entities#Object
 # 
-# https://w3id.org/digitalconstruction/0.5/Entities#Occurrent
-# 
 # https://w3id.org/digitalconstruction/0.5/Processes#Activity
 # 
-# https://w3id.org/ocqa#ActualCharacteristicValue
-# 
-# https://w3id.org/ocqa#AssignedCharacteristicValue
-# 
 # https://w3id.org/ocqa#Causation
-# 
-# https://w3id.org/ocqa#Characteristic
 # 
 # https://w3id.org/ocqa#Conformity
 # 
@@ -202,8 +165,6 @@
 # 
 # https://w3id.org/ocqa#InspectionProcedure
 # 
-# https://w3id.org/ocqa#Inspector
-# 
 # https://w3id.org/ocqa#Measurement
 # 
 # https://w3id.org/ocqa#MeasuringEquipment
@@ -220,10 +181,6 @@
 # 
 # https://w3id.org/ocqa#Protocol
 # 
-# https://w3id.org/ocqa#QualityCharacteristic
-# 
-# https://w3id.org/ocqa#QuantitativeCharacteristic
-# 
 # https://w3id.org/ocqa#Record
 # 
 # https://w3id.org/ocqa#Result
@@ -235,18 +192,6 @@
 # https://w3id.org/ocqa#Test
 # 
 # https://w3id.org/ocqa#Video
-# 
-# https://w3id.org/ocqa-catalog#CostFeatureCatalog
-# 
-# https://w3id.org/ocqa-catalog#FailureProbabilityCatalog
-# 
-# https://w3id.org/ocqa-catalog#FeatureState
-# 
-# https://w3id.org/ocqa-catalog#TimeRateCatalog
-# 
-# https://w3id.org/opm#Property
-# 
-# https://w3id.org/opm#PropertyState
 # 
 # 
 # 
@@ -265,7 +210,6 @@
 # #    General axioms
 # #
 # #################################################################
-# 
 # 
 # 
 # 
@@ -310,46 +254,23 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 
 :DIN_9000:2015 a owl:AnnotationProperty .
 
-dice:hasEquipment a owl:ObjectProperty .
-
-dice:hasLastInstant a owl:ObjectProperty .
-
-dice:isStartOf a owl:ObjectProperty .
-
 :detect a owl:ObjectProperty;
   rdfs:domain :InspectionProcedure;
   rdfs:range :FailureCategories .
 
 :hasActivityType a owl:ObjectProperty;
   rdfs:domain :Procedure;
-  rdfs:range dicp:Activity .
-
-:hasActualCharacteristic a owl:ObjectProperty;
-  rdfs:domain :Characteristic;
-  rdfs:range :ActualCharacteristicValue;
-  owl:propertyDisjointWith :hasAssignedCharacteristicValue .
-
-:hasAssignedCharacteristicValue a owl:ObjectProperty;
-  rdfs:domain :Characteristic;
-  rdfs:range :AssignedCharacteristicValue;
-  rdfs:label "hatPrüfmerkmalsWert"@de .
+  rdfs:range <digitalconstruction/0.5/Processes#Activity> .
 
 :hasCausation a owl:ObjectProperty;
   rdfs:domain :Evaluation;
   rdfs:range :Causation;
   rdfs:label "hatUrsache"@de .
 
-:hasCharacteristic a owl:ObjectProperty;
-  rdfs:domain :Inspection;
-  rdfs:range :Characteristic .
-
 :hasDocumentation a owl:ObjectProperty;
   rdfs:domain :Evaluation, :Inspection;
   rdfs:range :Record;
   rdfs:label "hatDokumentation"@de .
-
-:hasInspCharacteristic a owl:ObjectProperty;
-  rdfs:subPropertyOf :hasCharacteristic .
 
 :hasInspection a owl:ObjectProperty;
   rdfs:range :Inspection;
@@ -357,7 +278,7 @@ dice:isStartOf a owl:ObjectProperty .
   rdfs:label "hatPrüfung"@de .
 
 :hasInspectionEquipment a owl:ObjectProperty;
-  rdfs:subPropertyOf dice:hasEquipment .
+  rdfs:subPropertyOf <digitalconstruction/0.5/Entities#hasEquipment> .
 
 :hasInspectionProcedure a owl:ObjectProperty;
   rdfs:domain :Inspection;
@@ -376,23 +297,11 @@ dice:isStartOf a owl:ObjectProperty .
 :hasSample a owl:ObjectProperty;
   rdfs:range :Sample .
 
-:simultane a owl:ObjectProperty;
-  rdfs:domain dice:Occurrent;
-  rdfs:range dice:Occurrent .
-
-:succeed a owl:ObjectProperty;
-  rdfs:domain dice:Occurrent;
-  rdfs:range dice:Occurrent .
-
-<https://schema.org/maxValue> a owl:DatatypeProperty .
-
-<https://schema.org/value> a owl:DatatypeProperty .
-
 :Aufwandswert a owl:DatatypeProperty;
   rdfs:subPropertyOf :Wert .
 
 :InspectionStatus a owl:DatatypeProperty;
-  rdfs:domain dice:Entity;
+  rdfs:domain <digitalconstruction/0.5/Entities#Entity>;
   rdfs:comment "Prüfstatus"@de;
   :DIN_55350:2021-10 """Zustand bezüglich der Frage, welche Prüfungen an einem bestimmten Objekt durchgeführt wurden und welche Prüfergebnisse dabei erzielt wurden
 Anmerkung 1 zum Begriff: Der Prüfstatus kann zum Beispiel dokumentiert sein:
@@ -438,8 +347,6 @@ Otherwise inspection cost estimation can be done by the sum over equipment cost,
   rdfs:domain :InspectionProcedure;
   rdfs:comment "per Unit can be Floor, m2, m3" .
 
-:hasInsepctionStatus a owl:DatatypeProperty .
-
 :hasInspectionCost a owl:DatatypeProperty;
   rdfs:subPropertyOf :hasQuality-related-costs;
   rdfs:domain :Inspection;
@@ -447,11 +354,6 @@ Otherwise inspection cost estimation can be done by the sum over equipment cost,
   rdfs:label "Prüfkosten"@de, "appraisal costs"@en;
   :DIN_55350:2021-10 """Kosten, die durch planmäßige Prüfungen, die keinen konkreten Fehler zum Anlass haben, verursacht werden
 Anmerkung 1 zum Begriff: Prüfkosten entstehen durch das für Prüfungen eingesetzte Personal und die zugehörigen Prüfmittel, eingeschlossen die Prüfmittelüberwachung in allen Bereichen der Organisation. Bei zeitlich ineinandergreifenden Prüftätigkeiten und anderen Tätigkeiten sind die Kosten für den Anteil der Prüftätigkeiten anzusetzen."""@de .
-
-:hasInspectionFrequency a owl:DatatypeProperty;
-  rdfs:subPropertyOf owl:topDataProperty;
-  rdfs:range xsd:integer;
-  rdfs:label "Prüfhäufikeit"@de .
 
 :hasInspectionInterval a owl:DatatypeProperty;
   rdfs:subPropertyOf owl:topDataProperty;
@@ -520,43 +422,14 @@ Anhang SL enthalten sind. Die ursprüngliche Definition wurde durch Hinzufügen 
   rdfs:subPropertyOf owl:topDataProperty;
   rdfs:domain :Determination .
 
-dice:Equipment a owl:Class .
+<digitalconstruction/0.5/Entities#Equipment> a owl:Class .
 
-dice:Object a owl:Class .
+<digitalconstruction/0.5/Entities#Object> a owl:Class .
 
-dice:Occurrent a owl:Class .
-
-dicp:Activity a owl:Class .
-
-:ActualCharacteristicValue a owl:Class;
-  rdfs:subClassOf <digitalconstruction/0.5/Variables#PropertyState>;
-  owl:disjointWith :AssignedCharacteristicValue;
-  rdfs:comment "Beschreibt den tatsächlichen 3.4.4.2 Istwert, en: actual value tatsächlicher Merkmalswert (3.4.1.2) Anmerkung 1 zum Begriff: Anmerkung 1 bis Anmerkung 4 zu 3.4.4.1 gelten sinngemäß. Anmerkung 2 zum Begriff: Der Istwert kann ein einzelner Istwert, ein Mittelwert mehrerer einzelner Istwerte oder ein anderer charakteristischer Istwert sein."@de;
-  rdfs:label "Tatsächlicher Merkmalswert"@de, "actual characteristic value"@en .
-
-:AssignedCharacteristicValue a owl:Class;
-  rdfs:subClassOf <digitalconstruction/0.5/Variables#PropertyState>;
-  rdfs:comment """DIN 55350:2021-10 3.4.1.2 konkrete Ausprägung eines Merkmals (3.4.1.1)
-Anmerkung 1 zum Begriff: Durch die spezielle Festlegung des betrachteten Merkmals ist die Art des Merkmals (z. B. Farbe, Länge) bestimmt (Art des Merkmals: siehe 3.4.1.5 bis 3.4.1.11) und damit auch die Art der Merkmalswerte (z. B. rot, 3 m). Siehe auch Abschnitt A.7."""@de;
-  rdfs:label "Merkmalswert"@de, "characteristic value"@en .
+<digitalconstruction/0.5/Processes#Activity> a owl:Class .
 
 :Causation a owl:Class;
   rdfs:label "Ursache"@de .
-
-:Characteristic a owl:Class;
-  rdfs:subClassOf <http://w3id.org/seas/Property>, <digitalconstruction/0.5/Variables#Property>,
-    <opm#Property>;
-  rdfs:comment """Merkmal, en: characteristic
-kennzeichnende Eigenschaft
-Anmerkung 1 zum Begriff: Ein Merkmal kann inhärent oder zugeordnet sein.
-Anmerkung 2 zum Begriff: Es gibt Quantitative Merkmale (3.4.1.5) und Qualitative Merkmale (3.4.1.9). Anmerkung 3 zum Begriff: Es gibt verschiedene Klassen von Merkmalen, z. B.: a) physikalische (z. B. mechanische, elektrische, chemische oder biologische Merkmale); b) sensorische (z. B. bezüglich Geruch, Berührung, Geschmack, Sehvermögen, Gehör); c) verhaltensbezogene (z. B. Höflichkeit, Ehrlichkeit, Aufrichtigkeit); d) zeitbezogene (z. B. Pünktlichkeit, Zuverlässigkeit, Verfügbarkeit, Kontinuität); e) ergonomische (z. B. physiologische oder auf Sicherheit für den Menschen bezogene Merkmale); f) funktionale (z. B. Spitzengeschwindigkeit eines Flugzeuges).
-[QUELLE: DINENISO 9000:2015-11, 3.10.1, modifiziert – Anmerkung 2 umformuliert]"""@de,
-    """characteristic, en: characteristic
-characteristic property
-Note 1 to term: A characteristic may be inherent or associated.
-Note 2 to concept: There are Quantitative Characteristics (3.4.1.5) and Qualitative Characteristics (3.4.1.9). NOTE 3 to the term: there are different classes of characteristics, e.g.: a) physical (e.g. mechanical, electrical, chemical or biological characteristics); b) sensory (e.g. relating to smell, touch, taste, sight, hearing); c) behavioral (e.g. courtesy, honesty, sincerity); d) time-related (e.g., punctuality, reliability, availability, continuity); e) ergonomic (e.g., physiological or human safety-related characteristics); f) functional (e.g., top speed of an aircraft).
-[SOURCE: DINENISO 9000:2015-11, 3.10.1, modified - Note 2 reworded]"""@en;
-  rdfs:label "Characteristic"@en, "Merkmal"@de .
 
 :Conformity a owl:Class;
   rdfs:subClassOf :Evaluation, :Record;
@@ -606,7 +479,7 @@ Anmerkung 2 zum Begriff: Der vom Kunden (3.2.4) beabsichtigte Gebrauch kann durc
     "The term \"non-conformity\" (3.6.9) refers to a failure to meet the intended or specified use. Note 1 to the term emphasizes the importance of distinguishing between the terms \"defect\" and \"non-conformity\" due to their legal implications, particularly those related to product (3.7.6) and service liability issues (3.7.7). Note 2 to the term notes that the customer's (3.2.4) intended use may be affected by the type of information (3.8.2) provided by the supplier (3.2.5), such as instructions for use or maintenance."@en .
 
 :Determination a owl:Class;
-  rdfs:subClassOf dicp:Activity;
+  rdfs:subClassOf <digitalconstruction/0.5/Processes#Activity>;
   rdfs:label "Bestimmung"@de, "Determination"@en;
   :DIN_9000:2015 "Activity for determining one or more characteristics (3.10.1) and their values."@en,
     "Tätigkeit zur Ermittlung eines oder mehrerer Merkmale (3.10.1) und ihrer Merkmalswerte"@de .
@@ -640,7 +513,7 @@ Note 2 to the term: The result of an assessment may indicate conformity or nonco
 
 :InspectionEquipment a owl:Class;
   owl:equivalentClass :MeasuringEquipment;
-  rdfs:subClassOf dice:Equipment .
+  rdfs:subClassOf <digitalconstruction/0.5/Entities#Equipment> .
 
 :InspectionPlan a owl:Class;
   rdfs:subClassOf :Plan;
@@ -661,9 +534,6 @@ Anmerkung 2 zum Begriff: Zusätzlich zu einem umfassenden Prüfplan können für
     "Das Wissen eines Prüfverfahrens wird durch eine Regel abgebildet. Die Regel entspricht somit einer Verfahrensanweisung aus der sich die individuelle Prüfung ergibt.";
   rdfs:label "Prüfungsmethode"@de, "Prüfverfahren"@de .
 
-:Inspector a owl:Class;
-  rdfs:subClassOf <digitalconstruction/0.5/Agents#Person> .
-
 :Measurement a owl:Class;
   rdfs:subClassOf :Determination;
   rdfs:label "Measurement"@en;
@@ -675,7 +545,7 @@ Note 1 to the term: According to ISO 3534-2, the determined value is typically a
 Note 2 to the term: This term is one of the common names and basic definitions for ISO management system standards contained in ISO/IEC Directives, Part 1, Consolidated ISO Supplement, Annex SL. The original definition was amended by adding Note 1 to the term."""@en .
 
 :MeasuringEquipment a owl:Class;
-  rdfs:subClassOf dice:Equipment;
+  rdfs:subClassOf <digitalconstruction/0.5/Entities#Equipment>;
   rdfs:label "Messmittel"@de;
   :DIN_9000:2015 "Measuring instrument, software, measuring standard, reference material, or equipment, or a combination thereof, that is necessary to carry out a measurement process (3.11.5)."@en,
     "Messgerät, Software, Messnormal, Referenzmaterial oder apparative Hilfsmittel oder eine Kombination davon, wie sie zur Realisierung eines Messprozesses (3.11.5) erforderlich sind"@de .
@@ -770,32 +640,6 @@ Any further information and agreements.
 Note 2 on the term: There are various types of test certificates. In DINEN10204:2005-01, the following are defined: Certificate type 2.1, Inspection certificate type 2.2, Test report type 3.1, and Test report type 3.2.
 Note 3 on the term: A test certificate does not generally release a further processing purchaser of the product or service from their responsibility for quality."""@en .
 
-:QualityCharacteristic a owl:Class;
-  rdfs:subClassOf :Characteristic;
-  rdfs:comment """Characteristic (3.4.1.1) whose values are assigned to a scale (3.4.1.4) on which distances are not defined.
-Note 1 to the term: this scale is called \"Topological Scale\". See also Section A.7.
-Note 2 on the term: It may be useful to identify characteristic values of Qualitative Characteristics with a key number, i.e. with numbers. However, this does not assign a scale to the values of this Qualitative Characteristic on which distances are defined. The qualitative characteristic is therefore not converted into a quantitative characteristic by numbering the characteristic values."""@en,
-    """Merkmal (3.4.1.1), dessen Werte einer Skala (3.4.1.4) zugeordnet sind, auf der keine Abstände definiert sind
-Anmerkung 1 zum Begriff: Diese Skala heißt „Topologische Skala“. Siehe auch Abschnitt A.7.
-Anmerkung 2 zum Begriff: Es kann sinnvoll sein, Merkmalswerte von Qualitativen Merkmalen mit einer Schlüsselnummer zu kennzeichnen, also mit Zahlen. Dadurch wird jedoch den Werten dieses Qualitativen Merkmals keine Skala zugeordnet, auf der Abstände definiert sind. Das Qualitative Merkmal wird also durch eine Benummerung der Merkmalswerte nicht in ein Quantitatives Merkmal umgewandelt."""@de;
-  rdfs:label "Qualitatives Merkmal"@de, "qualitative characteristic"@en .
-
-:QuantitativeCharacteristic a owl:Class;
-  rdfs:subClassOf :Characteristic;
-  rdfs:comment """Quantitative characteristic: characteristic (3.4.1.1) whose values are assigned to a scale (3.4.1.4) on which distances are defined.
-Note 1 to the term: This scale is called: \"Metric scale\" or \"Cardinal scale\". On it either only distances are defined (\"interval scale\") or additionally also ratios (\"ratio scale\"). For example, on the Celsius temperature scale, only distances are defined, while on the Kelvin temperature scale, ratios are also defined. See also section A.7.
- Remark 2 to the term: According to the value range of characteristics (3.4.1.3), Continuous Characteristics (3.4.1.6) and Discrete Characteristics (3.4.1.7) are distinguished.
-Note 3 to term: A Quantitative Characteristic can be transformed into a Qualitative Characteristic by determining only whether the actual value lies within a specified range of values (which belongs to the value range of the characteristic (3.4.1.3)). 
-Note 4 to the term: The value of a quantitative characteristic is expressed as the product of a numerical value and a unit (e.g. SI unit, currency unit, see also DIN 1301-1:2010-10) (see DIN 1313:1998-12). 
-Note 5 to the term: tative characteristics."""@en,
-    """Quantitatives Merkmal: Merkmal (3.4.1.1), dessen Werte einer Skala (3.4.1.4) zugeordnet sind, auf der Abstände definiert sind.
-Anmerkung 1 zum Begriff: Diese Skala heißt: „Metrische Skala“ oder „Kardinalskala“. Auf ihr sind entweder nur Abstände definiert („Intervallskala“) oder zusätzlich auch Verhältnisse („Verhältnisskala“). Beispielsweise sind auf der Temperaturskala nach Celsius nur Abstände definiert, während auf der Kelvin-Temperaturskala zusätzlich auch Verhältnisse definiert sind. Siehe auch Abschnitt A.7.
- Anmerkung 2 zum Begriff: Nach dem Wertebereich von Merkmalen (3.4.1.3) werden Kontinuierliche Merkmale (3.4.1.6) und Diskrete Merkmale (3.4.1.7) unterschieden.
-Anmerkung 3 zum Begriff: Ein Quantitatives Merkmal kann dadurch in ein Qualitatives Merkmal verwandelt werden, dass nur noch festgestellt wird, ob der Istwert in einem vorgegebenen Bereich von Werten liegt (der zum Wertebereich des Merkmals (3.4.1.3) gehört). 
-Anmerkung 4 zum Begriff: Der Wert eines Quantitativen Merkmals wird als Produkt aus Zahlenwert und Einheit (z. B. SI-Einheit, Währungseinheit, siehe auch DIN 1301-1:2010-10) ausgedrückt (siehe DIN 1313:1998-12). 
-Anmerkung 5 zum Begriff: tativer Merkmale."""@de;
-  rdfs:label "Quantitatives Merkmal"@de, "quantitative characteristic"@en .
-
 :Record a owl:Class;
   rdfs:label "Aufzeichnung"@de, "Documentation"@en, "Dokumentation"@de;
   :DIN_9000:2015 """A document (3.8.5) that indicates achieved results or provides evidence of completed activities.
@@ -851,31 +695,7 @@ Note 1 to the term: If the result of a test shows conformity (3.6.11), it may be
 :Video a owl:Class;
   rdfs:subClassOf :Record .
 
-<ocqa-catalog#CostFeatureCatalog> a owl:Class;
-  rdfs:subClassOf <ocqa-catalog#FeatureCatalog>;
-  rdfs:comment "Der CostFeatureCatalog ist ein Katalog, der verschiedene Parameter oder Merkmale rund um die Kosten im Kontext der Prüfplanung in der Bauausführung beinhaltet. Dies kann Kosten für Materialien, Ausrüstung, Arbeitsstunden und andere relevante Aspekte umfassen. Der Zweck dieses Katalogs ist es, eine strukturierte und organisierte Sammlung von Kostenparametern bereitzustellen, die zur genauen Berechnung und Planung in Bauprojekten herangezogen werden können."@de,
-    "The CostFeatureCatalog is a catalog that encompasses various parameters or features related to costs in the context of quality assurance in construction execution. This can include costs for materials, equipment, man-hours, and other relevant aspects. The purpose of this catalog is to provide a structured and organized collection of cost parameters that can be used for accurate calculation and planning in construction projects."@en;
-  rdfs:label "KostenMerkmalKatalog"@de .
-
-<ocqa-catalog#FailureProbabilityCatalog> a owl:Class;
-  rdfs:subClassOf <ocqa-catalog#FeatureCatalog>;
-  rdfs:comment "Der FailureProbabilityCatalog ist ein Katalog, der verschiedene Parameter bezüglich der Wahrscheinlichkeit von Fehlern oder Ausfällen in der Prüfplanung der Bauausführung enthält. Dies kann sich auf die Wahrscheinlichkeit beziehen, mit der bestimmte Materialien versagen, oder die Effizienz bestimmter Bauverfahren. Ziel dieses Katalogs ist es, Risiken besser einschätzen und minimieren zu können."@de,
-    "The FailureProbabilityCatalog is a catalog containing various parameters concerning the probability of errors or failures in the quality assurance of construction execution. This might relate to the likelihood of specific materials failing or the efficiency of particular construction methods. The goal of this catalog is to better assess and minimize risks."@en;
-  rdfs:label "FehlerMerkmalsKatalog"@de .
-
-<ocqa-catalog#FeatureState> rdfs:subClassOf <opm#PropertyState> .
-
-<ocqa-catalog#TimeRateCatalog> a owl:Class;
-  rdfs:subClassOf <ocqa-catalog#FeatureCatalog>;
-  rdfs:comment "Der TimeRateCatalog ist ein Katalog, der Parameter oder Merkmale rund um die Zeitschätzungen in der Prüfplanung in der Bauausführung beinhaltet. Dies kann sich auf die benötigte Zeit für verschiedene Prozesse, wie Vorbereitung, Durchführung oder Nachbearbeitung beziehen. Durch diesen Katalog können Bauprojekte zeitlich besser geplant und optimiert werden."@de,
-    "The TimeRateCatalog is a catalog that includes parameters or features concerning time estimations in the context of quality assurance in construction execution. This can relate to the time required for various processes, such as preparation, execution, or post-processing. Through this catalog, construction projects can be better planned and optimized in terms of time."@en;
-  rdfs:label "ZeitMerkmalKatalog"@de .
-
-<opm#Property> a owl:Class .
-
-<opm#PropertyState> a owl:Class .
-
-dice:Process rdfs:label "Prozess"@de .
+<digitalconstruction/0.5/Entities#Process> rdfs:label "Prozess"@de .
 
 _:genid1 a owl:AllDisjointClasses;
   owl:members _:genid4 .
@@ -913,19 +733,4 @@ _:genid7 a rdf:List;
 
 _:genid6 a rdf:List;
   rdf:first :Test;
-  rdf:rest rdf:nil .
-
-_:genid11 a owl:AllDisjointClasses;
-  owl:members _:genid14 .
-
-_:genid14 a rdf:List;
-  rdf:first <ocqa-catalog#CostFeatureCatalog>;
-  rdf:rest _:genid13 .
-
-_:genid13 a rdf:List;
-  rdf:first <ocqa-catalog#FailureProbabilityCatalog>;
-  rdf:rest _:genid12 .
-
-_:genid12 a rdf:List;
-  rdf:first <ocqa-catalog#TimeRateCatalog>;
   rdf:rest rdf:nil .

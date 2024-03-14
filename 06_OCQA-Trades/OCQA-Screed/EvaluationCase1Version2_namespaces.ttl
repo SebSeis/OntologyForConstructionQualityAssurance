@@ -1,0 +1,15 @@
+PREFIX star: <http://api.stardog.com/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX so: <https://schema.org/>
+PREFIX stardog: <tag:stardog:api:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dicp: <https://w3id.org/digitalconstruction/0.5/Processes#>
+PREFIX dica: <https://w3id.org/digitalconstruction/0.5/Agents>
+PREFIX dice: <https://w3id.org/digitalconstruction/0.5/Entities#>
+PREFIX ocqa: <https://w3id.org/ocqa#> 
+PREFIX ocqa-screed: <https://w3id.org/ocqa-screed#>
+PREFIX ocqa-reg: <https://w3id.org/ocqa-regulation#>
+PREFIX ocqa-con: <https://w3id.org/ocqa-contract#>
+PREFIX : <https://example.de/ocqa-screed-inspections#>

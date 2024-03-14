@@ -1,119 +1,970 @@
+@base <https://w3id.org/ocqa_screed#> .
 @prefix : <https://w3id.org/ocqa_screed#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/ocqa_screed#> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+# 
+# http://purl.org/dc/terms/description
+# 
+# http://purl.org/dc/terms/issued
+# 
+# http://purl.org/dc/terms/license
+# 
+# http://purl.org/dc/terms/title
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasEnd
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasStart
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#precedes
+# 
+# https://w3id.org/ocqa#hasInspectionEquipment
+# 
+# https://w3id.org/ocqa-screed#hasFlatness
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ocqa-screed#measurementDistance
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# #%23%23%23%23%23%23%23%23%23%23ocqa-screed%23Screed:_check_finished_height_(angle_deviations)
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject
+# 
+# https://w3id.org/ocqa-screed#BondedScreed
+# 
+# https://w3id.org/ocqa-screed#CalciumCarbideMeasuringInstrument
+# 
+# https://w3id.org/ocqa-screed#CheckSeperationLayer
+# 
+# https://w3id.org/ocqa-screed#Check_floating_screed
+# 
+# https://w3id.org/ocqa-screed#Check_readiness_for_covering
+# 
+# https://w3id.org/ocqa-screed#Check_screed_angle
+# 
+# https://w3id.org/ocqa-screed#Check_screed_joints
+# 
+# https://w3id.org/ocqa-screed#Check_surface_treatment_of_mastic_asphalt
+# 
+# https://w3id.org/ocqa-screed#Chisel
+# 
+# https://w3id.org/ocqa-screed#DIN-Screed
+# 
+# https://w3id.org/ocqa-screed#FlatnessInspection
+# 
+# https://w3id.org/ocqa-screed#FlatnessInspectionProcedure
+# 
+# https://w3id.org/ocqa-screed#FloatingScreed
+# 
+# https://w3id.org/ocqa-screed#FoldingRule
+# 
+# https://w3id.org/ocqa-screed#Hammer
+# 
+# https://w3id.org/ocqa-screed#HeightInspection
+# 
+# https://w3id.org/ocqa-screed#HightInspectionProcedure
+# 
+# https://w3id.org/ocqa-screed#LevelingTrestle
+# 
+# https://w3id.org/ocqa-screed#MoistureInspection
+# 
+# https://w3id.org/ocqa-screed#MoistureInspectionProcedure
+# 
+# https://w3id.org/ocqa-screed#Monitor_heating_protocol
+# 
+# https://w3id.org/ocqa-screed#ParquetWorks
+# 
+# https://w3id.org/ocqa-screed#Screed
+# 
+# https://w3id.org/ocqa-screed#Screeding
+# 
+# https://w3id.org/ocqa-screed#SpiritLevel
+# 
+# https://w3id.org/ocqa-screed#TotalStation
+# 
+# https://w3id.org/ocqa-screed#WedgeGauge
+# 
+# https://w3id.org/ocqa-screed#Check_bonded_screed_(preparation)
+# 
+# https://w3id.org/ocqa-screed#Check_cavity_floor_(substructure_for_screed_work)
+# 
+# https://w3id.org/ocqa-screed#Check_floor_structure_(under_insulation/fill_insulation)
+# 
+# https://w3id.org/ocqa-screed#Check_industrial_screed_(products)
+# 
+# https://w3id.org/ocqa-screed#Check_insulation_frame_pre-wall_mounting_system_(windows)
+# 
+# https://w3id.org/ocqa-screed#Check_insulation_screed_(fire_protection)
+# 
+# https://w3id.org/ocqa-screed#Check_mastic_asphalt_screed_(before_execution)
+# 
+# https://w3id.org/ocqa-screed#Check_mastic_asphalt_screed_(during_execution)
+# 
+# https://w3id.org/ocqa-screed#Check_mastic_asphalt_screed_(products)
+# 
+# https://w3id.org/ocqa-screed#Check_screed_(products)
+# 
+# https://w3id.org/ocqa-screed#Check_screed_for_separation_layer_(preparation)
+# 
+# https://w3id.org/ocqa-screed#Check_ventilation_(screed_works)
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://example.de/ocqa-screed-inspections#FoldingRule023
+# 
+# https://w3id.org/ocqa-screed#CalciumCarbidProcedure
+# 
+# https://w3id.org/ocqa-screed#EBMR-ScreedFlatnessInspection
+# 
+# https://w3id.org/ocqa-screed#LevelingTrestleProcedure
+# 
+# https://w3id.org/ocqa-screed#LineLaserMeasurement
+# 
+# https://w3id.org/ocqa-screed#PlaceSpiritLevelOnScreedSurface
+# 
+# https://w3id.org/ocqa-screed#ScreedFailureProbability
+# 
+# https://w3id.org/ocqa-screed#SpiritLevelMeasurement
+# 
+# https://w3id.org/ocqa-screed#TotalStationMeasurement
+# 
+# https://w3id.org/ocqa-screed#WaterLevelMeasurement
+# 
+# https://w3id.org/ocqa-screed#18560
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
 
-<https://w3id.org/ocqa-screed#> rdf:type owl:Ontology ;
-                                 owl:imports <https://w3id.org/ocqa/0.3> ;
-                                 <http://purl.org/dc/terms/creator> "Sebastian Seiß" ;
-                                 <http://purl.org/dc/terms/description> "The Ontology for Screed is an extension of the OCQA ontology" ;
-                                 <http://purl.org/dc/terms/issued> "2022-02-24" ;
-                                 <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/1.0" ;
-                                 <http://purl.org/dc/terms/title> "Ontology for Contruction Quality Assurence Extension Screed (OCQA_SCREED)" ;
-                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "ocqa_screed" ;
-                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ocqa-screed#" ;
-                                 rdfs:comment """- Version 1
-- Extension Screed""" ;
-                                 owl:versionInfo 1 .
+<ocqa-screed#> a owl:Ontology;
+  owl:imports <ocqa/0.3>;
+  <http://purl.org/dc/terms/creator> "Sebastian Seiß";
+  <http://purl.org/dc/terms/description> "The Ontology for Screed is an extension of the OCQA ontology";
+  <http://purl.org/dc/terms/issued> "2022-02-24";
+  <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/1.0";
+  <http://purl.org/dc/terms/title> "Ontology for Contruction Quality Assurence Extension Screed (ocqa-screed)";
+  <http://purl.org/vocab/vann/preferredNamespacePrefix> "ocqa-screed";
+  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ocqa-screed#";
+  rdfs:comment """- Version 1
+- Extension Screed""";
+  owl:versionInfo 1 .
 
-#################################################################
-#    Annotation properties
-#################################################################
+<http://purl.org/dc/terms/creator> a owl:AnnotationProperty .
 
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/description> a owl:AnnotationProperty .
 
+<http://purl.org/dc/terms/issued> a owl:AnnotationProperty .
 
-###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/license> a owl:AnnotationProperty .
 
+<http://purl.org/dc/terms/title> a owl:AnnotationProperty .
 
-###  http://purl.org/dc/terms/issued
-<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> a owl:AnnotationProperty .
 
+<http://purl.org/vocab/vann/preferredNamespaceUri> a owl:AnnotationProperty .
 
-###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+<digitalconstruction/0.5/Entities#hasEnd> a owl:ObjectProperty .
 
+<digitalconstruction/0.5/Entities#hasStart> a owl:ObjectProperty .
 
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+<digitalconstruction/0.5/Entities#precedes> a owl:ObjectProperty .
 
+<ocqa#hasInspectionEquipment> rdfs:domain <ocqa#Inspection>;
+  rdfs:range <ocqa#InspectionEquipment> .
 
-###  http://purl.org/vocab/vann/preferredNamespacePrefix
-<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+<ocqa-screed#hasFlatness> a owl:ObjectProperty .
 
+<ocqa-screed#measurementDistance> a owl:DatatypeProperty .
 
-###  http://purl.org/vocab/vann/preferredNamespaceUri
-<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+<#%23%23%23%23%23%23%23%23%23%23%23ocqa-screed%23Screed:_check_finished_height_(angle_deviations)>
+  a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Estrich: Fertighöhe überprüfen (Winkelabweichungen)"@de .
 
+<digitalconstruction/0.5/Entities#BuildingObject> a owl:Class .
 
-#################################################################
-#    Classes
-#################################################################
+<ocqa-screed#BondedScreed> a owl:Class;
+  rdfs:subClassOf <ocqa-screed#Screed> .
 
-###  https://w3id.org/ocqa-screed#CheckSeperationLayer
-:CheckSeperationLayer rdf:type owl:Class ;
-                      rdfs:subClassOf <https://w3id.org/ocqa#Inspection> .
+<ocqa-screed#CalciumCarbideMeasuringInstrument> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionEquipment> .
 
+<ocqa-screed#CheckSeperationLayer> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection> .
 
-###  https://w3id.org/ocqa-screed#FlatnessInspection
-:FlatnessInspection rdf:type owl:Class ;
-                    rdfs:subClassOf <https://w3id.org/ocqa#Inspection> .
+<ocqa-screed#Check_floating_screed> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Schwimmender Estrich prüfen"@de .
 
+<ocqa-screed#Check_readiness_for_covering> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Belegreife überprüfen"@de .
 
-###  https://w3id.org/ocqa-screed#FlatnessInspectionProcedure
-:FlatnessInspectionProcedure rdf:type owl:Class ;
-                             rdfs:subClassOf <https://w3id.org/ocqa#InspectionProcedure> .
+<ocqa-screed#Check_screed_angle> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Estrichwinkel prüfen"@de .
 
+<ocqa-screed#Check_screed_joints> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Estrichfugen prüfen" .
 
-###  https://w3id.org/ocqa-screed#HightInspection
-:HightInspection rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/ocqa#Inspection> .
+<ocqa-screed#Check_surface_treatment_of_mastic_asphalt> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Oberflächenbehandlung des Gussasphalt prüfen"@de .
 
+<ocqa-screed#Chisel> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionEquipment> .
 
-###  https://w3id.org/ocqa-screed#ScreedDIN
-:ScreedDIN rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/ocqa-regulation#DIN> .
+<ocqa-screed#DIN-Screed> a owl:Class;
+  rdfs:subClassOf <ocqa-regulation#DIN> .
 
+<ocqa-screed#FlatnessInspection> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>, _:genid1, _:genid38;
+  rdfs:label "Ebenheitsprüfung"@de .
 
-###  https://w3id.org/ocqa-screed#Screeding
-:Screeding rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/digitalconstruction/0.5/Processes#Activity> .
+_:genid1 a owl:Class;
+  owl:intersectionOf _:genid32 .
 
+_:genid32 a rdf:List;
+  rdf:first _:genid33;
+  rdf:rest _:genid16 .
 
-###  https://w3id.org/ocqa-screed#SpiritLevel
-:SpiritLevel rdf:type owl:Class ;
-             rdfs:subClassOf <https://w3id.org/ocqa#InspectionEquipment> .
+_:genid16 a rdf:List;
+  rdf:first _:genid17;
+  rdf:rest _:genid12 .
 
+_:genid12 a rdf:List;
+  rdf:first _:genid13;
+  rdf:rest _:genid8 .
 
-###  https://w3id.org/ocqa-screed#WedgeGauge
-:WedgeGauge rdf:type owl:Class ;
-            rdfs:subClassOf <https://w3id.org/ocqa#InspectionEquipment> .
+_:genid8 a rdf:List;
+  rdf:first _:genid9;
+  rdf:rest _:genid6 .
 
+_:genid6 a rdf:List;
+  rdf:first _:genid7;
+  rdf:rest _:genid4 .
 
-#################################################################
-#    Individuals
-#################################################################
+_:genid4 a rdf:List;
+  rdf:first _:genid5;
+  rdf:rest _:genid2 .
 
-###  https://w3id.org/ocqa-screed#SpiritLevelMeasurement
-:SpiritLevelMeasurement rdf:type owl:NamedIndividual ,
-                                 :FlatnessInspectionProcedure .
+_:genid2 a rdf:List;
+  rdf:first _:genid3;
+  rdf:rest rdf:nil .
 
+_:genid3 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#FlatnessInspectionProcedure>;
+  owl:onProperty <ocqa#hasInspectionProcedure> .
 
-#################################################################
-#    General axioms
-#################################################################
+_:genid5 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#Screed>;
+  owl:onProperty <digitalconstruction/0.5/Processes#hasObject> .
 
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :CheckSeperationLayer
-                :FlatnessInspection
-                :HightInspection
-              )
-] .
+_:genid7 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#Screeding>;
+  owl:onProperty <digitalconstruction/0.5/Entities#precedes> .
 
+_:genid9 a owl:Restriction;
+  owl:someValuesFrom _:genid10;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasStart> .
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+_:genid10 a owl:Restriction;
+  owl:someValuesFrom <ocqa-screed#Screeding>;
+  owl:onProperty _:genid11 .
+
+_:genid11 owl:inverseOf <digitalconstruction/0.5/Entities#hasEnd> .
+
+_:genid13 a owl:Restriction;
+  owl:someValuesFrom _:genid14;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEnd> .
+
+_:genid14 a owl:Restriction;
+  owl:someValuesFrom <ocqa-screed#ParquetWorks>;
+  owl:onProperty _:genid15 .
+
+_:genid15 owl:inverseOf <digitalconstruction/0.5/Entities#hasStart> .
+
+_:genid17 a owl:Class;
+  owl:unionOf _:genid24 .
+
+_:genid24 a rdf:List;
+  rdf:first _:genid25;
+  rdf:rest _:genid18 .
+
+_:genid18 a rdf:List;
+  rdf:first _:genid19;
+  rdf:rest rdf:nil .
+
+_:genid19 a owl:Class;
+  owl:intersectionOf _:genid22 .
+
+_:genid22 a rdf:List;
+  rdf:first _:genid23;
+  rdf:rest _:genid20 .
+
+_:genid20 a rdf:List;
+  rdf:first _:genid21;
+  rdf:rest rdf:nil .
+
+_:genid21 a owl:Restriction;
+  owl:onClass <ocqa-screed#TotalStation>;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEquipment> .
+
+_:genid23 a owl:Restriction;
+  owl:hasValue <ocqa-screed#TotalStationMeasurement>;
+  owl:onProperty <ocqa#hasInspectionProcedure> .
+
+_:genid25 a owl:Class;
+  owl:intersectionOf _:genid30 .
+
+_:genid30 a rdf:List;
+  rdf:first _:genid31;
+  rdf:rest _:genid28 .
+
+_:genid28 a rdf:List;
+  rdf:first _:genid29;
+  rdf:rest _:genid26 .
+
+_:genid26 a rdf:List;
+  rdf:first _:genid27;
+  rdf:rest rdf:nil .
+
+_:genid27 a owl:Restriction;
+  owl:onClass <ocqa-screed#WedgeGauge>;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEquipment> .
+
+_:genid29 a owl:Restriction;
+  owl:onClass <ocqa-screed#SpiritLevel>;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEquipment> .
+
+_:genid31 a owl:Restriction;
+  owl:hasValue <ocqa-screed#SpiritLevelMeasurement>;
+  owl:onProperty <ocqa#hasInspectionProcedure> .
+
+_:genid33 a owl:Class;
+  owl:intersectionOf _:genid36 .
+
+_:genid36 a rdf:List;
+  rdf:first _:genid37;
+  rdf:rest _:genid34 .
+
+_:genid34 a rdf:List;
+  rdf:first _:genid35;
+  rdf:rest rdf:nil .
+
+_:genid35 a owl:Restriction;
+  owl:hasValue <ocr#18202>;
+  owl:onProperty <ocqa-regulation#requiredby> .
+
+_:genid37 a owl:Restriction;
+  owl:hasValue <ocqa-screed#18560>;
+  owl:onProperty <ocqa-regulation#requiredby> .
+
+_:genid38 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#Screed>;
+  owl:onProperty _:genid39 .
+
+_:genid39 owl:inverseOf <digitalconstruction/0.5/Entities#precedes> .
+
+<ocqa-screed#FlatnessInspectionProcedure> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionProcedure> .
+
+<ocqa-screed#FloatingScreed> a owl:Class;
+  rdfs:subClassOf <ocqa-screed#Screed> .
+
+<ocqa-screed#FoldingRule> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionEquipment> .
+
+<ocqa-screed#Hammer> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionEquipment> .
+
+<ocqa-screed#HeightInspection> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>, _:genid40 .
+
+_:genid40 a owl:Class;
+  owl:unionOf _:genid53 .
+
+_:genid53 a rdf:List;
+  rdf:first _:genid54;
+  rdf:rest _:genid41 .
+
+_:genid41 a rdf:List;
+  rdf:first _:genid42;
+  rdf:rest rdf:nil .
+
+_:genid42 a owl:Class;
+  owl:intersectionOf _:genid51 .
+
+_:genid51 a rdf:List;
+  rdf:first _:genid52;
+  rdf:rest _:genid49 .
+
+_:genid49 a rdf:List;
+  rdf:first _:genid50;
+  rdf:rest _:genid47 .
+
+_:genid47 a rdf:List;
+  rdf:first _:genid48;
+  rdf:rest _:genid45 .
+
+_:genid45 a rdf:List;
+  rdf:first _:genid46;
+  rdf:rest _:genid43 .
+
+_:genid43 a rdf:List;
+  rdf:first _:genid44;
+  rdf:rest rdf:nil .
+
+_:genid44 a owl:Restriction;
+  owl:hasValue <ocqa-screed#18560>;
+  owl:onProperty <ocqa-regulation#requiredby> .
+
+_:genid46 a owl:Restriction;
+  owl:hasValue <ocqa-screed#LevelingTrestleProcedure>;
+  owl:onProperty <ocqa#hasInspectionProcedure> .
+
+_:genid48 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#Screeding>;
+  owl:onProperty <ocqa#simultane> .
+
+_:genid50 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#Screed>;
+  owl:onProperty <digitalconstruction/0.5/Processes#hasObject> .
+
+_:genid52 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#LevelingTrestle>;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEquipment> .
+
+_:genid54 a owl:Class;
+  owl:intersectionOf _:genid61 .
+
+_:genid61 a rdf:List;
+  rdf:first _:genid62;
+  rdf:rest _:genid59 .
+
+_:genid59 a rdf:List;
+  rdf:first _:genid60;
+  rdf:rest _:genid57 .
+
+_:genid57 a rdf:List;
+  rdf:first _:genid58;
+  rdf:rest _:genid55 .
+
+_:genid55 a rdf:List;
+  rdf:first _:genid56;
+  rdf:rest rdf:nil .
+
+_:genid56 a owl:Restriction;
+  owl:hasValue <ocqa-screed#18560>;
+  owl:onProperty <ocqa-regulation#requiredby> .
+
+_:genid58 a owl:Restriction;
+  owl:someValuesFrom <ocqa-screed#HightInspectionProcedure>;
+  owl:onProperty <ocqa#hasInspectionProcedure> .
+
+_:genid60 a owl:Restriction;
+  owl:someValuesFrom <ocqa-screed#Screed>;
+  owl:onProperty <digitalconstruction/0.5/Processes#hasObject> .
+
+_:genid62 a owl:Restriction;
+  owl:someValuesFrom <ocqa-screed#Screeding>;
+  owl:onProperty <digitalconstruction/0.5/Entities#precedes> .
+
+<ocqa-screed#HightInspectionProcedure> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionProcedure> .
+
+<ocqa-screed#LevelingTrestle> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionEquipment> .
+
+<ocqa-screed#MoistureInspection> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>, _:genid63 .
+
+_:genid63 a owl:Class;
+  owl:intersectionOf _:genid80 .
+
+_:genid80 a rdf:List;
+  rdf:first _:genid81;
+  rdf:rest _:genid76 .
+
+_:genid76 a rdf:List;
+  rdf:first _:genid77;
+  rdf:rest _:genid72 .
+
+_:genid72 a rdf:List;
+  rdf:first _:genid73;
+  rdf:rest _:genid70 .
+
+_:genid70 a rdf:List;
+  rdf:first _:genid71;
+  rdf:rest _:genid68 .
+
+_:genid68 a rdf:List;
+  rdf:first _:genid69;
+  rdf:rest _:genid66 .
+
+_:genid66 a rdf:List;
+  rdf:first _:genid67;
+  rdf:rest _:genid64 .
+
+_:genid64 a rdf:List;
+  rdf:first _:genid65;
+  rdf:rest rdf:nil .
+
+_:genid65 a owl:Restriction;
+  owl:hasValue <ocqa-screed#18560>;
+  owl:onProperty <ocqa-regulation#requiredby> .
+
+_:genid67 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#MoistureInspectionProcedure>;
+  owl:onProperty <ocqa#hasInspectionProcedure> .
+
+_:genid69 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#Screed>;
+  owl:onProperty <digitalconstruction/0.5/Processes#hasObject> .
+
+_:genid71 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#Screeding>;
+  owl:onProperty <digitalconstruction/0.5/Entities#precedes> .
+
+_:genid73 a owl:Restriction;
+  owl:someValuesFrom _:genid74;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasStart> .
+
+_:genid74 a owl:Restriction;
+  owl:someValuesFrom <ocqa-screed#Screeding>;
+  owl:onProperty _:genid75 .
+
+_:genid75 owl:inverseOf <digitalconstruction/0.5/Entities#hasEnd> .
+
+_:genid77 a owl:Restriction;
+  owl:someValuesFrom _:genid78;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEnd> .
+
+_:genid78 a owl:Restriction;
+  owl:someValuesFrom <ocqa-screed#ParquetWorks>;
+  owl:onProperty _:genid79 .
+
+_:genid79 owl:inverseOf <digitalconstruction/0.5/Entities#hasStart> .
+
+_:genid81 a owl:Class;
+  owl:intersectionOf _:genid86 .
+
+_:genid86 a rdf:List;
+  rdf:first _:genid87;
+  rdf:rest _:genid84 .
+
+_:genid84 a rdf:List;
+  rdf:first _:genid85;
+  rdf:rest _:genid82 .
+
+_:genid82 a rdf:List;
+  rdf:first _:genid83;
+  rdf:rest rdf:nil .
+
+_:genid83 a owl:Restriction;
+  owl:onClass <ocqa-screed#Hammer>;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEquipment> .
+
+_:genid85 a owl:Restriction;
+  owl:onClass <ocqa-screed#Chisel>;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEquipment> .
+
+_:genid87 a owl:Class;
+  owl:intersectionOf _:genid90 .
+
+_:genid90 a rdf:List;
+  rdf:first _:genid91;
+  rdf:rest _:genid88 .
+
+_:genid88 a rdf:List;
+  rdf:first _:genid89;
+  rdf:rest rdf:nil .
+
+_:genid89 a owl:Restriction;
+  owl:onClass <ocqa-screed#CalciumCarbideMeasuringInstrument>;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEquipment> .
+
+_:genid91 a owl:Restriction;
+  owl:hasValue <ocqa-screed#CalciumCarbidProcedure>;
+  owl:onProperty <ocqa#hasInspectionProcedure> .
+
+<ocqa-screed#MoistureInspectionProcedure> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionProcedure> .
+
+<ocqa-screed#Monitor_heating_protocol> a owl:Class;
+  rdfs:subClassOf <ocqa#Monitoring>;
+  rdfs:label "Aufheizprotokoll überwachen"@de .
+
+<ocqa-screed#ParquetWorks> a owl:Class;
+  rdfs:subClassOf <digitalconstruction/0.5/Processes#Activity> .
+
+<ocqa-screed#Screed> a owl:Class;
+  rdfs:subClassOf <digitalconstruction/0.5/Entities#BuildingObject> .
+
+<ocqa-screed#Screeding> a owl:Class;
+  rdfs:subClassOf <digitalconstruction/0.5/Processes#Activity> .
+
+<ocqa-screed#SpiritLevel> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionEquipment> .
+
+<ocqa-screed#TotalStation> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionEquipment> .
+
+<ocqa-screed#WedgeGauge> a owl:Class;
+  rdfs:subClassOf <ocqa#InspectionEquipment> .
+
+<ocqa-screed#Check_bonded_screed_(preparation)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Verbundestrich prüfen (Vorbereitung)"@de .
+
+<ocqa-screed#Check_cavity_floor_(substructure_for_screed_work)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Hohlraumboden (Unterkonstruktion für Estricharbeiten) prüfen"@de .
+
+<ocqa-screed#Check_floor_structure_(under_insulation/fill_insulation)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Fußbodenaufbau (Unterdämmung/Schüttdämmung) prüfen"@de .
+
+<ocqa-screed#Check_industrial_screed_(products)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Industrieestrich (Produkte) prüfen"@de .
+
+<ocqa-screed#Check_insulation_frame_pre-wall_mounting_system_(windows)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Dämmrahmen Vorwandmontagesystem (Fenster) prüfen"@de .
+
+<ocqa-screed#Check_insulation_screed_(fire_protection)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Dämmung Estrich (Brandschutz) prüfen"@de .
+
+<ocqa-screed#Check_mastic_asphalt_screed_(before_execution)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Gussasphaltestrich (vor der Ausführung) prüfen"@de .
+
+<ocqa-screed#Check_mastic_asphalt_screed_(during_execution)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Gussasphaltestrich (während der Ausführung) prüfen"@de .
+
+<ocqa-screed#Check_mastic_asphalt_screed_(products)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Gussasphaltestrich (Produkte) prüfen"@de .
+
+<ocqa-screed#Check_screed_(products)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Estrich (Produkte prüfen)"@de .
+
+<ocqa-screed#Check_screed_for_separation_layer_(preparation)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Estriche auf Trennschicht prüfen (Vorbereitung)"@de .
+
+<ocqa-screed#Check_ventilation_(screed_works)> a owl:Class;
+  rdfs:subClassOf <ocqa#Inspection>;
+  rdfs:label "Lüften (Estricharbeiten) prüfen"@de .
+
+<https://example.de/ocqa-screed-inspections#FoldingRule023> a owl:NamedIndividual,
+    <ocqa-screed#FoldingRule> .
+
+<ocqa-screed#CalciumCarbidProcedure> a owl:NamedIndividual, <ocqa-screed#MoistureInspectionProcedure> .
+
+<ocqa-screed#EBMR-ScreedFlatnessInspection> a owl:NamedIndividual, <ocqa-catalog#FailureProbabilityFeature> .
+
+<ocqa-screed#LevelingTrestleProcedure> a owl:NamedIndividual, <ocqa-screed#HightInspectionProcedure>;
+  rdfs:label "Nivellierbock"@de .
+
+<ocqa-screed#LineLaserMeasurement> a owl:NamedIndividual, <ocqa-screed#FlatnessInspectionProcedure> .
+
+<ocqa-screed#PlaceSpiritLevelOnScreedSurface> a owl:NamedIndividual .
+
+<ocqa-screed#ScreedFailureProbability> a owl:NamedIndividual, <ocqa-catalog#FailureProbabilityCatalog> .
+
+<ocqa-screed#SpiritLevelMeasurement> a owl:NamedIndividual, <ocqa-screed#FlatnessInspectionProcedure>,
+    _:genid92 .
+
+_:genid92 a owl:Restriction;
+  owl:someValuesFrom _:genid94;
+  owl:onProperty _:genid93 .
+
+_:genid94 a owl:Class;
+  owl:intersectionOf _:genid99 .
+
+_:genid99 a rdf:List;
+  rdf:first <ocqa-screed#FlatnessInspection>;
+  rdf:rest _:genid97 .
+
+_:genid97 a rdf:List;
+  rdf:first _:genid98;
+  rdf:rest _:genid95 .
+
+_:genid95 a rdf:List;
+  rdf:first _:genid96;
+  rdf:rest rdf:nil .
+
+_:genid96 a owl:Restriction;
+  owl:allValuesFrom <ocqa-screed#WedgeGauge>;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEquipment> .
+
+_:genid98 a owl:Restriction;
+  owl:someValuesFrom <ocqa-screed#WedgeGauge>;
+  owl:onProperty <digitalconstruction/0.5/Entities#hasEquipment> .
+
+_:genid93 owl:inverseOf <ocqa#hasInspectionProcedure> .
+
+<ocqa-screed#TotalStationMeasurement> a owl:NamedIndividual, <ocqa-screed#FlatnessInspectionProcedure> .
+
+<ocqa-screed#WaterLevelMeasurement> a owl:NamedIndividual, <ocqa-screed#FlatnessInspectionProcedure> .
+
+<ocqa-screed#18560> a owl:NamedIndividual .
+
+_:genid100 a owl:AllDisjointClasses;
+  owl:members _:genid122 .
+
+_:genid122 a rdf:List;
+  rdf:first <#%23%23%23%23%23%23%23%23%23%23%23ocqa-screed%23Screed:_check_finished_height_(angle_deviations)>;
+  rdf:rest _:genid121 .
+
+_:genid121 a rdf:List;
+  rdf:first <ocqa-screed#CheckSeperationLayer>;
+  rdf:rest _:genid120 .
+
+_:genid120 a rdf:List;
+  rdf:first <ocqa-screed#Check_floating_screed>;
+  rdf:rest _:genid119 .
+
+_:genid119 a rdf:List;
+  rdf:first <ocqa-screed#Check_readiness_for_covering>;
+  rdf:rest _:genid118 .
+
+_:genid118 a rdf:List;
+  rdf:first <ocqa-screed#Check_screed_angle>;
+  rdf:rest _:genid117 .
+
+_:genid117 a rdf:List;
+  rdf:first <ocqa-screed#Check_screed_joints>;
+  rdf:rest _:genid116 .
+
+_:genid116 a rdf:List;
+  rdf:first <ocqa-screed#Check_surface_treatment_of_mastic_asphalt>;
+  rdf:rest _:genid115 .
+
+_:genid115 a rdf:List;
+  rdf:first <ocqa-screed#FlatnessInspection>;
+  rdf:rest _:genid114 .
+
+_:genid114 a rdf:List;
+  rdf:first <ocqa-screed#HeightInspection>;
+  rdf:rest _:genid113 .
+
+_:genid113 a rdf:List;
+  rdf:first <ocqa-screed#Monitor_heating_protocol>;
+  rdf:rest _:genid112 .
+
+_:genid112 a rdf:List;
+  rdf:first <ocqa-screed#Check_bonded_screed_(preparation)>;
+  rdf:rest _:genid111 .
+
+_:genid111 a rdf:List;
+  rdf:first <ocqa-screed#Check_cavity_floor_(substructure_for_screed_work)>;
+  rdf:rest _:genid110 .
+
+_:genid110 a rdf:List;
+  rdf:first <ocqa-screed#Check_floor_structure_(under_insulation/fill_insulation)>;
+  rdf:rest _:genid109 .
+
+_:genid109 a rdf:List;
+  rdf:first <ocqa-screed#Check_industrial_screed_(products)>;
+  rdf:rest _:genid108 .
+
+_:genid108 a rdf:List;
+  rdf:first <ocqa-screed#Check_insulation_frame_pre-wall_mounting_system_(windows)>;
+  rdf:rest _:genid107 .
+
+_:genid107 a rdf:List;
+  rdf:first <ocqa-screed#Check_insulation_screed_(fire_protection)>;
+  rdf:rest _:genid106 .
+
+_:genid106 a rdf:List;
+  rdf:first <ocqa-screed#Check_mastic_asphalt_screed_(before_execution)>;
+  rdf:rest _:genid105 .
+
+_:genid105 a rdf:List;
+  rdf:first <ocqa-screed#Check_mastic_asphalt_screed_(during_execution)>;
+  rdf:rest _:genid104 .
+
+_:genid104 a rdf:List;
+  rdf:first <ocqa-screed#Check_mastic_asphalt_screed_(products)>;
+  rdf:rest _:genid103 .
+
+_:genid103 a rdf:List;
+  rdf:first <ocqa-screed#Check_screed_(products)>;
+  rdf:rest _:genid102 .
+
+_:genid102 a rdf:List;
+  rdf:first <ocqa-screed#Check_screed_for_separation_layer_(preparation)>;
+  rdf:rest _:genid101 .
+
+_:genid101 a rdf:List;
+  rdf:first <ocqa-screed#Check_ventilation_(screed_works)>;
+  rdf:rest rdf:nil .
+
+_:genid123 a owl:AllDisjointClasses;
+  owl:members _:genid129 .
+
+_:genid129 a rdf:List;
+  rdf:first <digitalconstruction/0.5/Processes#Actuation>;
+  rdf:rest _:genid128 .
+
+_:genid128 a rdf:List;
+  rdf:first <digitalconstruction/0.5/Processes#Observation>;
+  rdf:rest _:genid127 .
+
+_:genid127 a rdf:List;
+  rdf:first <digitalconstruction/0.5/Processes#Project>;
+  rdf:rest _:genid126 .
+
+_:genid126 a rdf:List;
+  rdf:first <ocqa#Determination>;
+  rdf:rest _:genid125 .
+
+_:genid125 a rdf:List;
+  rdf:first <ocqa-screed#ParquetWorks>;
+  rdf:rest _:genid124 .
+
+_:genid124 a rdf:List;
+  rdf:first <ocqa-screed#Screeding>;
+  rdf:rest rdf:nil .
+
+_:genid130 a owl:AllDisjointClasses;
+  owl:members _:genid138 .
+
+_:genid138 a rdf:List;
+  rdf:first <ocqa-screed#CalciumCarbideMeasuringInstrument>;
+  rdf:rest _:genid137 .
+
+_:genid137 a rdf:List;
+  rdf:first <ocqa-screed#Chisel>;
+  rdf:rest _:genid136 .
+
+_:genid136 a rdf:List;
+  rdf:first <ocqa-screed#FoldingRule>;
+  rdf:rest _:genid135 .
+
+_:genid135 a rdf:List;
+  rdf:first <ocqa-screed#Hammer>;
+  rdf:rest _:genid134 .
+
+_:genid134 a rdf:List;
+  rdf:first <ocqa-screed#LevelingTrestle>;
+  rdf:rest _:genid133 .
+
+_:genid133 a rdf:List;
+  rdf:first <ocqa-screed#SpiritLevel>;
+  rdf:rest _:genid132 .
+
+_:genid132 a rdf:List;
+  rdf:first <ocqa-screed#TotalStation>;
+  rdf:rest _:genid131 .
+
+_:genid131 a rdf:List;
+  rdf:first <ocqa-screed#WedgeGauge>;
+  rdf:rest rdf:nil .
+
+_:genid139 a owl:AllDisjointClasses;
+  owl:members _:genid143 .
+
+_:genid143 a rdf:List;
+  rdf:first <ocqa-screed#CheckSeperationLayer>;
+  rdf:rest _:genid142 .
+
+_:genid142 a rdf:List;
+  rdf:first <ocqa-screed#FlatnessInspection>;
+  rdf:rest _:genid141 .
+
+_:genid141 a rdf:List;
+  rdf:first <ocqa-screed#HeightInspection>;
+  rdf:rest _:genid140 .
+
+_:genid140 a rdf:List;
+  rdf:first <ocqa-screed#MoistureInspection>;
+  rdf:rest rdf:nil .
+
+_:genid144 a owl:AllDisjointClasses;
+  owl:members _:genid147 .
+
+_:genid147 a rdf:List;
+  rdf:first <ocqa-screed#FlatnessInspectionProcedure>;
+  rdf:rest _:genid146 .
+
+_:genid146 a rdf:List;
+  rdf:first <ocqa-screed#HightInspectionProcedure>;
+  rdf:rest _:genid145 .
+
+_:genid145 a rdf:List;
+  rdf:first <ocqa-screed#MoistureInspectionProcedure>;
+  rdf:rest rdf:nil .

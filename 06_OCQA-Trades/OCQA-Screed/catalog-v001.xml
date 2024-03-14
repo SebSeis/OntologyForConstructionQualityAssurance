@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://w3id.org/digitalconstruction/0.5/Entities" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/09_DiCon/entitiesStateUpdate.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ocqa-screed#" uri="20230802_Screed.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa-rules/0.1" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/05_OCQA-Rules/230609_OCQA-Rules.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa-regulation/0.1" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/03_OCQA-Regulation/230608_OCQA-Regulation.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa-contract/0.1" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/04_OCQA-Contract/230609_OCQA-Contract.ttl"/>
@@ -7,5 +9,8 @@
     <uri id="User Entered Import Resolution" name="https://w3id.org/digitalconstruction/0.5/Information" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/09_DiCon/information.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa/0.3" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/01_OCQA/230707_OCQA_03.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/ocqa_screed/0.3" uri="OCQA_Screed_03.owl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1700033917110" name="http://www.semanticweb.org/sebas/ontologies/2023/9/27/untitled-ontology-43/" uri="TestInference.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1700033917110" name="https://w3id.org/digitalconstruction/0.5/Entities" uri="EvaluationCase2.rdf"/>
+    </group>
 </catalog>

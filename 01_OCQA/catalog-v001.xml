@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://w3id.org/digitalconstruction/0.5/Entities" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/09_DiCon/entitiesActualized.ttl"/>
     <uri id="Imports Wizard Entry" name="http://w3id.org/digitalconstruction/0.5/Units" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/09_DiCon/units.ttl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/digitalconstruction/0.5/Information" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/09_DiCon/information.ttl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/ocqa-rules/0.1" uri="file:/C:/Users/sebas/OneDrive/Dokumente/GitHub/OntologyForConstructionQualityAssurance/05_OCQA-Rules/230609_OCQA-Rules.ttl"/>

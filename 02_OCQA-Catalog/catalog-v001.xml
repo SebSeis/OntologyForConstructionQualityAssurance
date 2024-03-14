@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="https://w3id.org/opm#" uri="http://www.w3id.org/opm/opm.ttl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/opm#" uri="http://www.w3id.org/opm/opm.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1692211896882" name="https://w3id.org/ocqa-catalog" uri="230608_OCQA-Catalog.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692211896882" name="https://w3id.org/ocqa-catalog#" uri="230608_OCQA-Catalog.owl"/>
+    </group>
 </catalog>
